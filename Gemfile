@@ -14,6 +14,9 @@ gem 'pg', '~> 1.4'
 #Devise gem 
 gem "devise", "~> 4.9"
 
+#Active-Admin gem 
+gem 'activeadmin'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 
