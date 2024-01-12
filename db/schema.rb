@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+models
 ActiveRecord::Schema[7.1].define(version: 2024_01_12_042632) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,6 +59,43 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_12_042632) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_programs_on_product_id"
+
+ActiveRecord::Schema[7.1].define(version: 2024_01_12_220833) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "active_admin_comments", force: :cascade do |t|
+    t.string "namespace"
+    t.text "body"
+    t.string "resource_type"
+    t.bigint "resource_id"
+    t.string "author_type"
+    t.bigint "author_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_type", "author_id"], name: "index_active_admin_comments_on_author"
+    t.index ["namespace"], name: "index_active_admin_comments_on_namespace"
+    t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource"
+  end
+
+  create_table "admin_users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_admin_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.string "title"
+    t.string "image_data"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+
   end
 
   create_table "roles", force: :cascade do |t|
@@ -66,6 +104,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_12_042632) do
     t.datetime "updated_at", null: false
   end
 
+ models
   create_table "students", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -76,6 +115,13 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_12_042632) do
     t.datetime "updated_at", null: false
     t.index ["program_id"], name: "index_students_on_program_id"
     t.index ["user_id"], name: "index_students_on_user_id"
+
+  create_table "text_contents", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+
   end
 
   create_table "users", force: :cascade do |t|
@@ -96,6 +142,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_12_042632) do
     t.index ["role_id"], name: "index_users_on_role_id"
   end
 
+models
   add_foreign_key "cart_products", "carts"
   add_foreign_key "cart_products", "products"
   add_foreign_key "carts", "users"
@@ -103,5 +150,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_12_042632) do
   add_foreign_key "programs", "products"
   add_foreign_key "students", "programs"
   add_foreign_key "students", "users"
+
+  create_table "videos", force: :cascade do |t|
+    t.string "title"
+    t.string "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+
   add_foreign_key "users", "roles"
 end
