@@ -11,13 +11,13 @@ gem "sprockets-rails"
 # Use pg as the database for Active Record
 gem 'pg', '~> 1.4'
 
-#Devise gem 
+#Devise gem
 gem "devise", "~> 4.9"
 
-#sassc gem 
+#sassc gem
 gem 'sassc', '~> 2.0'
 
-#Active-Admin gem 
+#Active-Admin gem
 gem 'activeadmin'
 
 # Use the Puma web server [https://github.com/puma/puma]
