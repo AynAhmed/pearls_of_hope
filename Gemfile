@@ -14,6 +14,9 @@ gem 'pg', '~> 1.4'
 #Devise gem 
 gem "devise", "~> 4.9"
 
+#sassc gem 
+gem 'sassc', '~> 2.0'
+
 #Active-Admin gem 
 gem 'activeadmin'
 
