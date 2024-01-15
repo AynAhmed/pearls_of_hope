@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_15_065836) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_15_164152) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -106,8 +106,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_15_065836) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "program_id", null: false
-    t.index ["program_id"], name: "index_students_on_program_id"
     t.index ["user_id"], name: "index_students_on_user_id"
   end
 
@@ -123,7 +121,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_15_065836) do
     t.string "last_name", null: false
     t.string "username", null: false
     t.string "phone_number", null: false
-    t.bigint "role_id", null: false
     t.string "email", default: "", null: false
     t.string "password", default: "", null: false
     t.string "reset_password_token"
@@ -131,6 +128,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_15_065836) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "role_id", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["role_id"], name: "index_users_on_role_id"
@@ -148,7 +146,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_15_065836) do
   add_foreign_key "carts", "users"
   add_foreign_key "courseworks", "programs"
   add_foreign_key "products", "programs"
-  add_foreign_key "students", "programs"
   add_foreign_key "students", "users"
   add_foreign_key "users", "roles"
 end
