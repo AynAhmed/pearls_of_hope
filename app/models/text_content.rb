@@ -1,0 +1,2 @@
+class TextContent < ApplicationRecord
+end
