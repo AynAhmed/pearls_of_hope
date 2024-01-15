@@ -10,10 +10,12 @@
        <p class="alert"><%= alert %></p>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <script src="https://kit.fontawesome.com/5d37fde041.js" crossorigin="anonymous"></script>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
+    <%= layouts/navbar %>
     <%= yield %>
   </body>
 </html>
