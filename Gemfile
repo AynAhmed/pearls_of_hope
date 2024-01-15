@@ -9,7 +9,16 @@ gem "rails", "~> 7.1.2"
 gem "sprockets-rails"
 
 # Use pg as the database for Active Record
-gem "pg"
+gem 'pg', '~> 1.4'
+
+#Devise gem
+gem "devise", "~> 4.9"
+
+#sassc gem
+gem 'sassc', '~> 2.0'
+
+#Active-Admin gem
+gem 'activeadmin'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
@@ -65,3 +74,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+
