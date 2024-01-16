@@ -106,6 +106,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_15_164152) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "program_id", null: false
+    t.index ["program_id"], name: "index_students_on_program_id"
     t.index ["user_id"], name: "index_students_on_user_id"
   end
 
@@ -146,6 +148,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_15_164152) do
   add_foreign_key "carts", "users"
   add_foreign_key "courseworks", "programs"
   add_foreign_key "products", "programs"
+  add_foreign_key "students", "programs"
   add_foreign_key "students", "users"
   add_foreign_key "users", "roles"
 end

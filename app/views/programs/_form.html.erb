@@ -1,0 +1,31 @@
+<%= form_for(@program) do |f| %>
+    <%# Your form fields go here %>
+    <div>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+  
+    <div>
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+    </div>
+  
+    <div>
+      <%= f.label :type %>
+      <%= f.text_field :type %>
+    </div>
+  
+    <div>
+      <%= f.label :age_group %>
+      <%= f.text_field :age_group %>
+    </div>
+  
+    <div>
+      <%= f.label :date %>
+      <%= f.date_select :date %>
+    </div>
+  
+    <div>
+      <%= f.submit %>
+    </div>
+  <% end %>
