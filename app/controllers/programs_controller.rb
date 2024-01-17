@@ -56,4 +56,3 @@ class ProgramsController < ApplicationController
       params.require(:program).permit(:name, :description, :type, :age_group, :date)
     end
   end
-  

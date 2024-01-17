@@ -10,16 +10,22 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  resources :roles
+ 
+  root "home#index" # Assuming you have a HomeController with an index action
+
+  resources :volunteers, only: [:index] # Assuming you have a VolunteersController with an index action
+  resources :calendar, only: [:index]   # Assuming you have a CalendarController with an index action
+  resources :cart, only: [:index]# Assuming you have a CartController with an index action
+  resources :donation, only: [:index]   # Assuming you have a DonationController with an index action
 
   resources :students
-  resources :parents
-  
+  resources :profile
+
   resources :programs do 
     resources :courseworks
-end
-resources :products
-resources :carts do
-  resources :cart_products
-end
+  end
+
+  resources :products
+
+  resources :carts 
 end
