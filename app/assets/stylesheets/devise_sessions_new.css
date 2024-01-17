@@ -10,7 +10,7 @@ body{
     display: flex;
 }
 
-.container{
+.signin-page{
     margin: auto;
     width: 500px;
     max-width: 90%;
@@ -20,7 +20,7 @@ body{
     border-radius: 20px;
     box-shadow: 0 8px 16px black;
 }
-.container h2{
+.signin-page h2{
     text-align: center;
     margin-bottom: 24px;
     color: black;

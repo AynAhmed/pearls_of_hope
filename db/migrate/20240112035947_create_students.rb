@@ -6,7 +6,6 @@ class CreateStudents < ActiveRecord::Migration[7.1]
       t.date :dob
       t.references :user, null: false, foreign_key: true
 
-
       t.timestamps
     end
   end

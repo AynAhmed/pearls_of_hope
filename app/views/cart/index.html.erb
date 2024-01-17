@@ -1,0 +1,24 @@
+<div>
+    <h1>Shopping Cart</h1>
+
+    <div class="cart">
+        <%= if @products.size == 0 %>
+            <h3> There are no items in your cart </h3>
+        <% else %>
+            <table>
+                <tr>
+                    <th> Quantity </th>
+                    <th> Product </th>
+                    <th> Price </th>
+                    <th> Status </th>
+                </tr>
+
+                
+            </table>
+
+    </div>
+
+    <div>
+        <h3>Subtotal:</h3>
+    </div>
+</div>

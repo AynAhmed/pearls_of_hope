@@ -7,7 +7,6 @@ class CreatePrograms < ActiveRecord::Migration[7.1]
       t.string :age_group
       t.date :date
 
-
       t.timestamps
     end
   end
