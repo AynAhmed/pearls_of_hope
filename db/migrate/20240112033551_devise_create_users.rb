@@ -9,7 +9,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.1]
       t.string :last_name,              null: false
       t.string :username,              null: false
       t.string :phone_number,              null: false
-      
+
+
 
       #standard devise code
       t.string :email,              null: false, default: ""

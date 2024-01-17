@@ -1,0 +1,10 @@
+<h1>Programs</h1>
+
+<% @programs.each do |program| %>
+  <div>
+    <h3><%= program.name %></h3>
+    <p><%= program.description %></p>
+    <%= link_to 'View Program', Programs %>
+    <%= link_to 'Sign Up', signup_program_path(programs), method: :post %>
+  </div>
+<% end %>
