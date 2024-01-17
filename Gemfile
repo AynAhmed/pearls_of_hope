@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
 ruby '3.2.0'
@@ -10,7 +12,6 @@ gem 'sprockets-rails'
 
 # Use pg as the database for Active Record
 gem 'pg', '~> 1.4'
-
 
 # Rubocop
 gem 'rubocop'
