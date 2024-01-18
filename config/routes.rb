@@ -11,7 +11,6 @@ Rails.application.routes.draw do
   resources :cart, only: [:index]
   resources :donation, only: [:index]
 
-  resources :students
   resources :profile
 
   resources :programs do
@@ -28,6 +27,6 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :products
+  resources :courseworks
   resources :carts
 end
