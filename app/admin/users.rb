@@ -1,5 +1,5 @@
 ActiveAdmin.register User do
-  permit_params :first_name, :last_name, :username, :phone_number, :email, :password, :role_id # Add other fields you want to permit
+  permit_params :first_name, :last_name, :username, :phone_number, :email, :role_id
 
   index do
     selectable_column
@@ -8,13 +8,12 @@ ActiveAdmin.register User do
     column :last_name
     column :username
     column :email
-    # Add other columns as needed
+    column :role_id
     actions
   end
 
   filter :username
   filter :email
-  # Add other filters as needed
 
   form do |f|
     f.inputs do
@@ -23,10 +22,27 @@ ActiveAdmin.register User do
       f.input :username
       f.input :phone_number
       f.input :email
-      f.input :password
+      # Do not include password unless you want admins to be able to reset it
       f.input :role_id
     end
     f.actions
   end
-  
+
+  # Override the actions to remove the ability to create new users
+  actions :index, :show, :update, :destroy
+
+  # Customizes the controller actions
+  controller do
+    # Override the new action
+    def new
+      flash[:alert] = "Creating new users is not allowed."
+      redirect_to collection_path
+    end
+
+    # Override the create action
+    def create
+      flash[:alert] = "Creating new users is not allowed."
+      redirect_to collection_path
+    end
+  end
 end
