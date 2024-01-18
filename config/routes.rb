@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
   resources :students
   resources :profile
-
+  resources :about
   resources :programs do 
     resources :courseworks
   end
