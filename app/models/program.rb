@@ -4,4 +4,6 @@ class Program < ApplicationRecord
     validates :type, presence: true
     validates :age_group, presence: true
     validates :date, presence: true
+
+    has_many :courseworks
 end
