@@ -32,9 +32,6 @@ class ProgramsController < ApplicationController
     end  
   
     def signup
-      # Implement signup logic here
-      # You might want to associate the user with the program or perform other actions
-      # For simplicity, let's assume a simple flash message for successful signup
       flash[:notice] = 'Signed up for the program!'
       redirect_to @program
     end
@@ -48,11 +45,10 @@ class ProgramsController < ApplicationController
     private
   
     def set_program
-      @program = Program.find(params[:id])
+      @program = Program.find_by(name: params[:id])
     end
   
     def program_params
-      # Replace 'type' with a different attribute name if not using Single Table Inheritance
       params.require(:program).permit(:name, :description, :type, :age_group, :date)
     end
   end
