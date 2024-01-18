@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   resources :profile
 
+
   resources :programs do
     member do
       get 'house_of_scholars'
@@ -26,7 +27,9 @@ Rails.application.routes.draw do
       get 'climb'
       get 'summer_camp'
     end
-  end
+
+  resources :about
+
 
   resources :courseworks
   resources :carts
