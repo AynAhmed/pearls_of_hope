@@ -6,14 +6,12 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
   root "home#index"
 
-
   resources :volunteers, only: [:index]
   resources :calendar, only: [:index]
   resources :cart, only: [:index]
   resources :donation, only: [:index]
 
   resources :profile
-
 
   resources :programs do
     member do
@@ -28,10 +26,9 @@ Rails.application.routes.draw do
       get 'summer_camp'
     end
 
+    resources :courseworks
+  end
+
   resources :about
-
-
-  resources :courseworks
   resources :carts
 end
-
