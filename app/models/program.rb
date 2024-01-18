@@ -6,7 +6,10 @@ class Program < ApplicationRecord
     validates :date, presence: true
     validates :fee, presence: true
 
+    has_many :courseworks
+
    def self.ransackable_attributes(auth_object = nil)
         ["age_group", "created_at", "date", "description", "id", "id_value", "name", "fee", "type", "updated_at"]
       end
+
 end
