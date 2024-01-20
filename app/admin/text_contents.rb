@@ -15,7 +15,7 @@ ActiveAdmin.register TextContent do
   
     form do |f|
       f.inputs 'Text Content Details' do
-        f.input :title
+        f.input :title, input_html: { readonly: true, disabled: true }
         f.input :body, as: :text
       end
       f.actions
