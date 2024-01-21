@@ -5,6 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
          def self.ransackable_attributes(auth_object = nil)
-          ["created_at", "email", "first_name", "id", "id_value", "last_name", "password", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "role_id", "updated_at", "username"]
+          ["created_at", "email", "first_name", "id", "id_value", "last_name", "password", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "updated_at"]
         end
 end
