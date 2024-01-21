@@ -5,7 +5,11 @@
     <label for="check" class="checkbtn">
         <i class="fa-solid fa-bars"></i>
     </label>
-    <label class="logo">Placeholder</label>
+  
+<div>
+<% hero_image = fetch_image_by_title('logo') %>
+  <%= image_tag(hero_image.image_data.url) %>
+</div>
 
     <ul>
         <li class="active">Home</li>
