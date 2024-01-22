@@ -7,8 +7,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.1]
       ## our added code
       t.string :first_name,              null: false
       t.string :last_name,              null: false
-      t.string :username,              null: false
       t.string :phone_number,              null: false
+      t.string :role,              null: false, default: 'default'
 
 
 

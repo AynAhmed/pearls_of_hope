@@ -7,4 +7,19 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+# AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+
+# db/seeds.rb
+
+# db/seeds.rb
+
+logo_image_path = Rails.root.join('public', 'uploads', 'image', 'image_data', '2', 'pearl-logo-768x497.png')
+
+if File.exist?(logo_image_path)
+  Image.find_or_create_by!(title: 'logo') do |image|
+    image.image_data = File.open(logo_image_path)
+  end
+else
+  puts "Logo image file not found at #{logo_image_path}"
+end
+
