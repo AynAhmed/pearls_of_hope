@@ -5,8 +5,8 @@ class CreatePrograms < ActiveRecord::Migration[7.1]
       t.string :description
       t.string :type
       t.string :age_group
-      t.date :date
-
+      t.string :date
+      t.boolean :fee
 
       t.timestamps
     end
