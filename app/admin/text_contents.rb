@@ -1,6 +1,6 @@
 ActiveAdmin.register TextContent do
     permit_params :title, :body
-  
+
     index do
       selectable_column
       id_column
@@ -9,10 +9,10 @@ ActiveAdmin.register TextContent do
       column :created_at
       actions
     end
-  
+
     filter :title
     filter :created_at
-  
+
     form do |f|
       f.inputs 'Text Content Details' do
         f.input :title, input_html: { readonly: true, disabled: true }
@@ -20,7 +20,7 @@ ActiveAdmin.register TextContent do
       end
       f.actions
     end
-  
+
     show do
       attributes_table do
         row :title
@@ -31,4 +31,3 @@ ActiveAdmin.register TextContent do
       active_admin_comments
     end
   end
-  
