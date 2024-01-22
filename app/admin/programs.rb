@@ -1,5 +1,5 @@
 ActiveAdmin.register Program do
-  permit_params :name, :description, :type, :age_group, :date # Add other fields you want to permit
+  permit_params :name, :description, :type, :age_group, :date,  :fee 
 
   index do
     selectable_column
@@ -9,6 +9,7 @@ ActiveAdmin.register Program do
     column :type
     column :age_group
     column :date
+    column :fee 
     # Add other columns as needed
     actions
   end
@@ -23,7 +24,8 @@ ActiveAdmin.register Program do
       f.input :description
       f.input :type
       f.input :age_group
-      f.input :date, as: :datepicker
+      f.input :date
+      f.input :fee 
       # Add other inputs as needed
     end
     f.actions
