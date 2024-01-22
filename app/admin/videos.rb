@@ -1,10 +1,11 @@
 ActiveAdmin.register Video do
-    permit_params :title, :url
-  
+    permit_params :title, :description, :url
+
     index do
       selectable_column
       id_column
       column :title
+      column :description
       column :url
       column :created_at
       actions
@@ -16,6 +17,7 @@ ActiveAdmin.register Video do
     form do |f|
       f.inputs 'Video Details' do
         f.input :title
+        f.input :description
         f.input :url
       end
       f.actions
@@ -24,6 +26,7 @@ ActiveAdmin.register Video do
     show do
       attributes_table do
         row :title
+        row :description
         row :url
         row :created_at
         row :updated_at

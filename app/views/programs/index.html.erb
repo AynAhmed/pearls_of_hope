@@ -1,3 +1,13 @@
+
+<% embed_url = embed_video_by_title("Pearls vision statement") %>
+<% if embed_url %>
+  <iframe width="560" height="315" src="<%= embed_url %>" frameborder="0" allowfullscreen></iframe>
+<% else %>
+  <p>Video not found.</p>
+<% end %>
+
+<h1>Programs</h1>
+
 <h1>Programs:</h1>
 <ul>
   <% program_names = ['House of Scholars', 'Jewels', 'Charms', 'Explorers', 'Pearls', 'Frontiers', 'Diamonds', 'Climb', 'Summer Camp'] %>
@@ -6,4 +16,5 @@
    
   <% end %>
 </ul>
+
 

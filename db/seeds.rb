@@ -11,15 +11,6 @@
 
 # db/seeds.rb
 
-# db/seeds.rb
 
 logo_image_path = Rails.root.join('public', 'uploads', 'image', 'image_data', '2', 'pearl-logo-768x497.png')
-
-if File.exist?(logo_image_path)
-  Image.find_or_create_by!(title: 'logo') do |image|
-    image.image_data = File.open(logo_image_path)
-  end
-else
-  puts "Logo image file not found at #{logo_image_path}"
-end
 
