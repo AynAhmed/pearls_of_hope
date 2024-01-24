@@ -1,3 +1,28 @@
-<h1><%= @program.name %></h1>
-<p><%= @program.description %></p>
-<%= link_to 'Back to Programs', programs_path %>
+<% if @program %>
+  <h1><%= @program.name %></h1>
+  <p><%= @program.description %></p>
+
+  <h2>Associated Courseworks:</h2>
+  <ul>
+    <% @program.courseworks.each do |coursework| %>
+      <li><%= coursework.name %></li>
+    <% end %>
+  </ul>
+
+  <%= link_to 'Back to Programs', programs_path %>
+
+  <h2>Programs:</h2>
+  <ul>
+    <li><%= link_to 'House of Scholars', house_of_scholars_path('House of Scholars') %></li>
+    <li><%= link_to 'Jewels', jewels_path('Jewels') %></li>
+    <li><%= link_to 'Charms', charms_path('Charms') %></li>
+    <li><%= link_to 'Explorers', explorers_path('Explorers') %></li>
+    <li><%= link_to 'Pearls', pearls_path('Pearls') %></li>
+    <li><%= link_to 'Frontiers', frontiers_path('Frontiers') %></li>
+    <li><%= link_to 'Diamonds', diamonds_path('Diamonds') %></li>
+    <li><%= link_to 'Climb', climb_path('climb') %></li>
+    <li><%= link_to 'Summer Camp', summer_camp_path('Summer Camp') %></li>
+  </ul>
+<% else %>
+  <p>Program not found</p>
+<% end %>
