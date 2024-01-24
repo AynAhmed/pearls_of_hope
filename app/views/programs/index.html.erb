@@ -1,4 +1,25 @@
 
+
+<h1>Programs</h1>
+
+<% @programs.each do |program| %>
+  <div>
+    <h3><%= program.name %></h3>
+    <p><%= program.description %></p>
+    <%= link_to 'View Program', Programs %>
+    <%= link_to 'Sign Up', signup_program_path(programs), method: :post %>
+  </div>
+<% end %>
+
+
+<% embed_url = embed_video_by_title("Pearls vision statement") %>
+<% if embed_url %>
+  <iframe width="560" height="315" src="<%= embed_url %>" frameborder="0" allowfullscreen></iframe>
+<% else %>
+  <p>Video not found.</p>
+<% end %>
+=======
+
 <% embed_url = embed_video_by_title("Pearls vision statement") %>
 <% if embed_url %>
   <iframe width="560" height="315" src="<%= embed_url %>" frameborder="0" allowfullscreen></iframe>
@@ -16,5 +37,6 @@
    
   <% end %>
 </ul>
+
 
 
