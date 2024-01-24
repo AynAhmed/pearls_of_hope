@@ -1,0 +1,13 @@
+<div class="profile-card">
+  <h1><%= @user.full_name %></h1>
+  
+  <div class="profile-details">
+    <p><strong>Programs:</strong> <%= @user.programs %></p>
+    <p><strong>Role:</strong> <%= @user.role %></p>
+  </div>
+
+  <div class="profile-actions">
+    <%= link_to 'Edit Profile', edit_profile_path, class: 'btn btn-primary' %>
+    <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'btn btn-secondary' %>
+  </div>
+</div>

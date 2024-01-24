@@ -7,23 +7,15 @@ Rails.application.routes.draw do
   root "home#index"
 
 
-  # Defines the root path route ("/")
-  # root "posts#index"
-  root "home#index"
-
-
   resources :calendar, only: [:index]
   resources :carts, only: [:index]
   resources :donation, only: [:index]
-
-
   resources :volunteers, only: [:index]
-  resources :calendar, only: [:index]
-  resources :cart, only: [:index]
-  resources :donation, only: [:index]
+ 
 
 
-  resources :profile
+
+  resources :profiles
 
   resources :programs do
     member do
@@ -44,8 +36,6 @@ Rails.application.routes.draw do
 
   resources :about, only: [:index]
   
-
-  resources :about
   resources :carts
 
 end
