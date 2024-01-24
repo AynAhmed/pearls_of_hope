@@ -1,13 +1,21 @@
-<div class = "welcomeMessage">
-<h1>Welcome to Pearls of Hope!</h1>
-<p>This is the home page content</p>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Pearls of Hope</title>
+</head>
+<body>
 
-</div>
+  <div class="welcome-section">
+    <h1>Welcome to Pearls of Hope!</h1>
+    <p>This is the home page content</p>
+  </div>
 
-
-
+<div class="about-section">
 <% about_page_content = fetch_text_content_body_by_title('about page title ') %>
 <div><%= about_page_content.presence || "Content not found." %></div>
+</div>
 
 
 
