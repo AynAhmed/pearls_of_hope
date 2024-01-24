@@ -1,56 +1,189 @@
-/* app/assets/stylesheets/application.css or a specific stylesheet file */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+}
 
-nav {
-    /* Basic styling for nav */
-  }
-  
-  nav ul {
+body, nav, ul {
+    margin: 0;
+    padding: 0;
+}
+
+li, a {
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+header {
     display: flex;
-    list-style-type: none;
-    /* Other styling as needed */
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+
+.logo {
+    cursor: pointer;
+    width: 200px;
+    height: auto;
+}
+
+.nav-links {
+    list-style: none;
+    position: relative;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links li .custom-link {
+    transition: all 0.3s ease 0s;
+    color: #000000;
+}
+
+.nav-links li .custom-link:hover {
+    color: rgb(67, 122, 180);
+}
+
+
+.nav-links li img.cart {
+    vertical-align: middle; 
+    padding-top: 5px; 
+    position: relative;
+    bottom: 4.2px;
+}
+
+.donate-button{
+    background-color: white;
+    color: #000000;
+    cursor: pointer; 
+    padding: 5.6px 20px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+.donate-button:hover{
+    background-color: white;
+}
+
+.navbar-flex-container {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: space-between; /* Spreads the logo and nav links */
   }
   
-  nav ul li {
-    /* Styling for list items */
+  .navbar-logo {
+    height: auto; /* Adjust height as needed */
+    width:100px; /* Maintains aspect ratio of the logo */
   }
   
-  nav input[type="checkbox"] {
-    display: none; /* Hide the checkbox */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+   
+  }
+  a{
+    text-decoration: none;
+  }
+  .nav-links li {
+    padding: 0 25px;
   }
   
-  nav .checkbtn {
-    display: none; /* Hide the menu button initially */
+  .custom-link {
+    font-size: 15px;
+    color: #000000; /* Adjust color as needed */
+    text-decoration: none;
   }
   
-  /* Responsive styling for mobile devices */
-  @media screen and (max-width: 768px) {
-    nav ul {
-      display: block;
-      position: absolute;
-      width: 100%;
-      top: 60px; /* Adjust based on the height of your navbar */
-      left: -100%;
-      transition: all 0.5s;
-    }
+  .custom-link:hover  {
+    color: blue; /* Adjust hover color as needed */
+  }
+  .donate-button {
+    font-size: 15px;
+  }
   
-    nav input[type="checkbox"]:checked ~ ul {
-      left: 0;
-    }
+  .donate-button {
+    padding: 9px 25px;
+    background-color: rgb(67, 122, 180);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
   
-    nav .checkbtn {
-      display: block;
+  .donate-button:hover {
+    background-color: rgb(192, 212, 236);
+    color: rgb(58, 58, 58);
+  }
+  nav{
+
+  }
+
+  /* Hamburger icon styles */
+.hamburger-menu {
+    display: none; /* Hidden by default */
+  }
+  
+  /* Styles for smaller screens */
+  @media (max-width: 768px) {
+    .hamburger-menu {
+    color: black;
+      display: block; /* Show hamburger icon */
       cursor: pointer;
-      /* Additional styling */
+      /* Additional styling for the hamburger icon */
     }
   
-    nav ul li {
-      width: 100%;
-      text-align: center;
+    .nav-links {
+      display: none; /* Hide the navigation links by default */
     }
   
-    .donate-button {
-      width: 100%;
-      /* Additional button styling for mobile */
+    .nav-links.active {
+      display: flex; /* Show when active */
+      flex-direction: column;
+    }
+  
+    /* Use the checkbox to toggle the menu */
+    #nav-toggle:checked + .navbar-flex-container .nav-links {
+      display: flex;
+    }
+  }
+
+  /* Program Card Styles */
+.program-card {
+    background-color: #fff;
+    border: 2px solid #007bff; /* Blue border */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+  }
+  
+  .program-card h3 {
+    color: #333;
+    text-transform: uppercase; /* Making the title uppercase for emphasis */
+  }
+  
+  .program-card p {
+    color: #555;
+  }
+  
+  .program-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  .programs-section {
+    padding: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .program-card {
+      padding: 15px;
     }
   }
   

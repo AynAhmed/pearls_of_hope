@@ -1,33 +1,42 @@
 <!-- app/views/layouts/_navbar.html.erb -->
 <div>
-<nav>
-  <input type="checkbox" id="check">
-  <label for="check" class="checkbtn">
-    <i class="fa-solid fa-bars"></i>
-  </label>
-
-  <%= link_to root_path do %>
-    <% hero_image = fetch_image_by_title('logo') %>
-    <%= image_tag(hero_image.image_data.url, alt: 'Logo', style: 'height: 60px; width: 87px;') if hero_image %>
-  <% end %>
-
-  <ul>
-    <li><%= link_to 'Home', root_path %></li>
-    <li><%= link_to 'About', about_index_path %></li>
-    <li><%= link_to 'Programs', programs_path %></li>
-    <li><a a href="#">volunteer</a></li>
-
-    <li class="sign-in"><%= link_to 'Sign-in', new_user_session_path %></li>
-
-    <li id="cart">
-        <%= link_to carts_path do %>
-             <i class="fa-solid fa-cart-shopping icon"></i>
-        <% end %>
-    </li>
+  <nav>
 
 
-    <li><button class="donate-button">Donate</button></li>
-  </ul>
-</nav>
+    <!-- Flex Container for logo and nav-links -->
+    <div class="navbar-flex-container">
+      <!-- Logo Link -->
+      <%= link_to root_path, class: 'logo' do %>
+        <% hero_image = fetch_image_by_title('logo') %>
+        <%= image_tag(hero_image.image_data.url, alt: 'Logo', class: 'navbar-logo') if hero_image %>
+      <% end %>
 
+      <!-- Invisible checkbox used for toggling the menu -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" style="display: none;">
+
+      <!-- Hamburger Menu Icon (visible on smaller screens) -->
+      <li for="nav-toggle" class="hamburger-menu" style="display: block;">
+      TRUE
+      </li>
+
+
+      <!-- Navigation Links -->
+      <ul class="nav-links">
+        <li><%= link_to 'Home', root_path, class: 'custom-link' %></li>
+        <li><%= link_to 'About', about_index_path, class: 'custom-link' %></li>
+        <li><%= link_to 'Programs', programs_path, class: 'custom-link' %></li>
+        <li><%= link_to 'Volunteer', class: 'custom-link' %></li> <!-- Replace volunteer_path as necessary -->
+        <li id="cart">
+          <%= link_to carts_path, class: 'custom-link' do %>
+            <i class="fa-solid fa-cart-shopping icon"></i>
+          <% end %>
+        </li>
+        <li class="sign-in">
+          <%= link_to 'Sign-in', new_user_session_path, class: 'custom-link' %>
+        </li>
+        <li class="donate-button">Donate</li>
+      </ul>
+    </div>
+  </nav>
+  <hr>
 </div>
