@@ -13,16 +13,37 @@
 
 
 # db/seeds.rb
-#logo data
-logo_image_path = Rails.root.join('public', 'uploads', 'image', 'image_data', '2', 'pearl-logo-768x497.png')
 
-if File.exist?(logo_image_path)
-  Image.find_or_create_by!(title: 'logo') do |image|
-    # If you're using CarrierWave for image uploads:
-    image.image_data = File.open(logo_image_path)
+# Add this at the top of your seeds.rb file if not already present
+require 'fileutils'
 
-    # For other uploaders, adjust accordingly.
+# Function to create image records
+def create_image_record(title, file_path)
+  if File.exist?(file_path)
+    Image.find_or_create_by!(title: title) do |image|
+      image.image_data = File.open(file_path)
+    end
+  else
+    puts "Image file not found for title '#{title}' at #{file_path}"
   end
-else
-  puts "Logo image file not found at #{logo_image_path}"
 end
+
+# Logo image seed
+logo_image_path = Rails.root.join('public', 'uploads', 'image', 'image_data', '2', 'pearl-logo-768x497.png')
+create_image_record('logo', logo_image_path)
+
+# Image seeds for carousel
+carousel_images = {
+  'diamonds3_carousel1' => 'public/uploads/image/image_data/2/Diamonds3.jpg',
+  'frontiers2_carousel2' => 'public/uploads/image/image_data/2/Frontiers2.jpg',
+  'house_carousel' => 'public/uploads/image/image_data/2/house.jpg',
+  'pearls_carousel' => 'public/uploads/image/image_data/2/Pearls-1536x1152.jpg'
+}
+
+carousel_images.each do |title, path|
+  image_path = Rails.root.join(path)
+  create_image_record(title, image_path)
+end
+
+
+
