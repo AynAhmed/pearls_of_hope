@@ -1,0 +1,35 @@
+.footer {
+    background-color: rgb(34, 34, 34);/* Dark background for contrast */
+    color: #ffffff; /* White text color */
+    padding: 20px;
+    text-align: center;
+  }
+
+  .footer-content {
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .footer h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  .footer address {
+    font-style: normal; /* To keep the address in normal font style */
+    line-height: 1.5; /* Spacing between lines */
+  }
+
+  .footer a {
+    color: whitesmoke; /* Gold color for links for visibility and design */
+    text-decoration: none; /* Removes underline from links */
+  }
+
+  .footer a:hover {
+    text-decoration: underline; /* Adds underline on hover for better UX */
+  }
+
+  .copy-right {
+    margin-top: 20px;
+    font-size: 0.9em;
+  }
