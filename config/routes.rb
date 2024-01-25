@@ -36,6 +36,6 @@ Rails.application.routes.draw do
 
   resources :about, only: [:index]
   
-  resources :carts
+ 
 
 end
