@@ -22,15 +22,8 @@ body {
     background-color: #3498db;
     color: #fff
   }
-  
-  
-  
-  
-  
 
-    background-color: #f9f9f9;
-  }
-  
+
   header {
     background-color: #007bff;
     color: white;
@@ -78,7 +71,7 @@ body {
       margin-bottom: 10px;
     }
   }
-  
+
   /* Styles for Program Cards */
 .program-card {
     background-color: #ffffff;
@@ -88,7 +81,7 @@ body {
     margin-bottom: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-  
+
   .program-card h3 {
     color: #333333;
     margin-top: 0;
@@ -97,7 +90,7 @@ body {
   .program-card p {
     color: #666666;
   }
-  
+
   /* Responsive adjustments for smaller screens */
   @media (max-width: 600px) {
     .program-card {
@@ -105,5 +98,4 @@ body {
     }
   }
 
-  
   
