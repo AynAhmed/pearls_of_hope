@@ -1,23 +1,24 @@
 
 /* app/assets/stylesheets/home.css */
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
 
   }
-  
-  
-  h1 {
-    color: #3498db;
+
+p, a{
+    font-family: 'Montserrat', sans-serif;
+}
+  h1, h2{
+
+    font-family: 'Open Sans', sans-serif;
   }
-  
-  .footer {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
+
+
+
   button {
     background-color: #3498db;
     color: #fff
