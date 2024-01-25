@@ -1,0 +1,87 @@
+
+.program-link {
+    margin-bottom: 10px;
+  }
+  
+
+  .program-link [title]:hover::before {
+    content: attr(title);
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    background: #333;
+    color: #fff;
+    border-radius: 3px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .program-link [title]:hover::before {
+    opacity: 1;
+  }
+
+
+ul.program-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .program-item {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .program-thumbnail img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .program-details {
+    margin-left: 20px;
+  }
+
+  .program-details h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .program-details p {
+    margin: 5px 0;
+  }
+  
+  .program-link a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .program-link:hover {
+    background-color: #f0f0f0;
+  }
+  
+
+  .program-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+
+  .signup-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .signup-button:hover {
+    background-color: #45a049;
+  }
+   
+  
+  
+  

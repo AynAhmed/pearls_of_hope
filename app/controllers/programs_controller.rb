@@ -3,13 +3,14 @@ class ProgramsController < ApplicationController
   
     def index
       @programs = Program.all
+      
     end
   
     def show
     end
     def new
         @program = Program.new
-      end
+    end
     
     def create
         @program = Program.new(program_params)

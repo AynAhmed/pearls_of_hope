@@ -6,46 +6,20 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
   root "home#index"
 
-
-  # Defines the root path route ("/")
-  # root "posts#index"
-  root "home#index"
-
-
   resources :calendar, only: [:index]
   resources :carts, only: [:index]
   resources :donation, only: [:index]
 
-
   resources :volunteers, only: [:index]
   resources :calendar, only: [:index]
-  resources :cart, only: [:index]
-  resources :donation, only: [:index]
 
+  resources :profiles
 
-  resources :profile
-
-  resources :programs do
+  resources :programs, only: [:index, :show] do
     member do
-      get 'house_of_scholars'
-      get 'jewels'
-      get 'charms'
-      get 'explorers'
-      get 'pearls'
-      get 'frontiers'
-      get 'diamonds'
-      get 'climb'
-      get 'summer_camp'
     end
-
     resources :courseworks
   end
 
-
   resources :about, only: [:index]
-  
-
-  resources :about
-  resources :carts
-
 end
