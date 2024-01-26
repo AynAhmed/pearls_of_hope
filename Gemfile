@@ -20,6 +20,8 @@ gem 'sassc', '~> 2.0'
 gem 'activeadmin'
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 
+
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 
@@ -65,3 +67,14 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "stripe", "~> 10.6"
+gem "pay", "~> 7.1"
+
+gem 'dotenv-rails', groups: [:development, :test]
+
+
+
+
+
+

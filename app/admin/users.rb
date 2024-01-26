@@ -4,7 +4,7 @@ ActiveAdmin.register User do
 
   actions :index, :show, :update, :edit, :destroy
 
-  permit_params :first_name, :last_name, :username, :phone_number, :email, :role_id
+  permit_params :first_name, :last_name, :phone_number, :email, :role_id
 
 
   index do
