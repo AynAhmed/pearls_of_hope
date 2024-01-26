@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
-  }
+  
+}
   
   .container {
     max-width: 800px;
@@ -11,7 +13,11 @@ body {
     padding: 20px;
   }
 
-  
+.programsTitle{
+    font-family: 'Lobster', sans-serif;
+
+  }
+
   p {
     font-size: 16px;
     line-height: 1.5;
@@ -31,11 +37,7 @@ body {
     margin-bottom: 8px;
   }
   
-  a {
-    color: #3498db;
-    text-decoration: none;
-  }
-  
+
   a:hover {
     text-decoration: underline;
   }
@@ -57,3 +59,32 @@ body {
     background-color: #2980b9;
   }
   
+  /* Styles for Program Cards */
+.program-card {
+  background-color: #e0eef3;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.program-card h3 {
+  color: #2980b9;
+  margin-top: 0;
+}
+
+.program-card p {
+  color: #535353;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  .program-card {
+    padding: 15px;
+  }
+}
+
+
