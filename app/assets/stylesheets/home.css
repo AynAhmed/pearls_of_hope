@@ -2,19 +2,20 @@
 /* app/assets/stylesheets/home.css */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
 
   }
 
 p, a{
-    font-family: 'Montserrat', sans-serif;
+
 }
   h1, h2{
 
-    font-family: 'Open Sans', sans-serif;
+
+    text-align: center;
   }
 
 
@@ -72,31 +73,3 @@ p, a{
       margin-bottom: 10px;
     }
   }
-
-  /* Styles for Program Cards */
-.program-card {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  .program-card h3 {
-    color: #333333;
-    margin-top: 0;
-  }
-  
-  .program-card p {
-    color: #666666;
-  }
-
-  /* Responsive adjustments for smaller screens */
-  @media (max-width: 600px) {
-    .program-card {
-      padding: 15px;
-    }
-  }
-
-  

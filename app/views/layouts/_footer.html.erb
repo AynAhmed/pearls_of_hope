@@ -7,14 +7,28 @@
    
     </div>
     
-  <div class="footer-content">
+    <div class="footer-content">
     <h2>Pearls of Hope Community Center</h2>
+  
     <address>
-      6565 Oakley Drive<br>
-      Fridley, Minnesota 55432
+      <%= fetch_text_content_body_by_title("Address").gsub(', ', '<br>').html_safe if fetch_text_content_body_by_title("Address").present? %>
     </address>
-    <p>Phone: <a href="tel:+19526887554">952-688-7554</a></p>
-    <p>Email: <a href="mailto:pearlsofhopecenter@gmail.com">pearlsofhopecenter@gmail.com</a></p>
+  
+    <p>
+      Phone: 
+      <a href="tel:+1<%= fetch_text_content_body_by_title("Phone") %>">
+        <%= fetch_text_content_body_by_title("Phone") %>
+      </a>
+    </p>
+  
+    <p>
+      Email: 
+      <a href="mailto:<%= fetch_text_content_body_by_title("Email") %>">
+        <%= fetch_text_content_body_by_title("Email") %>
+      </a>
+    </p>
+  
   </div>
   <p class="copy-right">Copyright &copy; <%= Time.now.year %> Pearls of Hope</p>
-</footer>
+  </footer>
+  
