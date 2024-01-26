@@ -27,6 +27,10 @@ ActiveAdmin.register Program do
   end
 
   filter :name
+  filter :description
+  filter :age_group
+  filter :fee
+  filter :date
   filter :program_type
   # Add other filters as needed
 

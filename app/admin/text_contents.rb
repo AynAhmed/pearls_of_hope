@@ -5,7 +5,14 @@ ActiveAdmin.register TextContent do
       selectable_column
       id_column
       column :title
-      column :body
+      column "Body" do |text_content|
+        # Shorten the description to 50 characters and add ellipsis
+        shortened_body = text_content.body.truncate(50, separator: ' ', omission: '...')
+  
+        # Create a span with a title attribute for tooltip
+        span shortened_body, title: text_content.body
+      end
+
       column :created_at
       actions
     end

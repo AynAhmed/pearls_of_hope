@@ -28,7 +28,7 @@ def create_image_record(title, file_path)
   end
 end
 
-# Logo image seed
+# Create: Logo image seed
 logo_image_path = Rails.root.join('public', 'uploads', 'image', 'image_data', '2', 'pearl-logo-768x497.png')
 create_image_record('logo', logo_image_path)
 
@@ -46,9 +46,9 @@ carousel_images.each do |title, path|
   create_image_record(title, image_path)
 end
 
-Program.create(name: "Test Program", description: "Test description", age_group: "Test age group", program_type: "Test type", date: "2022-01-01", fee: true)
 
-#  programs starting data 
+
+#  Create: programs starting data 
 Program.find_or_create_by(name: "Al-Mustaqbal Academy") do |program|
   program.description = "The House of Scholars program is our academic program dedicated to nurturing spiritual growth and developing God consciousness. We provide instruction in: Islamic studies, Quran/Noorania, Hadith and Islamic studies. We also offer fun activities and both in-house and off campus field trips. The House Scholars program is open to both boys and girls ages 5-12 and is held on Saturdays from 10:00 am – 2:30 pm."
   program.age_group = "ages 5-12"
@@ -107,3 +107,35 @@ Program.find_or_create_by(name: "Diamonds") do |program|
   program.date = "2022-01-01"
   program.fee = true
 end
+
+# TextContent data - Create: HOME PAGE -ABOUT US - PARAGRAPH
+about_us_para_data = [
+  {
+    title: "About Us Paragraph",
+    body: "Pearls of Hope Community Center is a year round youth center dedicated to helping young girls and boys become responsible and contributing members of society by providing religious education, improving academic skills, offering opportunities to learn practical life skills, and encouraging our youth to look beyond themselves to make a difference in their communities."
+  }
+  # Add more entries here if needed
+]
+
+about_us_para_data.each do |content|
+  TextContent.find_or_create_by(title: content[:title]) do |text_content|
+    text_content.body = content[:body]
+  end
+end
+
+# TextContent data - Create: Footer - Business Contact info data
+
+# Seed data with find_or_create_by to avoid duplication
+TextContent.find_or_create_by(title: "Address") do |content|
+  content.body = "6565 Oakley Drive, Fridley, Minnesota 55432"
+end
+
+TextContent.find_or_create_by(title: "Phone") do |content|
+  content.body = "952-688-7554"
+end
+
+TextContent.find_or_create_by(title: "Email") do |content|
+  content.body = "pearlsofhopecenter@gmail.com"
+end
+
+
