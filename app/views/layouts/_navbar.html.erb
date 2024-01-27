@@ -31,7 +31,9 @@
         <% end %>
     </li>
         <li class="sign-in">
-          <%= link_to 'Sign-in', new_user_session_path, class: 'custom-link' %>
+        <%= user_signed_in? ? 
+    link_to('Sign Out', destroy_user_session_path, method: :delete, data: { turbo_method: :delete }, class: 'some-css-class') : 
+    link_to('Sign In', new_user_session_path, class: 'some-css-class') %>
         </li>
         <li class="donate-button">Donate</li>
       </ul>
