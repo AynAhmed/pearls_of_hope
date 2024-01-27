@@ -1,4 +1,5 @@
 ActiveAdmin.register Image do
+    menu parent: 'Website Content'
     permit_params :title, :image_data
   
     index do
