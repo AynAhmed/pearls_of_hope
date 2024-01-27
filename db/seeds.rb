@@ -46,51 +46,6 @@ carousel_images.each do |title, path|
   create_image_record(title, image_path)
 end
 
-Program.create(name: "Test Program", description: "Test description", age_group: "Test age group", program_type: "Test type", date: "2022-01-01", fee: true)
-
-#  programs starting data 
-Program.find_or_create_by(name: "Al-Mustaqbal Academy") do |program|
-  program.description = "The House of Scholars program is our academic program dedicated to nurturing spiritual growth and developing God consciousness. We provide instruction in: Islamic studies, Quran/Noorania, Hadith and Islamic studies. We also offer fun activities and both in-house and off campus field trips. The House Scholars program is open to both boys and girls ages 5-12 and is held on Saturdays from 10:00 am – 2:30 pm."
-  program.age_group = "ages 5-12"
-  program.program_type = "Academic"
-  program.date = "2022-01-01"
-  program.fee = true
-end
-
-Program.find_or_create_by(name: "Jewels") do |program|
-  program.description = "The Jewels is our mentoring program for girls In Kindergarten-2nd grade. This program is designed to plant the seeds of love for Islam, our Prophet PBUH and the Sahaba. The classes are set up in a way to keep the youngsters engaged and entertained. Each class starts with circle time covering the theme topics, a short story followed by games and arts crafts activities. The class also goes on excursions that match the theme as well as field trips."
-  program.age_group = "2nd grade"
-  program.program_type = "Mentoring"
-  program.date = "2022-01-01"
-  program.fee = true
-end
-
-Program.find_or_create_by(name: "Charms") do |program|
-  program.description = "Charms is our mentoring program for girls in 3rd-5th grade. The Charms annual theme varies and covers everything from the 99 names of Allah, Heroes and Sheroes in Islam and more. The Charms also have leaders from the community visit our class to inspire our girls. It is during this age group that volunteering and giving back are introduced and exemplified through various challenges and acts of service. The girls are also treated to socials with their Fathers and Father figures at Donuts with Dad and an opportunity to serve their mothers at the annual Tea Time. The girls also attend various field trips throughout the year."
-  program.age_group = "3rd-5th grade"
-  program.program_type = "Mentoring"
-  program.date = "2022-01-01"
-  program.fee = true
-end
-
-
-Program.find_or_create_by(name: "Explorers") do |program|
-  program.description = "The Explorers is our mentoring program for boys in 3rd-5th grade. This program mirrors the Charms program in that it also has an annual theme that varies and covers everything from the 99 names of Allah, Heroes and Sheroes in Islam and more. The Explorers also have leaders from the community visit our class to inspire our boys. The Explorers also collaborate with the Charms in acts of service including our annual Sandwich project and Dental kits drive. The boys are also given opportunities to cater to their mothers during the annual Muffins with Mom. They also participate in our annual March Madness where they have a basketball tournament between fathers and sons one week then attend a Timberwolves game the next."
-  program.age_group = "3rd-5th grade"
-  program.program_type = "Mentoring"
-  program.date = "2022-01-01"
-  program.fee = true
-end
-
-Program.find_or_create_by(name: "Pearls") do |program|
-  program.description = "The Pearls was designed for girls going through what is arguably the most challenging part of growing up: 6th-8th grade aka Middle School. Still growing into their own ever-changing body while desperately trying to figure out just who they are; it’s both a scary and confusing time. We’ve designed this program to be a weekly refuge from it all. Every week, we start off with a weekly recap where we encourage the girls to share things that happened to them during the week, both happy and sad. The other girls then congratulate, condole, or advise based on their own experiences. Next we have an interactive halaqa involving our annual theme. After a quick social snack break we wrap up with a fun engaging activity. This is also the year girls get to participate in the anticipated Pearls Ball. The Pearls ball is our alternative to the prom. An elegant evening for the girls to dress up and enjoy an evening of food, fun and festivities!"
-  program.age_group = "6th-8th grade"
-  program.program_type = "Mentoring"
-  program.date = "2022-01-01"
-  program.fee = true
-end
-
-
 
 #  Create: programs starting data 
 Program.find_or_create_by(name: "Al-Mustaqbal Academy") do |program|
@@ -186,3 +141,16 @@ end
 
 
 
+# SocialMediaEmbed data - Create: social media embeded posts - post data
+
+SocialMediaEmbed.find_or_create_by(title: "SocMedia#1") do |embed|
+  embed.embed_code = '<iframe width="560" height="315" src="https://www.youtube.com/embed/jZbkM2L3rHA?si=USJvzb2i7uCY9_fj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+end
+
+SocialMediaEmbed.find_or_create_by(title: "SocMedia#2") do |embed|
+  embed.embed_code = '<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Czt8xNbR6J1/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">...</blockquote><script async src="//www.instagram.com/embed.js"></script>'
+end
+
+SocialMediaEmbed.find_or_create_by(title: "SocMedia#3") do |embed|
+  embed.embed_code = '<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FPearlsofHopeMN%2Fposts%2Fpfbid02VFYsyWweWyt4wUN9dif1YVinbvT3V6a83fx2Bfm8UZE3ANFrX7XtX9h4HyXahRZsl&show_text=false&width=500" width="500" height="498" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>'
+end

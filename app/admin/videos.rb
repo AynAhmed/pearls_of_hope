@@ -1,4 +1,5 @@
 ActiveAdmin.register Video do
+    menu parent: 'Website Content'
     permit_params :title, :description, :url
 
     index do
