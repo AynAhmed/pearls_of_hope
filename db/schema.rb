@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_25_210010) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_27_053103) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -209,6 +209,13 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_25_210010) do
     t.string "age_group"
     t.string "date"
     t.boolean "fee"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "social_media_embeds", force: :cascade do |t|
+    t.string "title"
+    t.text "embed_code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
