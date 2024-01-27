@@ -1,4 +1,5 @@
 ActiveAdmin.register SocialMediaEmbed do
+    menu parent: 'Website Content'
     permit_params :title, :embed_code
   
     index do
