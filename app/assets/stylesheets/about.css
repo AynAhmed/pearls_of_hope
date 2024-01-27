@@ -1,5 +1,49 @@
 img {
-        width: 200px;
-        height: 200px;
+        width: 450px;
+        height: auto;
         align-content: center;
+} 
+
+.parent {
+    height:300px;
 }
+#our-mission {
+    background-color: #0E5F86;
+    color: white;
+    width: 50%;
+    height: 250px;
+    float: left;
+}
+
+#our-vision {
+    background-color: #88C1CC;
+    color: white;
+    width: 50%;
+    height: 250px;
+    float: right;
+}
+
+#what-we-do h2 {
+     color: #816685;
+     font-family: cursive;
+     font-size: 40px; 
+}
+
+#our-mission h2 {
+    color: #88C1CC;
+    font-family: cursive;
+    font-size: 40px; 
+}
+
+#our-vision h2 {
+    color: #613894;
+    font-family: cursive;
+    font-size: 40px; 
+}
+
+#our-story h2 {
+    color: #88C1CC;
+    font-family: cursive; 
+    font-size: 40px;
+}
+

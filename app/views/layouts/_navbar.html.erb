@@ -24,7 +24,12 @@
         <li><%= link_to 'Home', root_path, class: 'custom-link' %></li>
         <li><%= link_to 'About', about_index_path, class: 'custom-link' %></li>
         <li><%= link_to 'Programs', programs_path, class: 'custom-link' %></li>
-        <li><%= link_to 'Volunteer', class: 'custom-link' %></li> <!-- Replace volunteer_path as necessary -->
+        <li><%= link_to 'Volunteer', 'https://forms.gle/ytC8a6rpb8mPiR5bA', class: 'custom-link' %></li>
+    <li id="cart">
+        <%= link_to carts_path do %>
+             <i class="fa-solid fa-cart-shopping icon"></i>
+        <% end %>
+    </li>
         <li class="sign-in">
           <%= link_to 'Sign-in', new_user_session_path, class: 'custom-link' %>
         </li>
