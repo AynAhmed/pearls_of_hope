@@ -17,6 +17,9 @@ Rails.application.routes.draw do
   get 'checkout/success', to: 'checkouts#success'
   get 'billing', to: 'billing#show'
 
+  
+  resources :products, only: [:index]
+
   resources :profiles
 
   resources :programs do
