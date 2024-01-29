@@ -1,0 +1,22 @@
+<%# app/views/dashboards/_instructor_dashboard.html.erb %>
+
+<h2>Instructor's Dashboard</h2>
+<!-- Display programs and students -->
+<ul>
+  <% programs.each do |program| %>
+    <li><%= program.name %></li>
+  <% end %>
+</ul>
+
+<!-- Display students -->
+<ul>
+  <% students.each do |student| %>
+    <li><%= student.first_name %> <%= student.last_name %></li>
+  <% end %>
+</ul>
+
+<!-- Display instructor's personal information -->
+<h3>My Information</h3>
+<p>Name: <%= user.first_name %> <%= user.last_name %></p>
+<p>Email: <%= user.email %></p>
+<p>Phone: <%= user.phone_number %></p>

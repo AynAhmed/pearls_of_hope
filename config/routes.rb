@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'dashboards/index'
   get 'carts/index'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -6,21 +7,29 @@ Rails.application.routes.draw do
 
   get "up" => "rails/health#show", as: :rails_health_check
   root "home#index"
-
+  
 
   resources :calendar, only: [:index]
   resources :carts, only: [:index]
   resources :donation, only: [:index]
   resources :volunteers, only: [:index]
- 
+  resources :profiles
+
+  get 'dashboard',to: 'dashboards#index'
+  
+
   get 'checkout',to: 'checkouts#show'
   get 'checkout/success', to: 'checkouts#success'
   get 'billing', to: 'billing#show'
+
+
+
 
   
   resources :products, only: [:index]
 
   resources :profiles
+
 
   resources :programs do
     member do

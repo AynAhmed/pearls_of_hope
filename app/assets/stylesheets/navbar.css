@@ -167,10 +167,13 @@ header {
     padding: 20px;
   }
   
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .program-card {
-      padding: 15px;
-    }
-  }
   
+   .profileAvatar img{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px
+  }
+  .nav-links li, .donate-button {
+  list-style-type: none;
+ 
+}
