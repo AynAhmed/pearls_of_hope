@@ -11,16 +11,18 @@ img {
     background-color: #0E5F86;
     color: white;
     width: 50%;
-    height: 250px;
+    height: 255px;
     float: left;
+    text-align: center;
 }
 
 #our-vision {
     background-color: #88C1CC;
     color: white;
     width: 50%;
-    height: 250px;
+    height: 255px;
     float: right;
+    text-align: center;
 }
 
 #what-we-do h2 {

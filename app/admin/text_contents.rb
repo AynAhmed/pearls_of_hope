@@ -1,4 +1,5 @@
 ActiveAdmin.register TextContent do
+    menu parent: 'Website Content'
     permit_params :title, :body
 
     index do
