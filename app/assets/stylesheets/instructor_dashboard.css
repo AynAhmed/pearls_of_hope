@@ -1,0 +1,111 @@
+/* Instructor Dashboard Styles */
+.instructor-dashboard {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #ffffff;
+  }
+
+  .instructor-dashboard h2, .instructor-dashboard h3 {
+    color: #333;
+    border-bottom: 1px solid #4a4747;
+    padding-bottom: 10px;
+  }
+
+  .programs-list, .students-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .programs-list li, .students-list li {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  .dashboard-section {
+    margin-bottom: 30px;
+  }
+
+  .personal-info {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  .instructor-dashboard {
+    display: flex;
+  }
+
+  .sidebar {
+    width: 200px; /* Adjust width as needed */
+    background-color: #0f1b20; /* Sidebar background color */
+    padding: 20px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px
+
+  }
+
+  .sidebar-link {
+    display: block;
+    padding: 10px 0;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .sidebar-link:hover {
+    background-color: #ddd;
+  }
+  
+  .main-content {
+    flex-grow: 1; /* Takes the remaining width */
+    padding: 20px;
+  }
+ 
+  .programs, .students, .personal-info {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  div .main-content{
+    background-color: #715a7f;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+ 
+  }
+  
+  .sidebar li {
+    background-color: #fff; /* White background for sidebar list items */
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .programs ul li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .programs ul li:hover {
+    background-color: #e9e9e9;
+    border-color: #ccc;
+  }
+
+  .programs ul li {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  div .welcomeInstructor{
+    color:white; 
+  }

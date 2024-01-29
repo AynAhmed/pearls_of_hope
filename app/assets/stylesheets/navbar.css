@@ -7,7 +7,7 @@ body, nav, ul {
 
 li, a {
     font-size: 14px;
-    color: rgb(255, 255, 255);
+    color: rgb(47, 45, 45);
     text-decoration: none;
 }
 
@@ -43,7 +43,6 @@ header {
     color: rgb(67, 122, 180);
 }
 
-
 .donate-button{
     background-color: white;
     color: #000000;
@@ -62,39 +61,39 @@ header {
     align-items: center; /* Aligns items vertically in the center */
     justify-content: space-between; /* Spreads the logo and nav links */
   }
-  
+
   .navbar-logo {
     height: auto; /* Adjust height as needed */
     width:100px; /* Maintains aspect ratio of the logo */
   }
-  
+
   .nav-links {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
-   
-  }
+
+}
   a{
     text-decoration: none;
-  }
+}
   .nav-links li {
     padding: 0 25px;
-  }
-  
+}
+
   .custom-link {
     font-size: 15px;
     color: #000000; /* Adjust color as needed */
     text-decoration: none;
-  }
-  
+}
+
   .custom-link:hover  {
     color: blue; /* Adjust hover color as needed */
-  }
+}
   .donate-button {
     font-size: 15px;
-  }
-  
+}
+
   .donate-button {
     padding: 9px 25px;
     background-color: rgb(67, 122, 180);
@@ -117,7 +116,7 @@ header {
   /* Styles for smaller screens */
   @media (max-width: 768px) {
     .hamburger-menu {
-    color: black;
+    color: rgb(255, 255, 255);
       display: block; /* Show hamburger icon */
       cursor: pointer;
       /* Additional styling for the hamburger icon */
@@ -165,12 +164,16 @@ header {
   
   .programs-section {
     padding: 20px;
+    
   }
   
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .program-card {
-      padding: 15px;
-    }
-  }
   
+   .profileAvatar img{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px
+  }
+  .nav-links li, .donate-button {
+  list-style-type: none;
+ 
+}

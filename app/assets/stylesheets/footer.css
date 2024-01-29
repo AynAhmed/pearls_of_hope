@@ -34,9 +34,16 @@
     margin-top: 20px;
     font-size: 0.9em;
   }
+
   .social-icon {
     font-size: 45px; /* Adjust the size as needed */
 }
 
  
+
+
+
+  a {
+    color:white
+  }
 

@@ -1,5 +1,6 @@
 <!-- app/views/layouts/_footer.html.erb -->
 <footer class="footer">
+
 <div>
     <a href="https://www.instagram.com/pearlsofhopemn/?hl=en"><i class="fab fa-instagram social-icon"></i></a>
     <a href="https://www.facebook.com/PearlsofHopeMN/"><i class="fab fa-facebook social-icon"></i></a>
@@ -9,28 +10,29 @@
 <br>
 <br>
     
+
     <div class="footer-content">
     <h2>Pearls of Hope Community Center</h2>
-  
+
     <address>
       <%= fetch_text_content_body_by_title("Address").gsub(', ', '<br>').html_safe if fetch_text_content_body_by_title("Address").present? %>
     </address>
-  
+
     <p>
-      Phone: 
+      Phone:
       <a href="tel:+1<%= fetch_text_content_body_by_title("Phone") %>">
         <%= fetch_text_content_body_by_title("Phone") %>
       </a>
     </p>
-  
+
     <p>
-      Email: 
+      Email:
       <a href="mailto:<%= fetch_text_content_body_by_title("Email") %>">
         <%= fetch_text_content_body_by_title("Email") %>
       </a>
     </p>
-  
+
   </div>
   <p class="copy-right">Copyright &copy; <%= Time.now.year %> Pearls of Hope</p>
   </footer>
-  
+

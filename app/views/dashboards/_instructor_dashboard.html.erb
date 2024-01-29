@@ -1,0 +1,38 @@
+<%# app/views/dashboards/_instructor_dashboard.html.erb %>
+<div class="instructor-dashboard">
+  <!-- Sidebar Navigation -->
+  <div class="sidebar">
+
+  <div class="welcomeInstructor" >Welcome <%= user.first_name.capitalize %>!</div>
+
+  <div>
+    <%= link_to 'Students', class: 'sidebar-link' %>
+  </div>
+  <div>
+    <%= link_to 'Profile', class: 'sidebar-link' %>
+  </div>
+    <%= link_to 'Programs', class: 'sidebar-link' %>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h2>Instructor's Dashboard</h2>
+
+    <div class="programs">
+      <h3>Programs</h3>
+      <ul>
+        <% programs.each do |program| %>
+          <li><%= program.name %></li>
+        <% end %>
+      </ul>
+    </div>
+
+
+    <div class="personal-info">
+      <h3>My Information</h3>
+      <p>Name: <%= user.first_name %> <%= user.last_name %></p>
+      <p>Email: <%= user.email %></p>
+      <p>Phone: <%= user.phone_number %></p>
+    </div>
+  </div>
+</div>
