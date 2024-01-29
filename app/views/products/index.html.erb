@@ -1,0 +1,16 @@
+<h1> SELECT A PRODUCT </h1>
+
+
+<section>
+  <% @products.each do |product| %>
+    <article id="<%= product.product_name.parameterize %>" class="product-card">
+    <h3><%= product.product_name %></h3>
+    <h3>$<%= product.price %></h3>
+
+     <%= link_to "Add to Cart!", add_to_cart_path(product), class: "btn btn-primary"%>
+
+    </article>
+
+  <% end %>
+
+</section>

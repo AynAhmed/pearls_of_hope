@@ -1,14 +1,18 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+
+has_one :cart
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
           pay_customer stripe_attributes: :stripe_attributes
 
+          
 
 
-         def self.ransackable_attributes(auth_object = nil)
+        def self.ransackable_attributes(auth_object = nil)
           ["created_at", "email", "first_name", "id", "id_value", "last_name", "password", "role",  "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token", "updated_at"]
         end
     
@@ -16,7 +20,7 @@ class User < ApplicationRecord
         def full_name
           "#{first_name} #{last_name}"
         end
-      
+
         def stripe_attributes(pay_customer)
           {
             address: {
@@ -28,5 +32,9 @@ class User < ApplicationRecord
               user_id: id # or pay_customer.owner_id
             }
           }
+        end
+
+        def create_cart
+          Cart.create(user: self)
         end
 end

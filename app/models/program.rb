@@ -7,10 +7,12 @@ class Program < ApplicationRecord
     validates :fee, inclusion: { in: [true, false] }
 
     has_many :courseworks
-   
+    has_one :product
 
    def self.ransackable_attributes(auth_object = nil)
         ["age_group", "created_at", "date", "description", "id", "id_value", "name", "fee", "program_type", "updated_at"]
-      end
+    end
 
+    
 end
+

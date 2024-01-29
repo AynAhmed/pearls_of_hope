@@ -13,11 +13,19 @@ Rails.application.routes.draw do
   resources :donation, only: [:index]
   resources :volunteers, only: [:index]
  
-  get 'checkout',to: 'checkouts#show'
-  get 'checkout/success', to: 'checkouts#success'
-  get 'billing', to: 'billing#show'
+# config/routes.rb
+resources :checkout, only: [:index, :show] do
+  post :update_cart, on: :collection
+  get :show_cart, on: :collection
+end
+
+  
+  resources :products
 
   resources :profiles
+
+  get "products/add_to_cart/:id", to: "products#add_to_cart", as: "add_to_cart"
+  delete "products/remove_from_cart/:id", to: "products#remove_from_cart", as: "remove_from_cart"
 
   resources :programs do
     member do
@@ -37,7 +45,5 @@ Rails.application.routes.draw do
 
 
   resources :about, only: [:index]
-  resources :carts
  
-
 end

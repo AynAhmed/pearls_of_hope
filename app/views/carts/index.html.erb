@@ -1,2 +1,13 @@
-<h1>Carts#index</h1>
-<p>Find me in app/views/carts/index.html.erb</p>
+
+<h1>Shopping cart</h1>
+    <% @cart.each do |product| %>
+      <%= product.product_name %>
+        <%= product.price %>
+    <br>
+    <% end %>
+
+    <%= render partial: 'pay/stripe/checkout_button', locals:{session: @checkout_session, title:"CHECKOUT"}%>
+
+
+    
+
