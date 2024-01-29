@@ -1,13 +1,18 @@
-
 <h1>Shopping cart</h1>
-    <% @cart.each do |product| %>
-      <%= product.product_name %>
-        <%= product.price %>
+  <% if @cart.present? %>
+  <% @cart.each do |product| %>
+    <%= product.product_name %>
+    <%= product.price %>
     <br>
-    <% end %>
+  <% end %>
+<% else %>
+  <p>Your shopping cart is empty.</p>
+<% end %>
 
-    <%= render partial: 'pay/stripe/checkout_button', locals:{session: @checkout_session, title:"CHECKOUT"}%>
-
+<%= form_with  url: :create_checkout_session_ do |f|%>
+  <%= f.hidden_field :id, value: program.id%>
+  <%= f.submit 'Buy Me', class: 'btn btn-success'%>
+<%end%>
 
     
 

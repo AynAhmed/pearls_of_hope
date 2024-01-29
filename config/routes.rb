@@ -19,7 +19,8 @@ resources :checkout, only: [:index, :show] do
   get :show_cart, on: :collection
 end
 
-  
+  post 'create-checkout-session', to: 'programs#create_checkout_session'
+  get 'checkout/success', to: 'program#success'
   resources :products
 
   resources :profiles

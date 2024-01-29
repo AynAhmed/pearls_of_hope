@@ -33,7 +33,7 @@ has_one :cart
             }
           }
         end
-
+        
         def create_cart
           Cart.create(user: self)
         end
