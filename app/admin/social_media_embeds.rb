@@ -24,5 +24,5 @@ ActiveAdmin.register SocialMediaEmbed do
       f.actions
     end
 
-    # Add additional configurations as needed
+    
   end

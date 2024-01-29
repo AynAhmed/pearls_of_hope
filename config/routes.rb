@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get "up" => "rails/health#show", as: :rails_health_check
   root "home#index"
-  
+
 
   resources :calendar, only: [:index]
   resources :carts, only: [:index]
@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   resources :profiles
 
   get 'dashboard',to: 'dashboards#index'
-  
+
 
   get 'checkout',to: 'checkouts#show'
   get 'checkout/success', to: 'checkouts#success'
@@ -37,7 +37,7 @@ Rails.application.routes.draw do
       get 'summer_camp'
     end
 
-    resources :courseworks
+    resources :courseworks, only: [:new, :create]
   end
 
 
