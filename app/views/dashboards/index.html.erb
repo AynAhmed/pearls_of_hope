@@ -1,7 +1,5 @@
 <%# app/views/dashboards/show.html.erb %>
 
-<h1>Dashboard</h1>
-
 <% if @user.role == 'instructor' %>
   <%= render 'instructor_dashboard', programs: @programs, students: @students, user: @user %>
 <% else %>

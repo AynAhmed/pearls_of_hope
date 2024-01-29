@@ -5,5 +5,6 @@ class DashboardsController < ApplicationController
     @programs = Program.all
     @students = Student.all
     @user = current_user
+    @coursework = Coursework.new if instructor?
   end
 end
