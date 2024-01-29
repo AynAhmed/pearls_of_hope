@@ -205,7 +205,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_27_053103) do
   create_table "programs", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.string "program_type"
+    t.string "type"
     t.string "age_group"
     t.string "date"
     t.boolean "fee"
