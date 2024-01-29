@@ -13,8 +13,12 @@ Rails.application.routes.draw do
   resources :donation, only: [:index]
   resources :volunteers, only: [:index]
  
+  get 'checkout',to: 'checkouts#show'
+  get 'checkout/success', to: 'checkouts#success'
+  get 'billing', to: 'billing#show'
 
-
+  
+  resources :products, only: [:index]
 
   resources :profiles
 

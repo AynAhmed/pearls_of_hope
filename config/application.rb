@@ -9,6 +9,11 @@ Bundler.require(*Rails.groups)
 module PearlsOfHope
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+
+    config.action_mailer.default_url_options = { host: "http://localhost3000" }
+
+    Dotenv::Railtie.load
+
     config.load_defaults 7.1
 
     # Please, add to the `ignore` list any other `lib` subdirectories that do

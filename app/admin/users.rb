@@ -4,7 +4,7 @@ ActiveAdmin.register User do
 
   actions :index, :show, :update, :edit, :destroy
 
-  permit_params :first_name, :last_name, :username, :phone_number, :email, :role_id
+
 
 
   index do
@@ -17,7 +17,7 @@ ActiveAdmin.register User do
     column :role
     # Add other columns as needed
 
-    column :role_id
+    
 
     actions
   end
@@ -34,16 +34,12 @@ ActiveAdmin.register User do
 
       f.input :role, as: :select, collection: ['default', 'instructor'], include_blank: false
 
-
       # Do not include password unless you want admins to be able to reset it
-      f.input :role_id
+    
 
     end
     f.actions
   end
-
-  # Override the actions to remove the ability to create new users
-  actions :index, :show, :update, :destroy
 
   # Customizes the controller actions
   controller do
