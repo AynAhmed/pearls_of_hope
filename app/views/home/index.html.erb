@@ -1,61 +1,93 @@
 <main>
-<!-- Welcome Section -->
-<section id="welcome">
-  <h1>Welcome to Pearls</h1>
-  <p>Mentoring the Leaders of Tomorrow!</p>
-</section>
+<img src="assets/home.jpg" style="width: 1300px; height: auto;">
+ <!-- Welcome Section -->
+  <section id="welcome">
+    <h1>Welcome to Pearls</h1>
+    <p>Mentoring the Leaders of Tomorrow!</p>
+  </section>
+<!-- Slideshow Section -->
+  <section>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="assets/charms.jpg" style="width: 1400px; height: 700px;">
+      </div>
 
-<!-- About Us Section -->
-<section id="about">
-  <h2>About Us</h2>
-  <p class="textContent">
-  <%= fetch_text_content_body_by_title("About Us Paragraph") %>
-  </p>
+      <div class="mySlides fade">
+        <img src="assets/climb.jpg" style="width: 1400px; height: 700px;">
+      </div>
 
-  </p>
-  <!-- Remaining content... -->
-</section>
-<section>
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="assets/charms.jpg" style="width: 1400px; height: 700px;">
+      <div class="mySlides fade">
+        <img src="assets/frontiers.jpg" style="width: 1400px; height: 700px;">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="assets/al_mustaqbal_academy.jpg" style="width: 1400px; height: 700px;">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+<br>
+  <!-- About Us Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p class="textContent">
+      <%= fetch_text_content_body_by_title("About Us Paragraph") %>
+      Pearls of Hope Community Center is a year round youth center dedicated to helping young girls and boys become responsible and contributing members of society by providing religious education, improving academic skills, offering opportunities to learn practical life skills, and encouraging our youth to look beyond themselves to make a difference in their communities.
+    </p>
+    <!-- Remaining content... -->
+  </section>
+  <br>
+  <h1>Our Programs</h1>
+  <br>
+<div style="display: flex; align-items: center; justify-content: center;">
+  <div style="text-align: center;">
+    <p>We offer programs for kids ages 5 to 15 years old</p>
+    <a href="/programs" style="text-decoration: none; color: blue;">Learn More <span>&rarr;</span></a>
+  </div>
+  <img src="assets/programs.jpg" style="width: 300px; height: 300px; margin-left: 20px;">
 </div>
 
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="assets/climb.jpg" style="width: 1400px; height: 700px;">
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="assets/frontiers.jpg" style="width: 1400px; height: 700px;">
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="assets/al_mustaqbal_academy.jpg" style="width: 1400px; height: 700px;">
-</div>
-
-
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
 <br>
 
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-  <span class="dot" onclick="currentSlide(4)"></span>
-</div>
+<section id="newsletter-signup">
+  <div class="newsletter-box">
+    <h2>Sign Up for Our Newsletter</h2>
+    <%= form_with(url: '/subscribe', method: 'post') do |f| %>
+      <div class="form-group">
+        <div class="input-wrapper">
+          <input type="text" placeholder="First Name">
+          <input type="text" placeholder="Last Name">
+          <input type="text" placeholder="Email">
+        <%= f.submit 'Sign Up', class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+  </div>
 </section>
-</main>
 
-<!-- Social media embeded section -->
 
+
+
+
+    <!-- Facebook Embed -->
+    <div class="facebook-embed-container">
+      <div class="fb-page" data-href="https://www.facebook.com/PearlsofHopeMN/" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Social media embedded section -->
 <div class="social-media-content">
   <%= raw fetch_social_media_embed_by_title("SocMedia#1") %>
   <%= raw fetch_social_media_embed_by_title("SocMedia#2") %>
   <%= raw fetch_social_media_embed_by_title("SocMedia#3") %>
 </div>
-
