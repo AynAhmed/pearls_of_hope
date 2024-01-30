@@ -24,6 +24,13 @@ Rails.application.routes.draw do
 
 
 
+
+  
+  resources :products, only: [:index]
+
+  resources :profiles
+
+
   resources :programs do
     member do
       get 'house_of_scholars'
