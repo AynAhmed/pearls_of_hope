@@ -1,6 +1,7 @@
-$(document).ready(function() {
-    alert("testing jQuery")
-});
+//$(document).ready(function() {
+//    alert("testing jQuery")
+//});
+
 
 
 

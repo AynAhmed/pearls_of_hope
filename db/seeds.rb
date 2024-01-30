@@ -7,15 +7,14 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-# AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
-
-# db/seeds.rb
+ AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
 
 
-# db/seeds.rb
-
-# Add this at the top of your seeds.rb file if not already present
+# Add this at the top of your seeds.rb file 
 require 'fileutils'
+# db/seeds.rb
+
+
 
 # Function to create image records
 def create_image_record(title, file_path)
@@ -126,7 +125,7 @@ end
 
 # TextContent data - Create: Footer - Business Contact info data
 
-# Seed data with find_or_create_by to avoid duplication
+# using find_or_create_by in order avoid duplication
 TextContent.find_or_create_by(title: "Address") do |content|
   content.body = "6565 Oakley Drive, Fridley, Minnesota 55432"
 end

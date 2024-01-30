@@ -1,0 +1,38 @@
+<div class="card-body">
+<%= form_with(model: [@program, @coursework], url: program_courseworks_path(@program)) do |f| %>
+ 
+    <!-- Form Row -->
+    <div class="row gx-3 mb-3">
+      <!-- Form Group (first name) -->
+      <div class="col-md-6">
+        <%= f.label :name, class: "small mb-1" %>
+      <div class= "titleInputfeild">
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+      </div>
+
+      <!-- Form Group (last name) -->
+      <div class="col-md-6">
+        <%= f.label :description, class: "small mb-1" %>
+      <div class= "descriptionInputField">
+        <%= f.text_area :description, class: "form-control", placeholder: "Write something here" %>
+       </div>
+        </div>
+
+        <!-- Form Group (last name) -->
+        <div class="col-md-6">
+          <%= f.label :content, class: "small mb-1" %>
+          <%= f.text_area :content, class: "form-control", placeholder: "Write something here" %>
+          </div>
+
+          <%= f.hidden_field :program_id, value: @program.id %>
+    </div>
+
+ 
+<div class="actions">
+    <%= f.submit 'Create Coursework', class: 'btn btn-primary' %>
+  </div>
+<% end %>
+
+</div>
+</div>

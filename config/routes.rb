@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'dashboards/index'
   get 'carts/index'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -12,21 +13,26 @@ Rails.application.routes.draw do
   resources :carts, only: [:index]
   resources :donation, only: [:index]
   resources :volunteers, only: [:index]
- 
-# config/routes.rb
-resources :checkout, only: [:index, :show] do
-  post :update_cart, on: :collection
-  get :show_cart, on: :collection
-end
+  resources :profiles
 
-  post 'create-checkout-session', to: 'programs#create_checkout_session'
-  get 'checkout/success', to: 'program#success'
-  resources :products
+  get 'dashboard',to: 'dashboards#index'
+
+
+  get 'checkout',to: 'checkouts#show'
+  get 'checkout/success', to: 'checkouts#success'
+  get 'billing', to: 'billing#show'
+
+
+
+
+  
+  resources :products, only: [:index]
 
   resources :profiles
 
   get "products/add_to_cart/:id", to: "products#add_to_cart", as: "add_to_cart"
   delete "products/remove_from_cart/:id", to: "products#remove_from_cart", as: "remove_from_cart"
+
 
   resources :programs do
     member do
@@ -41,7 +47,7 @@ end
       get 'summer_camp'
     end
 
-    resources :courseworks
+    resources :courseworks, only: [:new, :create]
   end
 
 

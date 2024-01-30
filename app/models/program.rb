@@ -1,4 +1,6 @@
 class Program < ApplicationRecord
+    has_many :courseworks
+
     validates :name, presence: true
     validates :description, presence: true
     validates :program_type, presence: true
