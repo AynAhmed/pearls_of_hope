@@ -1,7 +1,7 @@
 <!-- app/views/layouts/_navbar.html.erb -->
+<!-- app/views/layouts/_navbar.html.erb -->
 <div>
   <nav>
-
     <!-- Flex Container for logo and nav-links -->
     <div class="navbar-flex-container">
       <!-- Logo Link -->
@@ -9,54 +9,67 @@
         <% hero_image = fetch_image_by_title('logo') %>
         <%= image_tag(hero_image.image_data.url, alt: 'Logo', class: 'navbar-logo') if hero_image %>
       <% end %>
-
       <!-- Invisible checkbox used for toggling the menu -->
       <input type="checkbox" id="nav-toggle" class="nav-toggle" style="display: none;">
-
       <!-- Hamburger Menu Icon (visible on smaller screens) -->
-      <li for="nav-toggle" class="hamburger-menu" style="display: block;">
-      TRUE
-      </li>
-
-
+      <label for="nav-toggle" class="hamburger-menu" style="display: block;">
+        <div class="hamburger-icon"></div>
+      </label>
       <!-- Navigation Links -->
-  
-  <% if instructor? %>
-      <ul class="nav-links">
-      <li><%= link_to 'About', about_index_path, class: 'custom-link' %></li>
-      <li><%= link_to 'Dashboard', dashboard_path, class: 'custom-link' %></li>
-       
-        <li>
-          <%= link_to profiles_path, class: "profileAvatar", style: "width: 30px; height: 30px; border-radius: 15px;" do %>
-            <%= image_tag("profile_avatar", alt: "profile") %>
-          <% end %>
+      <% if instructor? %>
+        <!-- Navigation options for instructors -->
+        <ul class="nav-links">
+          <li><%= link_to 'About', about_index_path, class: 'custom-link' %></li>
+          <li><%= link_to 'Dashboard', dashboard_path, class: 'custom-link' %></li>
+          <li>
+            <%= link_to profiles_path, class: 'profileAvatar', style: 'width: 30px; height: 30px; border-radius: 15px;' do %>
+              <%= image_tag('profile_avatar', alt: 'profile') %>
+            <% end %>
+          </li>
+          <li class="sign-in">
+            <%= user_signed_in? ?
+              link_to('Sign Out', destroy_user_session_path, method: :delete, data: { turbo_method: :delete }, class: 'some-css-class') :
+              link_to('Sign In', new_user_session_path, class: 'some-css-class') %>
+          </li>
+        </ul>
+      <% elsif user_signed_in? %>
+        <!-- Navigation options for logged-in users with role 'default' -->
+        <ul class="nav-links">
+          <li><%= link_to 'Home', root_path, class: 'custom-link' %></li>
+          <li><%= link_to 'My Programs', programs_path, class: 'custom-link' %></li>
+          <li><%= link_to 'Volunteer', 'https://forms.gle/ytC8a6rpb8mPiR5bA', class: 'custom-link' %></li>
+          <li id="cart">
+            <%= link_to carts_path do %>
+              <i class="fa-solid fa-cart-shopping icon"></i>
+            <% end %>
+          </li>
+          <li class="sign-in">
+            <%= user_signed_in? ?
+              link_to('Sign Out', destroy_user_session_path, method: :delete, data: { turbo_method: :delete }, class: 'some-css-class') :
+              link_to('Sign In', new_user_session_path, class: 'some-css-class') %>
+          </li>
+          <li class="donate-button">Donate</li>
+        </ul>
+      <% else %>
+        <!-- Navigation for users who are not logged in -->
+        <ul class="nav-links">
+          <li><%= link_to 'Home', root_path, class: 'custom-link' %></li>
+          <li><%= link_to 'About', about_index_path, class: 'custom-link' %></li>
+          <li><%= link_to 'Programs', programs_path, class: 'custom-link' %></li>
+          <li><%= link_to 'Volunteer', 'https://forms.gle/ytC8a6rpb8mPiR5bA', class: 'custom-link' %></li>
+          <li id="cart">
+            <%= link_to carts_path do %>
+              <i class="fa-solid fa-cart-shopping icon"></i>
+            <% end %>
+          </li>
+          <li class="sign-in">
+          <%= user_signed_in? ?
+            link_to('Sign Out', destroy_user_session_path, method: :delete, data: { turbo_method: :delete }, class: 'some-css-class') :
+            link_to('Sign In', new_user_session_path, class: 'some-css-class') %>
         </li>
-        <li class="sign-in">
-        <%= user_signed_in? ?
-    link_to('Sign Out', destroy_user_session_path, method: :delete, data: { turbo_method: :delete }, class: 'some-css-class') : 
-    link_to('Sign In', new_user_session_path, class: 'some-css-class') %>
-        </li>
-
-    <% else %>
-    <li><%= link_to 'Home', root_path, class: 'custom-link' %></li>
-    <li><%= link_to 'About', about_index_path, class: 'custom-link' %></li>
-    <li><%= link_to 'Programs', programs_path, class: 'custom-link' %></li>
-    <li><%= link_to 'Volunteer', 'https://forms.gle/ytC8a6rpb8mPiR5bA', class: 'custom-link' %></li>
-    <li id="cart">
-        <%= link_to carts_path do %>
-             <i class="fa-solid fa-cart-shopping icon"></i>
-        <% end %>
-    </li>
-    <li class="sign-in">
-        <%= user_signed_in? ?
-    link_to('Sign Out', destroy_user_session_path, method: :delete, data: { turbo_method: :delete }, class: 'some-css-class') : 
-    link_to('Sign In', new_user_session_path, class: 'some-css-class') %>
-
-        </li>
-   <li class="donate-button">Donate</li>
-       
-      </ul>
-    <% end %>
+          <li class="donate-button">Donate</li>
+        </ul>
+      <% end %>
     </div>
   </nav>
   <hr>

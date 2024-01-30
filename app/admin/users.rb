@@ -23,7 +23,10 @@ ActiveAdmin.register User do
   end
 
  
+  filter :first_name
+  filter :last_name
   filter :email
+  filter :role
 
   form do |f|
     f.inputs do
