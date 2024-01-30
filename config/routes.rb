@@ -22,6 +22,8 @@ Rails.application.routes.draw do
   get 'checkout/success', to: 'checkouts#success'
   get 'billing', to: 'billing#show'
 
+  post 'create-checkout-session', to: 'programs#create_checkout_session'
+
 
 
 
