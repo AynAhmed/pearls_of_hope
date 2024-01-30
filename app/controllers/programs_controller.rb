@@ -12,14 +12,15 @@ class ProgramsController < ApplicationController
       end
     
     def create
-        @program = Program.new(program_params)
-    
-    if @program.save
+      @program = Program.new(program_params)
+
+      if @program.save
         redirect_to @program, notice: 'Program was successfully created.'
-    else
+      else
         render :new
+      end
     end
-    end
+    
     def edit
     end
   
@@ -68,3 +69,6 @@ class ProgramsController < ApplicationController
       params.require(:program).permit(:name, :description, :program_type, :age_group, :date)
     end
   end
+
+
+
