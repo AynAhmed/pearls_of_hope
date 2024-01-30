@@ -1,0 +1,11 @@
+<h1>Coursework</h1>
+<div>
+  <% @courseworks.each do |coursework| %>
+      <li>
+        <%= link_to coursework.name, program_courseworks_path(coursework.program, coursework) %>
+      </li>
+  <% end %>
+</div>
+
+<%= link_to "Create a coursework", new_program_coursework_path(@coursework) %>
+

@@ -19,13 +19,10 @@
        </div>
         </div>
 
-        <!-- Form Group (last name) -->
-        <div class="col-md-6">
-          <%= f.label :content, class: "small mb-1" %>
-          <%= f.text_area :content, class: "form-control", placeholder: "Write something here" %>
-          </div>
-
           <%= f.hidden_field :program_id, value: @program.id %>
+        <div class="col-md-6">
+            <%= f.file_field :attachments, multiple: true %>
+        </div>
     </div>
 
  
