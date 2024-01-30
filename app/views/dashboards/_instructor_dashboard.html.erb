@@ -22,7 +22,7 @@
     <ul>
       <% programs.each do |program| %>
         <li>
-          <%= program.name %>
+        <%= link_to program.name, program_path(program) %> | <%= program.courseworks.count %>
           <div class ="add-coursework-cont">
           <%= link_to "Add Coursework", new_program_coursework_path(program), class: "add-coursework-button" %>
           </div>
