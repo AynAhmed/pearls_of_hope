@@ -1,2 +1,18 @@
-<h1>Carts#index</h1>
-<p>Find me in app/views/carts/index.html.erb</p>
+<h1>Shopping cart</h1>
+  <% if @cart.present? %>
+  <% @cart.each do |product| %>
+    <%= product.product_name %>
+    <%= product.price %>
+    <br>
+  <% end %>
+<% else %>
+  <p>Your shopping cart is empty.</p>
+<% end %>
+
+<%= form_with  url: :create_checkout_session_ do |f|%>
+  <%= f.hidden_field :id, value: program.id%>
+  <%= f.submit 'Buy Me', class: 'btn btn-success'%>
+<%end%>
+
+    
+

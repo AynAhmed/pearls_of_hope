@@ -349,4 +349,10 @@ ActiveAdmin.setup do |config|
   # You can switch to using Webpacker here.
   #
   # config.use_webpacker = true
+
+
+  config.before_action do
+    Stripe.api_key = ENV["STRIPE_PRIVATE_KEY"]
+  end
+
 end

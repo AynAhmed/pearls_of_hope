@@ -1,0 +1,11 @@
+<% @programs.each do |program| %>
+  <div>
+    <%= program.name %>
+    <%= form_with url: update_cart_checkout_index_path, method: :post do |f| %>
+      <%= f.hidden_field :program_id, value: program.id %>
+      <%= f.label :quantity %>
+      <%= f.number_field :quantity, min: 1, value: 1 %>
+      <%= f.submit 'Add to Cart' %>
+    <% end %>
+  </div>
+<% end %>

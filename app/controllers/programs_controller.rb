@@ -1,5 +1,5 @@
 class ProgramsController < ApplicationController
-    before_action :set_program, only: [:show, :edit, :update, :destroy, :signup]
+    before_action :set_program, only: [:show, :edit, :update, :destroy, :signup,:create_checkout_session]
   
     def index
       @programs = Program.all
@@ -12,14 +12,15 @@ class ProgramsController < ApplicationController
       end
     
     def create
-        @program = Program.new(program_params)
-    
-    if @program.save
+      @program = Program.new(program_params)
+
+      if @program.save
         redirect_to @program, notice: 'Program was successfully created.'
-    else
+      else
         render :new
+      end
     end
-    end
+    
     def edit
     end
   
@@ -40,15 +41,34 @@ class ProgramsController < ApplicationController
         @program.destroy
         redirect_to programs_url, notice: 'Program was successfully destroyed.'
     end
+
+    def create_checkout_session
+      session = Stripe::Checkout::Session.create({
+      line_items: [
+        {
+        price: 'price_1OdLxGGFI1uaMnOfvgWU6leH',
+        quantity: 1,
+       }
+      ],
+      mode:'subscription',
+      success_url: checkout_success_url(@program),
+      cancel_url: program_url(@program)
+  
+      })
+      redirect_to session.url, allow_other_host: true, status: 303
+    end
       
   
     private
   
     def set_program
-      @program = Program.find_by(name: params[:id])
+      @program = Program.find(params[:id])
     end
   
     def program_params
       params.require(:program).permit(:name, :description, :program_type, :age_group, :date)
     end
   end
+
+
+
