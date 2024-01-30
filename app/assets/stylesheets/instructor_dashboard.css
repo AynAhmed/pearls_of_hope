@@ -92,7 +92,7 @@
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     margin-bottom: 8px;
-    padding: 10px;
+    padding: 15px;
     border-radius: 5px;
   }
 
@@ -108,4 +108,37 @@
 
   div .welcomeInstructor{
     color:white; 
+  }
+
+  /* Initially hide the button */
+.add-coursework-button {
+    display: none;
+  }
+
+  /* Apply styles when hovering over the list item */
+  li:hover .add-coursework-button {
+    display: inline-block; /* Show the button on hover */
+    border: dashed 2px  rgb(182, 182, 182);
+    border-radius: 5px;
+  }
+
+  /* Style the button as needed */
+  .add-coursework-button {
+    font-size: 14px;
+    color: darkgray; 
+    border: none; 
+    padding: 3px 10px; 
+    cursor: pointer; /* Change cursor on hover */
+    text-align: right;
+  }
+
+  /* Optional: Add additional styles for better visual appearance */
+  .add-coursework-button:hover {
+    color: rgb(111, 111, 111); /* Change background color on hover */
+    border: dashed 2px  rgb(135, 134, 134);
+
+  }
+
+  .add-coursework-cont{
+    float: right;
   }
