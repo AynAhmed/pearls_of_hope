@@ -50,6 +50,7 @@ Rails.application.routes.draw do
 
   resources :about, only: [:index]
   resources :carts
- 
+
+  resources :users, only: [:create]
 
 end
