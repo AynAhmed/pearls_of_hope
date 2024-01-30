@@ -22,6 +22,18 @@ Rails.application.routes.draw do
   get 'checkout/success', to: 'checkouts#success'
   get 'billing', to: 'billing#show'
 
+  post 'create-checkout-session', to: 'programs#create_checkout_session'
+
+
+
+
+  
+  resources :products, only: [:index]
+
+  resources :profiles
+
+  get "products/add_to_cart/:id", to: "products#add_to_cart", as: "add_to_cart"
+  delete "products/remove_from_cart/:id", to: "products#remove_from_cart", as: "remove_from_cart"
 
 
   resources :programs do
@@ -42,7 +54,5 @@ Rails.application.routes.draw do
 
 
   resources :about, only: [:index]
-  resources :carts
  
-
 end

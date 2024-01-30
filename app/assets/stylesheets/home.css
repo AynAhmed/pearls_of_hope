@@ -1,73 +1,156 @@
-
 /* app/assets/stylesheets/home.css */
+/* Font Imports */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+/* General Styles */
 body {
     margin: 0;
     padding: 0;
-
-  }
-
-
-  h1, h2{
-
-
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333; /* Dark text color */
+}
+#welcome {
     text-align: center;
+    background-color: #e0f2f1;
   }
+  
+  #welcome h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  #welcome p {
+    font-size: 20px;
+    color: #0b0606; /* Dark gray */
+  }
+ 
 
+h1, h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; /* Montserrat for headings */
+}
 
+#about {
+text-align: center;
+font-size: 32px;
+}
 
-  button {
+button {
     background-color: #3498db;
-    color: #fff
-  }
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif; /* Montserrat for buttons */
+}
 
-
-  header {
+/* Header Styles */
+header {
     background-color: #007bff;
     color: white;
     padding: 1rem 0;
     text-align: center;
-  }
-  
-  header nav ul {
+}
+
+header nav ul {
     list-style-type: none;
     padding: 0;
-  }
-  
-  header nav ul li {
+}
+
+header nav ul li {
     display: inline;
     margin: 0 15px;
-  }
-  
-  header nav ul li a {
+}
+
+header nav ul li a {
     color: white;
     text-decoration: none;
-  }
-  
-  main {
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #cce6ff; /* Lighter blue on hover */
+}
+
+/* Main and Section Styles */
+main {
     padding: 20px;
-  }
-  
-  section {
-    margin-bottom: 20px;
-  }
-  
-  footer {
+}
+
+
+section {
+    margin-bottom: 40px; /* Increased margin between sections */
+}
+
+/* Footer Styles */
+footer {
     background-color: #007bff;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 20px 0; /* Increased padding */
+}
+
+#instagram,
+#facebook {
+  background-color: #F8F8F8;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.instagram-embed-container,
+.facebook-embed-container {
+  max-width: 540px;
+  width: 100%;
+  display: inline-block; /* Ensure the embeds appear next to each other */
+  margin-right: 20px; /* Adjust spacing between embeds */
+}
+
+@media only screen and (max-width: 768px) {
+  #instagram,
+  #facebook {
+    flex-direction: column; /* Display the embeds in a column on smaller screens */
+  }
+
+  .instagram-embed-container,
+  .facebook-embed-container {
+    margin-right: 0;
+    margin-bottom: 20px; /* Adjust spacing between embeds */
+  }
+}
+
+.newsletter-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 80%; /* Adjust width as needed */
+    margin: 0 auto;
   }
   
-  @media only screen and (max-width: 600px) {
-    header nav ul li {
-      display: block;
-      text-align: center;
-      margin-bottom: 10px;
-    }
+  .input-wrapper {
+    margin-right: 10px;
   }
+  
+  .input-label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .small-input {
+    width: 80px; /* Adjust width of small inputs */
+  }
+  
+  .btn-primary {
+    margin-left: 10px;
+  }
+  
+  .form-control {
+    display: inline-block;
+    width: auto; /* Allow the inputs to take up the necessary space */
+  }
+  

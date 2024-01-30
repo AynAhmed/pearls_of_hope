@@ -1,7 +1,19 @@
 
 <h1>Profiles</h1>
-<ul>
+
+
+<div class="card">
+  <img src="img.jpg" alt="Zakaria" style="width:100%">
+  <h1>Zakaria Muse</h1>
+  <p class="title">CEO & Founder, Example</p>
+  <p>Pearls Of Hope</p>
+  <a href="#"><i class="fa fa-dribbble"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+  <a href="#"><i class="fa fa-facebook"></i></a>
+  <ul>
   <% @profiles.each do |profile| %>
-    <li><%= button_to "#{profile.first_name} #{profile.last_name}", profile_path(profile), method: :get, class: 'profile-button' %></li>
+    <li><%= button_to "Edit Profile", profile_path(profile), method: :get, class: 'profile-button' %></li>
   <% end %>
 </ul>
+</div>

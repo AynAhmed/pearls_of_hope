@@ -10,7 +10,18 @@
     <h3><%= program.name %></h3>
     <p>Age Group: <%= program.age_group %></p>
       <p><%= program.description %></p>
+
+      <%= link_to "Register Now!", products_path, class: "btn btn-primary"%>
+    <div data-turbo='false'>
+      <%= form_with  url: :create_checkout_session do |f|%>
+        <%= f.hidden_field :id, value: program.id%>
+        <%= f.submit 'Buy Me', class: 'btn btn-success'%>
+      <%end%>
+    </div>  
       <!-- You can add more program details here if needed -->
+          <%=link_to "Register Now", products_path, class: "btn btn-primary"%>
+
     </article>
   <% end %>
 </section>
+

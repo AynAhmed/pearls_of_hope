@@ -1,4 +1,5 @@
 <!-- app/views/layouts/_navbar.html.erb -->
+<!-- app/views/layouts/_navbar.html.erb -->
 <div>
   <nav>
     <!-- Flex Container for logo and nav-links -->
@@ -8,19 +9,12 @@
         <% hero_image = fetch_image_by_title('logo') %>
         <%= image_tag(hero_image.image_data.url, alt: 'Logo', class: 'navbar-logo') if hero_image %>
       <% end %>
-
       <!-- Invisible checkbox used for toggling the menu -->
       <input type="checkbox" id="nav-toggle" class="nav-toggle" style="display: none;">
-
       <!-- Hamburger Menu Icon (visible on smaller screens) -->
       <label for="nav-toggle" class="hamburger-menu" style="display: block;">
         <div class="hamburger-icon"></div>
       </label>
-
-
-
-
-
       <!-- Navigation Links -->
       <% if instructor? %>
         <!-- Navigation options for instructors -->
