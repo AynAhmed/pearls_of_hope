@@ -49,7 +49,7 @@ Rails.application.routes.draw do
       get 'summer_camp'
     end
 
-    resources :courseworks, only: [:new, :create]
+    resources :courseworks, only: [:index, :new, :create, :show]
   end
 
 

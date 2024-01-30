@@ -1,18 +1,30 @@
 class CourseworksController < ApplicationController
-  before_action :set_program, only: [:new, :create, :edit, :update, :destroy]
-  before_action :set_program, only: [:new, :create, :edit, :update, :destroy] 
+  before_action :set_program, only: [:new, :create, :show,:edit, :update, :destroy]
+  before_action :set_coursework, only: [ :create, :show, :edit, :update, :destroy] 
 
 
   def index
+    @courseworks = @program.courseworks
   end
 
 
   def new
-    @coursework = Coursework.new
+    @coursework = @program.courseworks.build
+  end
+
+  def show
+    @coursework = Coursework.find(params[:id])
   end
 
   def create
-    @coursework = current_user.courseworks.build(coursework_params) # Use 'build' instead of 'create'
+    @coursework = current_user.courseworks.build(coursework_params) 
+  # Handle file uploads
+  if params[:coursework][:attachments].present?
+    params[:coursework][:attachments].each do |attachment|
+      @coursework.attachments.attach(attachment)
+    end
+  end
+
     puts "Received params: #{params.inspect}"
 
     respond_to do |format|
@@ -51,10 +63,10 @@ class CourseworksController < ApplicationController
   end
 
   def set_coursework
-    @coursework = Coursework.find(params[:id])
+    @coursework = Coursework.find(params[:id]) if params[:id].present?
   end
 
   def coursework_params
-    params.require(:coursework).permit(:name, :description, :content, :program_id)
+    params.require(:coursework).permit(:name, :description, :program_id)
   end
 end
