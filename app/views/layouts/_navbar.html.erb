@@ -1,5 +1,4 @@
 <!-- app/views/layouts/_navbar.html.erb -->
-<!-- app/views/layouts/_navbar.html.erb -->
 <div>
   <nav>
     <!-- Flex Container for logo and nav-links -->
@@ -36,7 +35,7 @@
         <!-- Navigation options for logged-in users with role 'default' -->
         <ul class="nav-links">
           <li><%= link_to 'Home', root_path, class: 'custom-link' %></li>
-          <li><%= link_to 'My Programs', programs_path, class: 'custom-link' %></li>
+          <li><%= link_to 'Programs', programs_path, class: 'custom-link' %></li>
           <li><%= link_to 'Volunteer', 'https://forms.gle/ytC8a6rpb8mPiR5bA', class: 'custom-link' %></li>
           <li id="cart">
             <%= link_to carts_path do %>

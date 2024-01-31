@@ -1,46 +1,29 @@
 <%# app/views/dashboards/_default_dashboard.html.erb %>
-
-<h2>Default User Dashboard</h2>
-<!-- Content for default users -->
-<p>Welcome, <%= user.first_name %>!</p>
-<!-- Other content for default users -->
-
 <div class="instructor-dashboard">
   <!-- Sidebar Navigation -->
   <div class="sidebar">
-
-  <div class="welcomeInstructor" >Welcome <%= user.first_name.capitalize %>!</div>
-
+  <div class="welcomeInstructor" >Welcome, <%= user.first_name.capitalize %>!</div>
   <div>
-    <%= link_to 'My memberships', class: 'sidebar-link' %>
+    <%= link_to 'My Students', class: 'sidebar-link' %>
   </div>
   <div>
-    <%= link_to 'my student', class: 'sidebar-link' %>
+    <%= link_to 'My enrollements', class: 'sidebar-link' %>
   </div>
     <%= link_to 'profile', class: 'sidebar-link' %>
   </div>
   <!-- Main Content -->
   <div class="main-content">
-    <h2>Control Center</h2>
-
-    <div class="">
-    <h3>Programs</h3>
+    <h2>Dashboard</h2>
+    <div class="programs">
+    <h3>My programs</h3>
     <ul>
-      <% programs.each do |program| %>
+      <% @programs.each do |program| %>
         <li>
         <%= link_to program.name, program_path(program) %> | <%= program.courseworks.count %>
+          <div class ="add-coursework-cont">
+          <%= link_to "Add Coursework", new_program_coursework_path(program), class: "add-coursework-button" %>
           </div>
         </li>
       <% end %>
     </ul>
   </div>
-  
-
-    <div class="personal-info">
-      <h3>My Information</h3>
-      <p>Name: <%= user.first_name %> <%= user.last_name %></p>
-      <p>Email: <%= user.email %></p>
-      <p>Phone: <%= user.phone_number %></p>
-    </div>
-  </div>
-</div>
