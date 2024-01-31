@@ -5,8 +5,8 @@
 
 <div>
 <h2><%= @coursework.name %></h2>
-<p>Description: <%= @coursework.description %></p>
 <p>Posted ○ <%= @coursework.created_at.strftime('%B %d, %Y') %></p>
+<p>Description: <%= @coursework.description %></p>
 </div>
 
 <% @coursework.attachments.each do |attachment| %>
