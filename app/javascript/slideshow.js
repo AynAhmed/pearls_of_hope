@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+window.onload = function() {
     let slideIndex = 0;
     showSlides();
 
@@ -13,4 +13,4 @@ document.addEventListener("DOMContentLoaded", function() {
         slides[slideIndex-1].style.display = "block";
         setTimeout(showSlides, 2000); // Change image every 2 seconds
     }
-});
+};
