@@ -177,3 +177,21 @@ header {
   list-style-type: none;
  
 }
+/* sub nav styling*/
+.subNav {
+  background-color: #2f4858;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1px;
+  font-size: 14px;
+}
+
+.subNav li {
+  margin-top: 5.5px;
+  color: white;
+  margin-left: 20px;
+  margin-right: 5px;
+  list-style: none;
+  cursor: pointer;
+}
