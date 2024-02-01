@@ -1,23 +1,19 @@
 <%# app/views/dashboards/_default_dashboard.html.erb %>
-
 <div class="instructor-dashboard">
   <!-- Sidebar Navigation -->
   <div class="sidebar">
-
   <div class="welcomeInstructor" >Welcome, <%= user.first_name.capitalize %>!</div>
-
   <div>
     <%= link_to 'My Students', class: 'sidebar-link' %>
   </div>
   <div>
     <%= link_to 'My enrollements', class: 'sidebar-link' %>
   </div>
-    <%= link_to '', class: 'sidebar-link' %>
+    <%= link_to 'profile', class: 'sidebar-link' %>
   </div>
   <!-- Main Content -->
   <div class="main-content">
     <h2>Dashboard</h2>
-
     <div class="programs">
     <h3>My programs</h3>
     <ul>
@@ -31,4 +27,3 @@
       <% end %>
     </ul>
   </div>
-  

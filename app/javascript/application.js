@@ -4,4 +4,6 @@ import "controllers"
 import * as jQuery from "jquery";
 window.jQuery = jQuery
 window.$ = jQuery
-import "./test"
+
+
+import "./slideshow.js";

@@ -11,7 +11,7 @@
     <p>Age Group: <%= program.age_group %></p>
       <p><%= program.description %></p>
 
-      <%= link_to "Register Now!", products_path, class: "btn btn-primary"%>
+     
     <div data-turbo='false'>
       <%= form_with  url: :create_checkout_session do |f|%>
         <%= f.hidden_field :id, value: program.id%>
