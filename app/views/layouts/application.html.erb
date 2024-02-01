@@ -9,23 +9,19 @@
     <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
 
+  
+
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <script src="https://kit.fontawesome.com/5d37fde041.js" crossorigin="anonymous"></script>
-    <%= javascript_importmap_tags %>
-    <head>
- 
-  <%= stylesheet_link_tag 'slideshow', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'slideshow', 'data-turbolinks-track': 'reload' %>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0" nonce="FmEwZVXu"></script>
-  <script async src="//www.instagram.com/embed.js"></script>
+<%= javascript_importmap_tags %>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-
-</head>
-
 
     <script src="https://js.stripe.com/v3/"></script>
   </head>
-
   <body>
     <%= render "layouts/navbar" %>
     <%= yield %>
