@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :courseworks
+  has_many :students
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 
