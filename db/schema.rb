@@ -89,13 +89,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_30_054628) do
   create_table "courseworks", force: :cascade do |t|
     t.string "name"
     t.string "description"
+    t.string "content"
     t.bigint "program_id", null: false
-    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.jsonb "attachments"
     t.index ["program_id"], name: "index_courseworks_on_program_id"
-    t.index ["user_id"], name: "index_courseworks_on_user_id"
   end
 
   create_table "images", force: :cascade do |t|
@@ -279,7 +278,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_30_054628) do
   add_foreign_key "cart_products", "products"
   add_foreign_key "carts", "users"
   add_foreign_key "courseworks", "programs"
-  add_foreign_key "courseworks", "users"
   add_foreign_key "pay_charges", "pay_customers", column: "customer_id"
   add_foreign_key "pay_charges", "pay_subscriptions", column: "subscription_id"
   add_foreign_key "pay_payment_methods", "pay_customers", column: "customer_id"
