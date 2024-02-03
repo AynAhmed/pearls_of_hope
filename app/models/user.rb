@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-  has_many :courseworks
   has_many :students
   has_one :cart
   # Include default devise modules. Others available are:

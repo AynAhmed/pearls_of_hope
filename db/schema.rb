@@ -89,13 +89,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_03_125000) do
   create_table "courseworks", force: :cascade do |t|
     t.string "name"
     t.string "description"
+    t.string "content"
     t.bigint "program_id", null: false
-    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.jsonb "attachments"
     t.index ["program_id"], name: "index_courseworks_on_program_id"
-    t.index ["user_id"], name: "index_courseworks_on_user_id"
   end
 
   create_table "enrollments", force: :cascade do |t|
