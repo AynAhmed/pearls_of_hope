@@ -1,117 +1,55 @@
-.profile-card {
-  max-width: 400px;
-  margin: auto;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(239, 4, 4, 0.1);
+/* CSS */
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusted to display smaller grid items */
+  gap: 20px; /* Spacing between grid items */
+  justify-content: center; /* Center the grid horizontally */
+}
+
+.program-card {
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  background-color: #88C1CC;
-  text-align: center;
-  color: black;
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-
-.user-form {
-  margin-bottom: 20px;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-control {
-  width: 100%; /* Set the width to 100% */
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box; /* Ensure padding and border are included in the width */
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  text-decoration: none;
-  color: #fff;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.btn-primary {
-  background-color: #3498db;
-}
-
-.btn-secondary {
-  background-color: #e74c3c;
-}
-
-.profile-details {
-  margin-top: 20px;
-}
-
-.profile-details p {
-  margin-bottom: 10px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  text-decoration: none;
-  color: #fff;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.btn-primary {
-  background-color: #040404;
-}
-
-.btn-secondary {
-  background-color: #fcfbfb;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
+  background-color: #ffffff;
   text-align: center;
 }
 
-.title {
-  color: grey;
+.program-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+h3 {
+  color: #333333;
   font-size: 18px;
+  margin-top: 10px; /* Add some space between image and title */
 }
 
-button {
+p {
+  color: #666666;
+  margin-bottom: 10px; /* Add some space between title and description */
+}
+
+.button-container {
+  margin-top: 10px;
+}
+
+.btn {
   border: none;
-  outline: 0;
+  outline: none;
   display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
+  padding: 10px 20px;
+  color: #ffffff;
+  background-color: #007bff;
   text-align: center;
+  border-radius: 6px;
   cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-a {
-  text-decoration: none;
   font-size: 14px;
-  color: white;
+  transition: background-color 0.3s ease;
 }
 
-button:hover, a:hover {
-  opacity: 0.7;
-}
-
-.text-field {
-  margin: 30px;
-}
-
-.email {
-  margin-left: 17px;
-}
-
-.role {
-  margin-left: 17px;
+.btn:hover {
+  background-color: #0056b3;
 }
