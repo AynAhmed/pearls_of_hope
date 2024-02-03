@@ -1,4 +1,20 @@
-/* CSS */
+
+.profile-card {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(239, 4, 4, 0.1);
+  border-radius: 8px;
+  background-color: #660650;
+  text-align: center;
+  color: black;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.user-form {
+  margin-bottom: 20px;
+}
 
 .program-grid {
   display: grid;
@@ -37,6 +53,59 @@ p {
 }
 
 .btn {
+
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #040404;
+}
+
+.btn-secondary {
+  background-color: #fcfbfb;
+}
+
+.card {
+  font-family: helvetica;
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 10px 20px rgb(0, 0, 0);
+  border-radius: 8px;
+  background-color: #fbfafb;
+  text-align: center;
+  color: rgb(253, 250, 250);
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.card h1 {
+  font-family: cursive;
+  color: rgb(2, 2, 2);
+}
+
+.card h2 {
+  font-family: cursive;
+  color: rgb(2, 2, 2);
+}
+
+.profile-button {
+  color:black;
+}
+
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+
   border: none;
   outline: none;
   display: inline-block;

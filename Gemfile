@@ -18,6 +18,8 @@ gem 'sassc', '~> 2.0'
 #Active-Admin gem
 
 
+
+
 gem 'activeadmin'
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 
