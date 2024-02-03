@@ -1,3 +1,5 @@
+<h1>Create a New Student</h1>
+<div>
 <%= form_with(model: @student, local: true) do |form| %>
     <% if @student.errors.any? %>
       <div id="error_explanation">
@@ -9,7 +11,7 @@
         </ul>
       </div>
     <% end %>
-  
+    
     <div class="field">
       <%= form.label :first_name %>
       <%= form.text_field :first_name %>
@@ -26,12 +28,12 @@
     </div>
   
     <div class="field">
-      <%= form.label :program_id, "Select Program" %>
-      <%= form.collection_select :program_id, Program.all, :id, :name, prompt: "Select a Program" %>
+    <%= form.hidden_field :program_id %> <!-- Add this line -->
+
     </div>
   
     <div class="actions">
       <%= form.submit %>
     </div>
   <% end %>
-  
+  </div>

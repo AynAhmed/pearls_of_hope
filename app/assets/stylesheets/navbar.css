@@ -15,7 +15,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #FFFFFF;
+   
 }
 
 .logo {
@@ -31,7 +31,10 @@ header {
 
 .nav-links li {
     display: inline-block;
-    padding: 0px 20px;
+}
+
+a.custom-link {
+
 }
 
 .nav-links li .custom-link {
@@ -44,7 +47,6 @@ header {
 }
 
 .donate-button{
-    background-color: white;
     color: #000000;
     cursor: pointer; 
     padding: 5.6px 20px;
@@ -52,12 +54,14 @@ header {
     margin-right: 10px;
 }
 
-.donate-button:hover{
-    background-color: white;
+li.donate-button:hover{
+  color: rgb(67, 122, 180);
+ 
 }
 
 .navbar-flex-container {
     display: flex;
+    margin-top: 10px;
     align-items: center; /* Aligns items vertically in the center */
     justify-content: space-between; /* Spreads the logo and nav links */
   }
@@ -87,24 +91,19 @@ header {
     text-decoration: none;
 }
 
-  .custom-link:hover  {
-    color: blue; /* Adjust hover color as needed */
-}
+
+
   .donate-button {
     font-size: 15px;
 }
 
   .donate-button {
-    padding: 9px 25px;
-    background-color: rgb(67, 122, 180);
-    color: white;
     border: none;
     border-radius: 50px;
     cursor: pointer;
   }
   
   .donate-button:hover {
-    background-color: rgb(192, 212, 236);
     color: rgb(58, 58, 58);
   }
  
@@ -195,3 +194,37 @@ header {
   list-style: none;
   cursor: pointer;
 }
+/* Style the dropdown content */
+.profile-dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff; /* Customize the background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  min-width: 200px;
+  right: 0; /* Align the right edge of the box with the right edge of the profile image */
+}
+
+
+
+/* Style the dropdown link */
+.profile-dropdown:hover .dropdown-content {
+  border-radius: 8px;
+
+  display: block;
+/* Move the box to the left by 100% of its own width */
+
+}
+
+/* Style the links within the dropdown */
+.profile-dropdown .dropdown-content a {
+
+  padding: 8px 12px; /* Adjust padding as needed */
+  text-decoration: none;
+  color: #333; /* Customize the text color */
+  display: block;
+  
+}
+
+
+/* Add additional styling as needed */

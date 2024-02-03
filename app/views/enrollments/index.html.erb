@@ -1,0 +1,17 @@
+<p>Find me in app/views/enrollments/index.html.erb</p>
+
+<h1 class="enroll-heading">Enroll in <%= @program.name %></h1>
+
+<% if current_user.students.any? %>
+  <div>
+    <%= link_to "Add an existing student", new_enrollment_path(program_id: @program.id, existing_student: true) %>
+  </div>
+  <h4>OR</h3>
+  <div>
+    <%= link_to "Create a new student", new_student_path %>
+  </div>
+<% else %>
+  <div>
+    <%= link_to "Create a new student", new_student_path(program_id: params[:program_id]) %>
+  </div>
+<% end %>

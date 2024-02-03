@@ -8,10 +8,11 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
-    background-color: #f0f0f0; /* Light gray background */
     color: #333; /* Dark text color */
 }
+
 #welcome {
+  margin-top: 10px;
     text-align: center;
     background-color: #e0f2f1;
   }
@@ -75,10 +76,7 @@ header nav ul li a:hover {
     color: #cce6ff; /* Lighter blue on hover */
 }
 
-/* Main and Section Styles */
-main {
-    padding: 20px;
-}
+
 
 
 section {
