@@ -13,24 +13,24 @@ class StudentsController < ApplicationController
   
     def new
       @student = Student.build
-      
+
     end
 
     def create
       @student = current_user.students.build(student_params)
       @student.user = current_user 
-    
-      # Extract the program_id from the student_params or other relevant source
-      program_id = params[:student][:program_id]
-    
+
+      # Assuming you have a way to determine the program based on program_id
+
       if @student.save
-       redirect_to enrollments_new_path(student_id: @student.id)
+        redirect_to new_enrollment_path, notice: "You just create a new student!"
+          
       else
         puts @student.errors.full_messages # Add this line for debugging
         render :new
       end
     end
-    
+
 
     def edit
 

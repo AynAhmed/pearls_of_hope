@@ -4,7 +4,7 @@ class EnrollmentsController < ApplicationController
   def index
     # Fetch the program information based on the program_id passed in the URL params
     @program = Program.find(params[:program_id])
-
+    @students = current_user.students
     # Retrieve the enrollments for this program (you can customize this part based on your requirements)
     # @enrollments = Enrollment.where(program_id: @program.id)
   end
@@ -12,13 +12,13 @@ class EnrollmentsController < ApplicationController
   def show
   end
 
+
   def new
-    @student = Student.find(params[:student_id])
-    @program_id = session[:program_id] # Retrieve program ID from session
+    @students = current_user.students
+     @program_id = params[:program_id]# Retrieve program ID from session
     @enrollment = Enrollment.new
-  
+   end
     
-  end
 
   def create
     @enrollment = Enrollment.new(enrollment_params)
@@ -26,6 +26,7 @@ class EnrollmentsController < ApplicationController
     @enrollment.status = "pending"
   
     if @enrollment.save
+      redirect_to programs_path, notice: "You just enrolled a student! Congrats!"
       # Handle successful enrollment creation (e.g., display a success message)
     else
       # Handle enrollment creation errors and display error messages
@@ -45,4 +46,10 @@ class EnrollmentsController < ApplicationController
   def set_program
     @program = Program.find(params[:program_id])
   end
+
+  def enrollment_params
+    params.require(:enrollment).permit(:program_id, :student_id, :status)
+  end
+
+
 end

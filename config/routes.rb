@@ -1,13 +1,4 @@
 Rails.application.routes.draw do
-  get 'enrollments/index'
-  get 'enrollments/show'
-  get 'enrollments/new'
-  get 'enrollments/create'
-  get 'enrollments/edit'
-  get 'enrollments/update'
-  get 'enrollments/destroy'
-  get 'dashboards/index'
-  get 'carts/index'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
@@ -15,7 +6,7 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
   root "home#index"
 
-  resources :enrollments, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+  resources :enrollments
   resources :calendar, only: [:index]
   resources :carts, only: [:index]
   resources :donation, only: [:index]
