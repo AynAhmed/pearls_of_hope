@@ -27,6 +27,28 @@ body {
   margin-top: 20px;
 }
 
+
+ 
+  
+  .back-link {
+    margin-top: 20px;
+  }
+  
+  .back-link a {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  
+  .back-link a:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Styles for Program Cards */
+
 .program-card {
   background-color: #fff;
   border: 1px solid #ddd;

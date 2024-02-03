@@ -11,7 +11,10 @@
       <p><%= truncate(program.description, length: 100) %></p>
       <div class="button-container">
         <%= link_to "Learn More", program_path(program), class: "btn btn-primary" %>
-        <%= link_to "Register Now", products_path, class: "btn btn-success" %>
+      <div>
+      <%= link_to "Buy Me", enrollments_path(program_id: program.id), class: "btn btn-primary buy-program", data: { program_id: program.id } %>
+      </div>
+       <%= link_to "Add To Cart", enrollments_path(program_id: program.id), class: "btn btn-primary" %>
       </div>
     </article>
   <% end %>
