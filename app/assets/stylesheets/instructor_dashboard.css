@@ -40,9 +40,6 @@
     width: 200px; /* Adjust width as needed */
     background-color: #0f1b20; /* Sidebar background color */
     padding: 20px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px
-
   }
 
   .sidebar-link {

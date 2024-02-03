@@ -1,0 +1,23 @@
+<h1>Enrollment Confirmation</h1>
+
+<p>You are about to enroll the following student:</p>
+<ul>
+  <li>First Name: <%= @student.first_name %></li>
+  <li>Last Name: <%= @student.last_name %></li>
+  <li>Date of Birth: <%= @student.dob %></li>
+  <li>Program: <%= @program.name %></li>
+</ul>
+
+<%= form_with(model: @enrollment, url: enrollments_create_path, method: :post) do |form| %>
+  <!-- Add any additional fields you need for enrollment -->
+
+  <!-- Hidden field to store student_id -->
+  <%= form.hidden_field :student_id, value: @student.id %>
+
+  <!-- Hidden field to store program_id -->
+  <%= form.hidden_field :program_id, value: @program.id %>
+
+  <!-- Add other enrollment form fields here -->
+
+  <%= form.submit "Confirm Enrollment" %>
+<% end %>

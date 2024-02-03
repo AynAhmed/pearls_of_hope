@@ -1,17 +1,18 @@
 class User < ApplicationRecord
   has_many :courseworks
   has_many :students
+  has_one :cart
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 
-has_one :cart
+
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
           pay_customer stripe_attributes: :stripe_attributes
 
-          
+
 
 
         def self.ransackable_attributes(auth_object = nil)

@@ -1,8 +1,8 @@
 <h1>Shopping cart</h1>
-  <% if @cart.present? %>
-  <% @cart.each do |product| %>
-    <%= product.product_name %>
-    <%= product.price %>
+<% if @cart.present? %>
+  <% @cart.cart_items.each do |cart_item| %>
+    <%= cart_item.product_name %>
+    <%= cart_item.price %>
     <br>
   <% end %>
 <% else %>
@@ -10,9 +10,10 @@
 <% end %>
 
 <%= form_with  url: :create_checkout_session_ do |f|%>
+
   <%= f.hidden_field :id, value: program.id%>
   <%= f.submit 'Buy Me', class: 'btn btn-success'%>
 <%end%>
 
-    
+
 

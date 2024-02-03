@@ -61,9 +61,6 @@
   cursor: pointer;
 }
 
-.btn-primary {
-  background-color: #040404;
-}
 
 .btn-secondary {
   background-color: #fcfbfb;
@@ -97,7 +94,6 @@ button {
 a {
   text-decoration: none;
   font-size: 14px;
-  color: white;
 }
 
 button:hover, a:hover {

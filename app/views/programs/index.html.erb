@@ -1,27 +1,21 @@
 
 <!-- app/views/programs/index.html.erb -->
-<h1 class= "programsTitle">Programs</h1>
+<h1 class="programsTitle">Programs</h1>
 
 <!-- Programs Section -->
 
 <section>
   <% @programs.each do |program| %>
     <article id="<%= program.name.parameterize %>" class="program-card">
-    <h3><%= program.name %></h3>
-    <p>Age Group: <%= program.age_group %></p>
+      <h3><%= program.name %></h3>
+      <p>Age Group: <%= program.age_group %></p>
       <p><%= program.description %></p>
 
-     
-    <div data-turbo='false'>
-      <%= form_with  url: :create_checkout_session do |f|%>
-        <%= f.hidden_field :id, value: program.id%>
-        <%= f.submit 'Buy Me', class: 'btn btn-success'%>
-      <%end%>
-    </div>  
-      <!-- You can add more program details here if needed -->
-          <%=link_to "Register Now", products_path, class: "btn btn-primary"%>
+      <div>
+      <%= link_to "Buy Me", enrollments_path(program_id: program.id), class: "btn btn-primary buy-program", data: { program_id: program.id } %>
+      </div>
 
+      <%= link_to "Add To Cart", enrollments_path(program_id: program.id), class: "btn btn-primary" %>
     </article>
   <% end %>
 </section>
-

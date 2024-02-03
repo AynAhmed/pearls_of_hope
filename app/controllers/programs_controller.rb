@@ -71,6 +71,7 @@ class ProgramsController < ApplicationController
 
     def set_program
       @program = Program.find(params[:id])
+      session[:program_id] = @program.id
     rescue ActiveRecord::RecordNotFound
       # Handle the case where the program is not found
       redirect_to programs_path, alert: 'Program not found'

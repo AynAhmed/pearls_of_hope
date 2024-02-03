@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_30_054628) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_03_125000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -96,6 +96,17 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_30_054628) do
     t.jsonb "attachments"
     t.index ["program_id"], name: "index_courseworks_on_program_id"
     t.index ["user_id"], name: "index_courseworks_on_user_id"
+  end
+
+  create_table "enrollments", force: :cascade do |t|
+    t.bigint "student_id"
+    t.bigint "program_id"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["program_id"], name: "index_enrollments_on_program_id"
+    t.index ["student_id", "program_id"], name: "index_enrollments_on_student_id_and_program_id", unique: true
+    t.index ["student_id"], name: "index_enrollments_on_student_id"
   end
 
   create_table "images", force: :cascade do |t|
@@ -234,8 +245,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_30_054628) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "program_id", null: false
-    t.index ["program_id"], name: "index_students_on_program_id"
     t.index ["user_id"], name: "index_students_on_user_id"
   end
 
@@ -280,11 +289,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_30_054628) do
   add_foreign_key "carts", "users"
   add_foreign_key "courseworks", "programs"
   add_foreign_key "courseworks", "users"
+  add_foreign_key "enrollments", "programs"
+  add_foreign_key "enrollments", "students"
   add_foreign_key "pay_charges", "pay_customers", column: "customer_id"
   add_foreign_key "pay_charges", "pay_subscriptions", column: "subscription_id"
   add_foreign_key "pay_payment_methods", "pay_customers", column: "customer_id"
   add_foreign_key "pay_subscriptions", "pay_customers", column: "customer_id"
   add_foreign_key "products", "programs"
-  add_foreign_key "students", "programs"
   add_foreign_key "students", "users"
 end

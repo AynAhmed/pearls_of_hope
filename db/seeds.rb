@@ -32,10 +32,6 @@ logo_image_path = Rails.root.join('public', 'uploads', 'image', 'image_data', '2
 create_image_record('logo', logo_image_path)
 
 
-# Create: Logo image seed
-
-
-
 # Image seeds for carousel
 carousel_images = {
   'diamonds3_carousel1' => 'public/uploads/image/image_data/2/Diamonds3.jpg',
