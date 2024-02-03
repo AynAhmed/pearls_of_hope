@@ -31,6 +31,11 @@ end
 logo_image_path = Rails.root.join('public', 'uploads', 'image', 'image_data', '2', 'pearl-logo-768x497.png')
 create_image_record('logo', logo_image_path)
 
+
+# Create: Logo image seed
+
+
+
 # Image seeds for carousel
 carousel_images = {
   'diamonds3_carousel1' => 'public/uploads/image/image_data/2/Diamonds3.jpg',
@@ -43,6 +48,26 @@ carousel_images = {
 carousel_images.each do |title, path|
   image_path = Rails.root.join(path)
   create_image_record(title, image_path)
+end
+
+# Image seeds for program
+program_images = {
+  'al_mustaqbal_academy.jpg' => '/assets/images/al_mustaqbal_academy.jpg',
+  'charms' => '/assets/images/charms.jpg',
+  'climb' => '/assets/images/climb.jpg',
+  'diamonds' => '/assets/images/diamonds.jpg',
+  'explorers' => '/assets/images/explorers.jpg',
+  'frontiers' => '/assets/images/frontiers.jpg',
+  'pearls' => '/assets/images/pearls.jpg'
+  'jewels' => '/assets/images/jewels.jpg'
+  'placeholder' => '/assets/images/poh.jpg'
+}
+
+program_images.each do |title, path|
+  image_path = Rails.root.join(path)
+  image = create_image_record(title, image_path) # Create or find the image record
+  program = Program.find_by(name: title.capitalize) # Assuming title matches program name
+  program.update(image: image) if program # Assign the image to the program if found
 end
 
 

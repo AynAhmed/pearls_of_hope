@@ -1,5 +1,5 @@
 class CourseworksController < ApplicationController
-  before_action :set_program, only: [:new, :create, :show,:edit, :update, :destroy]
+  before_action :set_program, only: [ :create, :new, :show,:edit, :update, :destroy]
   before_action :set_coursework, only: [ :create, :show, :edit, :update, :destroy] 
 
 
@@ -10,6 +10,7 @@ class CourseworksController < ApplicationController
 
   def new
     @coursework = @program.courseworks.build
+
   end
 
   def show
@@ -17,13 +18,14 @@ class CourseworksController < ApplicationController
   end
 
   def create
-    @coursework = current_user.courseworks.build(coursework_params) 
+    @coursework = @program.courseworks.build(coursework_params) 
   # Handle file uploads
   if params[:coursework][:attachments].present?
     params[:coursework][:attachments].each do |attachment|
       @coursework.attachments.attach(attachment)
     end
   end
+
 
     puts "Received params: #{params.inspect}"
 
@@ -59,7 +61,7 @@ class CourseworksController < ApplicationController
   private
 
   def set_program
-    @program = Program.find(params[:program_id])
+    @program = Program.find(params[:item_id])
   end
 
   def set_coursework

@@ -32,6 +32,8 @@ Rails.application.routes.draw do
 
   
 
+  resources :students
+
   get "products/add_to_cart/:id", to: "products#add_to_cart", as: "add_to_cart"
   delete "products/remove_from_cart/:id", to: "products#remove_from_cart", as: "remove_from_cart"
 
@@ -49,10 +51,24 @@ Rails.application.routes.draw do
       get 'summer_camp'
     end
 
+  end
+
+  resources :items do
+    member do
+      get 'house_of_scholars'
+      get 'jewels'
+      get 'charms'
+      get 'explorers'
+      get 'pearls'
+      get 'frontiers'
+      get 'diamonds'
+      get 'climb'
+      get 'summer_camp'
+    end
+
     resources :courseworks, only: [:index, :new, :create, :show]
   end
 
-
   resources :about, only: [:index]
- 
+
 end
