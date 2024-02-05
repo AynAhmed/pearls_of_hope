@@ -7,7 +7,7 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
- AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+# AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
 
 
 # Add this at the top of your seeds.rb file 
@@ -54,8 +54,8 @@ program_images = {
   'diamonds' => '/assets/images/diamonds.jpg',
   'explorers' => '/assets/images/explorers.jpg',
   'frontiers' => '/assets/images/frontiers.jpg',
-  'pearls' => '/assets/images/pearls.jpg'
-  'jewels' => '/assets/images/jewels.jpg'
+  'pearls' => '/assets/images/pearls.jpg',
+  'jewels' => '/assets/images/jewels.jpg',
   'placeholder' => '/assets/images/poh.jpg'
 }
 
