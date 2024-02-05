@@ -1,10 +1,6 @@
-
 <!-- app/views/programs/index.html.erb -->
 <h1 class="programsTitle">Programs</h1>
-
-
 <!-- Programs Section -->
-
 <section class="program-grid">
   <% @programs.each do |program| %>
     <article id="<%= program.name.parameterize %>" class="program-card">
@@ -27,4 +23,3 @@
     </article>
   <% end %>
 </section>
-
