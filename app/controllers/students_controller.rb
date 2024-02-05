@@ -23,8 +23,8 @@ class StudentsController < ApplicationController
       # Assuming you have a way to determine the program based on program_id
 
       if @student.save
-       
-
+        redirect_to new_enrollment_path, notice: "You just create a new student!"
+          
       else
         puts @student.errors.full_messages # Add this line for debugging
         render :new
@@ -38,7 +38,7 @@ class StudentsController < ApplicationController
 
     def update
       if @student.update(student_params)
-        redirect_to enrollments_path, notice: 'Student was successfully updated.'
+        redirect_to @student, notice: 'Student was successfully updated.'
       else
         render :edit
       end

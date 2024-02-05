@@ -25,29 +25,8 @@ class EnrollmentsController < ApplicationController
     # Set the initial status to "pending"
     @enrollment.status = "pending"
   
-      # Fetch the program and student
-      @program = Program.find(params[:enrollment][:program_id])
-      @student = Student.find(params[:enrollment][:student_id])
-
- # Ensure that the user has a cart; create one if it doesn't exist
- if current_user.cart.nil?
-  current_user.create_cart
-end
-
     if @enrollment.save
-     
-      # Create a CartProduct record using the product_id from the program
-    # and the student_id from the enrollment
-    product = Product.find_by(program_id: @program.id)
-    current_user.cart.cart_products.create(product: product, student: @student)
-
-
-      session[:cart_data] = {
-      program_id: @program.id,
-      student_id: @student.id
-     }
-     redirect_to view_cart_cart_path(id: 1), status: :see_other, notice: "You just enrolled a student! Congrats!"
-
+      redirect_to programs_path, notice: "You just enrolled a student! Congrats!"
       # Handle successful enrollment creation (e.g., display a success message)
     else
       # Handle enrollment creation errors and display error messages
