@@ -23,7 +23,7 @@ class ProductsController < ApplicationController
     #     redirect_to products_path
     # end
 
-    # def new 
+    # def new
     #     @product = @program.products.build
     # end
 

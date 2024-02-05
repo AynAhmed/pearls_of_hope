@@ -1,0 +1,26 @@
+<!-- app/views/carts/view_cart.html.erb -->
+
+<h1>Your Cart</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Student</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @cart.cart_products.each do |cart_product| %>
+      <tr>
+        <td><%= cart_product.product.product_name %></td>
+        <td><%= cart_product.student.full_name %></td>
+        <td>
+          <%= link_to 'Remove', remove_from_cart_path(cart_product.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Checkout', checkout_cart_path, class: 'btn btn-primary' %>
