@@ -33,13 +33,9 @@ Rails.application.routes.draw do
 
   resources :students
 
-  
-  get 'carts/:id/view_cart', to: 'carts#view_cart', as: 'view_cart_cart'
-
   get "products/add_to_cart/:id", to: "products#add_to_cart", as: "add_to_cart"
   delete "products/remove_from_cart/:id", to: "products#remove_from_cart", as: "remove_from_cart"
 
-  
 
   resources :programs do
     member do
