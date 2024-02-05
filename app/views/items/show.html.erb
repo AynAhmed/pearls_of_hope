@@ -1,0 +1,20 @@
+<div class="container mt-4">
+  <h1><%= @program.name %></h1>
+  <p><%= @program.description %></p>
+</div>
+
+<div class="container mt-4">
+  <% if @program.courseworks.present? %>
+    <h3>Coursework</h3>
+    <ul>
+      <% @program.courseworks.each do |coursework| %>
+        <li>
+          <%= link_to coursework.name, item_coursework_path(@program, coursework) %>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+  <% end %>
+  </div>
+
+
