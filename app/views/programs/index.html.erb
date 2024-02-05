@@ -11,11 +11,7 @@
       <p>Age Group: <%= program.age_group %></p>
       <p><%= program.description %></p>
 
-      <div>
-      <%= link_to "Buy Me", enrollments_path(program_id: program.id), class: "btn btn-primary buy-program", data: { program_id: program.id } %>
-      </div>
-
-      <%= link_to "Add To Cart", enrollments_path(program_id: program.id), class: "btn btn-primary" %>
+      <%= link_to "Register", enrollments_path(program_id: program.id), class: "btn btn-primary" %>
     </article>
   <% end %>
 </section>
