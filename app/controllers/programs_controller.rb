@@ -64,34 +64,10 @@ class ProgramsController < ApplicationController
       })
       redirect_to session.url, allow_other_host: true, status: 303
     end
-
-
+      
+  
 
     private
-
-    def add_to_cart
-    program = Program.find(params[:id]) # Assuming you have a Program model
-    student = current_user.students.find(params[:student_id]) # Assuming you have a Student model
-  
-    # Find the user's cart or create one if it doesn't exist
-    cart = current_user.cart || current_user.build_cart
-  
-    # Create a CartProduct associating the program, student, and cart
-    cart_product = CartProduct.create(cart: cart, product: program, student: student)
-  
-    if cart_product.valid?
-      flash[:success] = "Program added to cart."
-    else
-      flash[:error] = "Error adding program to cart."
-    end
-  
-    redirect_to cart_path # Redirect to the cart page
-  end
-
-
-
-
-
 
     def set_program
       @program = Program.find(params[:id])

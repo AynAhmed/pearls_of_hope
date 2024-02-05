@@ -20,7 +20,7 @@ namespace :db do
         "price_1OdM11GFI1uaMnOfzqqZBWUW"
       ]
       program_ids = [1, 2, 3, 4, 5, 6, 7]
-
+      
       7.times do |i|
         Product.create!(
           product_name: product_names[i],
@@ -31,3 +31,11 @@ namespace :db do
       puts "Products table populated successfully!"
     end
   end
+  
+  
+  
+  
+  
+  
+  
+  
