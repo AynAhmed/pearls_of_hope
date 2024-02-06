@@ -5,7 +5,7 @@ class CreateStudents < ActiveRecord::Migration[7.1]
       t.string :last_name
       t.date :dob
 
-      t.references :user, null: false, foreign_key: true
+      t.references :user, null: false, foreign_key: { on_delete: :cascade } # Add on_delete option
 
 
       t.timestamps
