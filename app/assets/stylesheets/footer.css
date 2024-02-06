@@ -1,49 +1,78 @@
+/* Footer Styles */
 .footer {
-    background-color: rgb(34, 34, 34);/* Dark background for contrast */
-    color: #ffffff; /* White text color */
-    padding: 20px;
-    text-align: center;
-    font-size: 20px;
-  }
-
-  .footer-content {
-    max-width: 800px;
-    margin: auto;
-  }
-
-  .footer h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-
-  .footer address {
-    font-style: normal; /* To keep the address in normal font style */
-    line-height: 1.5; /* Spacing between lines */
-  }
-
-  .footer a {
-    color: whitesmoke; /* Gold color for links for visibility and design */
-    text-decoration: none; /* Removes underline from links */
-  }
-
-  .footer a:hover {
-    text-decoration: underline; /* Adds underline on hover for better UX */
-  }
-
-  .copy-right {
-    margin-top: 20px;
-    font-size: 0.9em;
-  }
-
-  .social-icon {
-    font-size: 45px; /* Adjust the size as needed */
+  background-color: #613894;
+  color: #ffffff;
+  padding: 30px;
+  text-align: center;
+  position: relative;
 }
 
- 
+.footer-content {
+  max-width: 800px;
+  margin: auto;
+}
 
+.footer h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
 
+.links {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+  text-align: left;
+}
 
-  a {
-    color:white
-  }
+.footer ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
 
+.footer ul li:last-child {
+  margin-right: 0;
+}
+
+.footer a {
+  color: whitesmoke;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #01d5ff; /* Yellow color on hover */
+}
+
+.footer .addy {
+  margin-top: 20px;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  text-align: right;
+}
+
+.footer address {
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.footer p {
+  margin: 10px 0;
+}
+
+.copy-right {
+  margin-top: 30px;
+  font-size: 0.9em;
+}
+
+.social-icon {
+  font-size: 30px;
+  margin-right: 15px;
+}
+
+.phone,
+.email {
+  color: whitesmoke;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
