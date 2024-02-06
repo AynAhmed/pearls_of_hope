@@ -30,7 +30,7 @@ Rails.application.routes.draw do
 
   resources :products, only: [:index]
 
-  resources :profiles
+  
 
   resources :students
 
@@ -52,12 +52,26 @@ Rails.application.routes.draw do
       get 'summer_camp'
     end
 
-    resources :courseworks, only: [:index, :new, :create, :show]
   end
 
+  resources :items do
+    member do
+      get 'house_of_scholars'
+      get 'jewels'
+      get 'charms'
+      get 'explorers'
+      get 'pearls'
+      get 'frontiers'
+      get 'diamonds'
+      get 'climb'
+      get 'summer_camp'
+    end
+
+    resources :courseworks, only: [:index, :new, :create, :show]
+  end
 
   resources :s, only: [:index]
 
   resources :about, only: [:index]
- 
+
 end

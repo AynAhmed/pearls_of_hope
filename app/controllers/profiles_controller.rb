@@ -25,8 +25,9 @@ class ProfilesController < ApplicationController
     def update
       @user = current_user
       if @user.update(user_params)
-        redirect_to profile_path, notice: 'Profile updated successfully.'
+        redirect_to profiles_path, notice: 'Profile updated successfully.'
       else
+        flash[:error]= "error updating profile"
         render :edit
       end
     end
@@ -34,6 +35,6 @@ class ProfilesController < ApplicationController
     private
   
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :email, :contact)
+      params.require(:user).permit(:first_name, :last_name, :phone_number)
     end
   end
