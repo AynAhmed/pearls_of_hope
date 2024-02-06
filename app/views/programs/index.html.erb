@@ -7,7 +7,7 @@
 <section class="program-grid">
   <% @programs.each do |program| %>
     <article id="<%= program.name.parameterize %>" class="program-card">
-      <%= image_tag program_image_path(program), class: "program-image" %>
+
       <h3><%= program.name %></h3>
       <p>Age Group: <%= program.age_group %></p>
       <p><%= truncate(program.description, length: 100) %></p>

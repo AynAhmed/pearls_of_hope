@@ -7,7 +7,7 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
- AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+#AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
 
 
 # Add this at the top of your seeds.rb file 
@@ -46,7 +46,6 @@ carousel_images.each do |title, path|
   create_image_record(title, image_path)
 end
 
-
 #  Create: programs starting data 
 Program.find_or_create_by(name: "Al-Mustaqbal Academy") do |program|
   program.description = "The House of Scholars program is our academic program dedicated to nurturing spiritual growth and developing God consciousness. We provide instruction in: Islamic studies, Quran/Noorania, Hadith and Islamic studies. We also offer fun activities and both in-house and off campus field trips. The House Scholars program is open to both boys and girls ages 5-12 and is held on Saturdays from 10:00 am – 2:30 pm."
@@ -72,7 +71,6 @@ Program.find_or_create_by(name: "Charms") do |program|
   program.fee = true
 end
 
-
 Program.find_or_create_by(name: "Explorers") do |program|
   program.description = "The Explorers is our mentoring program for boys in 3rd-5th grade. This program mirrors the Charms program in that it also has an annual theme that varies and covers everything from the 99 names of Allah, Heroes and Sheroes in Islam and more. The Explorers also have leaders from the community visit our class to inspire our boys. The Explorers also collaborate with the Charms in acts of service including our annual Sandwich project and Dental kits drive. The boys are also given opportunities to cater to their mothers during the annual Muffins with Mom. They also participate in our annual March Madness where they have a basketball tournament between fathers and sons one week then attend a Timberwolves game the next."
   program.age_group = "3rd-5th grade"
@@ -88,7 +86,6 @@ Program.find_or_create_by(name: "Pearls") do |program|
   program.date = "2022-01-01"
   program.fee = true
 end
-
 
 
 
