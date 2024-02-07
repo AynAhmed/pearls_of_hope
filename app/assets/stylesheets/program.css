@@ -98,3 +98,7 @@ body {
 .btn:hover {
   background-color: #2980b9;
 }
+
+a {
+  color:black;
+}
