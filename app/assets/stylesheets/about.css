@@ -4,36 +4,39 @@ img {
     display: block;
     margin: 0 auto;
     max-width: 100%;
-  }
-  
-  /* Container styles for images */
-  .image-container {
+}
+
+/* Container styles for images */
+.image-container {
     margin: 20px auto; /* Center the container horizontally and add spacing */
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     padding: 10px;
-  }
-  
-  /* Image styles */
-  .image-container img {
+}
+
+/* Image styles */
+.image-container img {
     display: block;
     max-width: 100%;
     height: auto;
     transition: transform 0.3s ease;
-  }
-  
-  /* Hover effect on image container */
-  .image-container:hover,
-  .image-container:focus {
+}
+
+/* Hover effect on image container */
+.image-container:hover,
+.image-container:focus {
     transform: scale(1.05);
-  }
-  
-  /* Hover effect on image */
-  .image-container:hover img,
-  .image-container:focus img {
+}
+
+/* Hover effect on image */
+.image-container:hover img,
+.image-container:focus img {
     filter: brightness(80%);
-  }
-  
- 
+}
+
+/* Styles for text */
+.text {
+    margin: 10px; /* Add margin-top to create space */
+}
