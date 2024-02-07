@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   resources :calendar, only: [:index]
   resources :carts, only: [:index]
   resources :donation, only: [:index]
-  resources :volunteers, only: [:index]
   resources :profiles
 
   get 'dashboard',to: 'dashboards#index'
