@@ -40,7 +40,7 @@ Rails.application.routes.draw do
 
   resources :programs do
     member do
-      get 'house_of_scholars'
+      get 'al-mustaqbal-academy'
       get 'jewels'
       get 'charms'
       get 'explorers'
@@ -55,7 +55,7 @@ Rails.application.routes.draw do
 
   resources :items do
     member do
-      get 'house_of_scholars'
+      get 'al-mustaqbal-academy'
       get 'jewels'
       get 'charms'
       get 'explorers'
