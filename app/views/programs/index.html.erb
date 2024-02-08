@@ -4,20 +4,26 @@
 <section class="program-grid">
   <% @programs.each do |program| %>
     <article id="<%= program.name.parameterize %>" class="program-card">
-      <%= image_tag program_image_path(program), class: "program-image" %>
+
       <h3><%= program.name %></h3>
       <p>Age Group: <%= program.age_group %></p>
 
-      <%= link_to "Register", enrollments_path(program_id: program.id), class: "btn btn-primary" %>
+
+
 
       <p><%= truncate(program.description, length: 100) %></p>
       <div class="button-container">
         <%= link_to "Learn More", program_path(program), class: "btn btn-primary" %>
-        <div>
-        <%= link_to "Register", enrollments_path(program_id: program.id), class: "btn btn-primary" %>
+        <div
+<!-- checks if the user is logged in before the they can register for a program -->   
+        <% if user_signed_in? %>
+          <%= link_to "Register", enrollments_path(program_id: program.id), class: "btn btn-primary" %>
+        <% else %>
+          <%= link_to "Register", new_user_session_path, class: "btn btn-primary", data: { turbolinks: false } %>
+        <% end %>
+
         </div>
       </div>
-
     </article>
   <% end %>
 </section>

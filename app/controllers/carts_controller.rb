@@ -1,18 +1,75 @@
 class CartsController < ApplicationController
   before_action :authenticate_user!
-  # before_action :set_program, only: [:new, :index, :create, :show,:edit, :update, :destroy] 
-
-  def index
-  @cart = current_user.cart 
-  @cart_products = @cart.cart_products if @cart.present?
-  end
-
-
-  def new
-  end
+  before_action :set_gon_variables
 
   def show
+    @render_cart = true
   end
+
+
+  def add
+    @product = Product.find_by(id: params[:id])
+    current_cart_product = @cart.cart_products.find_by(product_id: @product.id)
+    # If the product already exists in the cart, do nothing
+    flash[:notice] = "Product is already in the cart."
+  else
+    # Created a new CartProduct for the product
+    @cart.cart_products.create(product: @product)
+    flash[:notice] = "Product added to cart successfully."
+  end
+
+    respond_to do |format|
+      format.turbo_stream do
+        render turbo_stream: [turbo_stream.replace('cart',
+                                                   partial: 'carts/cart',
+                                                   locals: { cart: @cart }),
+                              turbo_stream.replace(@product)]
+      end
+    end
+  end
+
+
+  def remove
+    CartProduct.find_by(id: params[:id]).destroy
+    respond_to do |format|
+      format.turbo_stream do
+        render turbo_stream: turbo_stream.replace('cart',
+                                                  partial: 'carts/cart',
+                                                  locals: { cart: @cart })
+      end
+    end
+
+    def set_gon_variables
+      gon.env_variables = {
+          STRIPE_PUBLIC_KEY: ENV['STRIPE_PUBLIC_KEY'],
+          STRIPE_SECRET_KEY: ENV['STRIPE_SECRET_KEY']
+      }
+    end
+
+  end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 def add_to_cart
   # Retrieve the selected product and student

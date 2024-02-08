@@ -10,40 +10,45 @@ Rails.application.routes.draw do
   resources :calendar, only: [:index]
   resources :carts, only: [:index]
   resources :donation, only: [:index]
-  resources :volunteers, only: [:index]
   resources :profiles
 
   get 'dashboard',to: 'dashboards#index'
+
+
+  post 'payments/create'
   
-
-
   get 'checkout',to: 'checkouts#show'
   get 'checkout/success', to: 'checkouts#success'
+  
   get 'billing', to: 'billing#show'
 
-  post 'create-checkout-session', to: 'programs#create_checkout_session'
+  # post 'create-checkout-session', to: 'programs#create_checkout_session'
 
 
 
 
-  
+  resources :cart_products, only: [:create, :new, :index, :destroy]
+
   resources :products, only: [:index]
 
   
 
   resources :students
 
-  
-  get 'carts/:id/view_cart', to: 'carts#view_cart', as: 'view_cart_cart'
+  get "cart", to: 'carts#show'
+  post "carts/add"
+  post "carts/remove"
+  get 'clear_cart', to: 'carts#clear_cart'
+
 
   get "products/add_to_cart/:id", to: "products#add_to_cart", as: "add_to_cart"
   delete "products/remove_from_cart/:id", to: "products#remove_from_cart", as: "remove_from_cart"
 
-  
+
 
   resources :programs do
     member do
-      get 'house_of_scholars'
+      get 'al-mustaqbal-academy'
       get 'jewels'
       get 'charms'
       get 'explorers'
@@ -58,7 +63,7 @@ Rails.application.routes.draw do
 
   resources :items do
     member do
-      get 'house_of_scholars'
+      get 'al-mustaqbal-academy'
       get 'jewels'
       get 'charms'
       get 'explorers'

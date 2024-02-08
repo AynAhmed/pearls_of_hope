@@ -3,6 +3,7 @@ class CreateEnrollments < ActiveRecord::Migration[7.1]
     create_table :enrollments do |t|
       t.references :student, foreign_key: true
       t.references :program, foreign_key: true
+      t.references :user, null: false, foreign_key: true
       t.string :status
 
       t.timestamps

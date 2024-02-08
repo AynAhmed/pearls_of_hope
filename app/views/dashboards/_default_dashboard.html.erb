@@ -9,7 +9,7 @@
   <div>
     <%= link_to 'My Enrollements', class: 'sidebar-link' %>
   </div>
-    <%= link_to 'profile', class: 'sidebar-link' %>
+    <%= link_to 'Profile', class: 'sidebar-link' %>
   </div>
   <!-- Main Content -->
   <div class="main-content">
@@ -20,6 +20,9 @@
       <% @students.each do |student| %>
         <li>
         <%= link_to student.full_name, student_path(student) %>
+
+          <%= link_to student.full_name, students_path(student) %>
+
         </li>
       <% end %>
     </ul>
