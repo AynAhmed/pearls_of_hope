@@ -186,7 +186,7 @@ text-align: center; /* Center the items within the container */
 .programs ul li {
 display: inline-block;
 width: 250px;
-height: 250px;
+height: 100px;
 margin: 10px; /* Set a fixed margin for all sides of each item */
 vertical-align: top;
 }
@@ -201,4 +201,9 @@ margin-right: 0;
 
 .programs ul li:nth-child(3n+1) {
 clear: left;
+}
+
+#display-enrollment{
+  padding: 5px;
+  margin: 5px;
 }
