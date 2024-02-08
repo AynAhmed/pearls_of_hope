@@ -1,0 +1,33 @@
+<%= include_gon %>
+<div class="jumbotron">
+  <% program_ids = [] %>
+
+  <h2 style="text-align: center;">Order Total</h2>
+  <div class='payment-card'>
+    <% @cart.cart_products.each do |cart_product| %>
+      <% product = cart_product.product %>
+      <p><%= product.name %> * 1 = <%= number_to_currency(product.price) %></p>
+      <% (program = Program.find_by(name: product.name)) ? program_ids << program.id : nil %>
+    <% end %>
+    <p><%= string = program_ids.join(',') %></p>
+
+    <% if program_ids.any? %>
+      <%= form_with(model: @payment, url: payments_create_path, method: 'post', local: true, id: 'checkout-form') do |form| %>
+        <% form.label :first_name %>
+        <%= form.text_field :first_name, placeholder: 'First Name', value: current_user.first_name, class: "field" %>
+        <% form.label :last_name %>
+        <%= form.text_field :last_name, placeholder: 'Last Name', value: current_user.last_name, class: "field" %>
+        <% form.label :email %>
+        <%= form.text_field :email, placeholder: 'Email', class: "field", value: current_user.email, readonly: true %>
+        <%= form.hidden_field :user_id, value: current_user.id %>
+        <%= form.hidden_field :course_ids, value: string %>
+        <%= form.hidden_field :amount, value: @cart.total %>
+        <div id="card-container">
+          <div id="card-element"></div>
+          <div id="card-errors" role="alert"></div>
+          <button id="checkout-button">Pay Now</button>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

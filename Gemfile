@@ -17,7 +17,8 @@ gem "devise", "~> 4.9"
 gem 'sassc', '~> 2.0'
 #Active-Admin gem
 
-
+# send some data to your js files and you don't want to do this with long way trough views and parsing 
+gem 'gon'
 
 
 gem 'activeadmin'

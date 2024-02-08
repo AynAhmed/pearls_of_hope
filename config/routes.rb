@@ -15,12 +15,14 @@ Rails.application.routes.draw do
   get 'dashboard',to: 'dashboards#index'
 
 
-
+  post 'payments/create'
+  
   get 'checkout',to: 'checkouts#show'
   get 'checkout/success', to: 'checkouts#success'
+  
   get 'billing', to: 'billing#show'
 
-  post 'create-checkout-session', to: 'programs#create_checkout_session'
+  # post 'create-checkout-session', to: 'programs#create_checkout_session'
 
 
 
@@ -32,6 +34,12 @@ Rails.application.routes.draw do
   
 
   resources :students
+
+  get "cart", to: 'carts#show'
+  post "carts/add"
+  post "carts/remove"
+  get 'clear_cart', to: 'carts#clear_cart'
+
 
   get "products/add_to_cart/:id", to: "products#add_to_cart", as: "add_to_cart"
   delete "products/remove_from_cart/:id", to: "products#remove_from_cart", as: "remove_from_cart"

@@ -1,0 +1,10 @@
+<%= turbo_frame_tag "cart" do %>
+    <div class="jumbotron">
+        <h1 style=" text-align: center;">Cart</h1>
+        <% if @cart.cart_products.count > 0 %>
+          <%= render "carts/cart_products" %>
+        <% else %>
+          <p style=" text-align: center;">Your cart is empty</p>
+        <% end %>
+    </div>
+  <% end %>

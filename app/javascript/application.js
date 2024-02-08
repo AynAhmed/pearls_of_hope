@@ -2,5 +2,5 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-import "./slideshow.js"
 
+import "./slideshow.js"
