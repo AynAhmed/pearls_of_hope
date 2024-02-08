@@ -1,8 +1,7 @@
 class Program < ApplicationRecord
     has_many :courseworks
     has_many :enrollments
-    has_many :students, through: :enrollments
-
+    
     validates :name, presence: true
     validates :description, presence: true
     validates :program_type, presence: true
