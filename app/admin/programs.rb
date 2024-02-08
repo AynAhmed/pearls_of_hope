@@ -39,24 +39,35 @@ ActiveAdmin.register Program do
     f.actions
   end
 
+
+
   controller do
-    after_create do
-      return unless resource.stripe_product_id.nil?
-
-      stripe_product = Stripe::Product.create(
-        name: resource.name,
-        type: 'service',
-        description: resource.description
-      )
-
-      stripe_price = Stripe::Price.create(
-        product: stripe_product.id,
-        unit_amount: (resource.price/100).to_i,
-        currency: 'usd'
-        )
-
-      resource.update(stripe_product_id: stripe_product.id, stripe_price_id: stripe_price.id)
+    def create_resource(object)
+      super
+      # After the program is created, call the StripeService to create the corresponding product
+      StripeService.create_product(object)
     end
   end
+
+
+  # controller do
+  #   after_create do
+  #     return unless resource.stripe_product_id.nil?
+
+  #     stripe_product = Stripe::Product.create(
+  #       name: resource.name,
+  #       type: 'service',
+  #       description: resource.description
+  #     )
+
+  #     stripe_price = Stripe::Price.create(
+  #       product: stripe_product.id,
+  #       unit_amount: (resource.price/100).to_i,
+  #       currency: 'usd'
+  #       )
+
+  #     resource.update(stripe_product_id: stripe_product.id, stripe_price_id: stripe_price.id)
+  #   end
+  # end
 
 end
