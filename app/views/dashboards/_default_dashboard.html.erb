@@ -7,7 +7,7 @@
     <%= link_to 'My Students', class: 'sidebar-link' %>
   </div>
   <div>
-    <%= link_to 'My enrollements', class: 'sidebar-link' %>
+    <%= link_to 'My Enrollements', class: 'sidebar-link' %>
   </div>
     <%= link_to 'profile', class: 'sidebar-link' %>
   </div>
@@ -15,14 +15,11 @@
   <div class="main-content">
     <h2>Dashboard</h2>
     <div class="programs">
-    <h3>My programs</h3>
+    <h3>My Students</h3>
     <ul>
-      <% @programs.each do |program| %>
+      <% @students.each do |student| %>
         <li>
-        <%= link_to program.name, program_path(program) %> | <%= program.courseworks.count %>
-          <div class ="add-coursework-cont">
-          <%= link_to "Add Coursework", new_program_coursework_path(program), class: "add-coursework-button" %>
-          </div>
+        <%= link_to student.full_name, student_path(student) %>
         </li>
       <% end %>
     </ul>
