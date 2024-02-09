@@ -18,7 +18,7 @@ ActiveAdmin.register Coursework do
       coursework.attachments.map { |attachment| link_to attachment.filename, rails_blob_path(attachment, disposition: "attachment") }.join(", ").html_safe
     end
     actions
-  end\
+  end
 
   form do |f|
     f.inputs do
