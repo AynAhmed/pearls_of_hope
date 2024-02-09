@@ -19,10 +19,10 @@
     <ul>
       <% @students.each do |student| %>
         <li>
-        <%= link_to student.full_name, student_path(student) %>
-
-          <%= link_to student.full_name, students_path(student) %>
-
+          <%= link_to student.full_name, student_path(student) %>
+          <p id="display-enrollment">
+            Enrolled in: <%= display_enrolled_programs(student) %>
+          </p>
         </li>
       <% end %>
     </ul>
