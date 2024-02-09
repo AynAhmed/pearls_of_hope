@@ -1,9 +1,6 @@
 <main>
  <!-- Welcome Section -->
-  <section id="welcome">
-    <h1>Welcome to Pearls</h1>
-    <p>Mentoring the Leaders of Tomorrow!</p>
-  </section>
+ 
 
 
 <!-- New -testing -Slideshow/carousel Section -->
@@ -37,25 +34,67 @@
 </section>
 
 
+
 <br>
   <!-- About Us Section -->
-  <section id="about">
+<section id="about">
+  
     <h2>About Us</h2>
-    <p class="textContent">
-      <%= fetch_text_content_body_by_title("About Us Paragraph") %>
-    </p>
-    <!-- Remaining content... -->
-  </section>
-  <br>
+    
+
+
+  <div class="container-about-us">
+    <div class="item-about-us">
+      <img src="assets/programs.jpg">
+        <p class="about-content">
+          <%= fetch_text_content_body_by_title("About Us Paragraph") %>
+       </p>    
+    </div>
+</div>
+
+</section>
+
+
+
+<section id="about">
+  
+    <h2>Our Programs</h2>
+    
+
+
+  <div class="container-about-us">
+    <div class="item-about-us">
+          <%= fetch_text_content_body_by_title("About Us Paragraph") %>
+        <img src="assets/programs.jpg">
+    </div>
+</div>
+
+</section>
+
+  <%# <br>
+<section id = "program">
   <h1>Our Programs</h1>
   <br>
-<div style="display: flex; align-items: center; justify-content: center;">
-  <div style="text-align: center;">
+<div id= program-content> 
+  <div style="">
     <p>We offer programs for kids ages 5 to 15 years old</p>
-    <a href="/programs" style="text-decoration: none; color: blue;">Learn More <span>&rarr;</span></a>
+    <a href="/programs">Learn More <span>&rarr;</span></a>
   </div>
-  <img src="assets/programs.jpg" style="width: 300px; height: 300px; margin-left: 20px;">
 </div>
+  <img src="assets/programs.jpg" style="width: 300px; height: 300px; margin-left: 20px;">
+
+</section> %>
+
+
+
+<section id = "program">
+  <h1>Our Programs</h1>
+  <br>
+  <div id = program-content>
+    <p>We offer programs for kids ages 5 to 15 years old</p>
+  </div>
+    <img src="assets/programs.jpg" style="width: 300px; height: 300px; margin-left: 20px;">
+</section>
 
 <br>
 
@@ -73,6 +112,7 @@
     <% end %>
   </div>
 </section>
+
 
 
 
