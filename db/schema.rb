@@ -99,12 +99,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_08_054452) do
   create_table "enrollments", force: :cascade do |t|
     t.bigint "student_id"
     t.bigint "program_id"
+    t.bigint "user_id", null: false
     t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["program_id"], name: "index_enrollments_on_program_id"
     t.index ["student_id", "program_id"], name: "index_enrollments_on_student_id_and_program_id", unique: true
     t.index ["student_id"], name: "index_enrollments_on_student_id"
+    t.index ["user_id"], name: "index_enrollments_on_user_id"
   end
 
   create_table "images", force: :cascade do |t|
@@ -215,8 +217,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_08_054452) do
   end
 
   create_table "products", force: :cascade do |t|
+    t.string "name"
     t.integer "price"
     t.bigint "program_id", null: false
+    t.string "payment_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "price_id"
@@ -296,11 +300,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_08_054452) do
   add_foreign_key "courseworks", "users"
   add_foreign_key "enrollments", "programs"
   add_foreign_key "enrollments", "students"
+  add_foreign_key "enrollments", "users"
   add_foreign_key "pay_charges", "pay_customers", column: "customer_id"
   add_foreign_key "pay_charges", "pay_subscriptions", column: "subscription_id"
   add_foreign_key "pay_payment_methods", "pay_customers", column: "customer_id"
   add_foreign_key "pay_subscriptions", "pay_customers", column: "customer_id"
   add_foreign_key "payments", "users"
   add_foreign_key "products", "programs"
-  add_foreign_key "students", "users"
+  add_foreign_key "students", "users", on_delete: :cascade
 end

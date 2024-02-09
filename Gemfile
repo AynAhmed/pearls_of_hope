@@ -1,43 +1,28 @@
 source "https://rubygems.org"
 ruby "3.2.0"
-
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.2"
-
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 # Use pg as the database for Active Record
-
 gem 'pg', '~> 1.4'
 #Devise gem
-
 gem "devise", "~> 4.9"
 #sassc gem
-
 gem 'sassc', '~> 2.0'
 #Active-Admin gem
-
-# send some data to your js files and you don't want to do this with long way trough views and parsing 
+# send some data to your js files and you don't want to do this with long way trough views and parsing
 gem 'gon'
-
-
 gem 'activeadmin'
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-
-
-
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
-
-# Use Carrierwave to handle image uploading / storing 
+# Use Carrierwave to handle image uploading / storing
 gem 'carrierwave', '~> 3.0'
-
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
-
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
-
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 # Use Redis adapter to run Action Cable in production
@@ -70,14 +55,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
-
 gem "stripe", "~> 10.6"
 gem "pay", "~> 7.1"
-
 gem 'dotenv-rails', groups: [:development, :test]
-
 gem 'gibbon'
-
-
-
-
