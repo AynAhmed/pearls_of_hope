@@ -17,8 +17,9 @@ class StudentsController < ApplicationController
     end
 
     def create
-      @student = current_user.students.build(student_params)
       @student.user = current_user 
+      @student = current_user.students.build(student_params)
+  
 
       # Assuming you have a way to determine the program based on program_id
 
@@ -53,6 +54,10 @@ class StudentsController < ApplicationController
 
     def set_student
       @student = Student.find(params[:id])
+      session[:student_id] = @student.id
+    rescue ActiveRecord::RecordNotFound
+      # Handle the case where the program is not found
+      redirect_to programs_path, alert: 'Student not found'
     end
 
     def student_params

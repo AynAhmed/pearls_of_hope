@@ -37,12 +37,13 @@
 
 /* Updated CSS for the carousel */
 .carousel-container {
-  width: 80%;
+  width: 100%;
   margin: auto;
   position: relative;
   display: flex;
   flex-direction: column;
   gap: var(--lx-gap);
+  
 
   .carousel {
     aspect-ratio: 16/9;
@@ -63,19 +64,6 @@
         height: 100%;
         object-fit: cover;
         object-position: center;
-      }
-
-      .caption {
-        width: 100%;
-        padding: var(--lx-space-01);
-        position: absolute;
-        bottom: 0;
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 12px;
-        background-color: rgba(0, 0, 0, 0.5);
-        transform: translateY(100%); /* Slide up from the bottom */
-        transition: transform 0.3s ease-in-out;
       }
 
       &.active {
@@ -132,10 +120,13 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    margin-top: 20px;
+    
+
 
     .dot {
       cursor: pointer;
-      height: 10px;
+      height: 5px;
       width: 10px;
       background-color: #242421;
       border-radius: 50%;
@@ -148,3 +139,4 @@
     }
   }
 }
+
