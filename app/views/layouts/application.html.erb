@@ -29,8 +29,11 @@
   <body>
     <%= render "layouts/navbar" %>
     <%= yield %>
+
     <% unless controller_name == 'dashboards' %>
       <%= render 'layouts/footer' %>
     <% end %>
+
+   
   </body>
 </html>

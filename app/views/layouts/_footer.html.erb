@@ -23,11 +23,11 @@
     </ul>
     </div>
 
-    <div class="addy">
+   
     <address>
       <%= fetch_text_content_body_by_title("Address").gsub(', ', '<br>').html_safe if fetch_text_content_body_by_title("Address").present? %>
     </address>
-    </div>
+    
 
     <div class="phone">
       Phone:
@@ -47,3 +47,4 @@
   <p class="copy-right">Copyright &copy; <%= Time.now.year %> Pearls of Hope</p>
   </footer>
 
+  
