@@ -4,3 +4,4 @@ import "controllers"
 
 
 import "./slideshow.js"
+import "./checkout.js"

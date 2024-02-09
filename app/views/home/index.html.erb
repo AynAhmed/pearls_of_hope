@@ -1,7 +1,7 @@
 <main>
  <!-- Welcome Section -->
   <section id="welcome">
-    <h1>Welcome to Pearls - new repo</h1>
+    <h1>Welcome to Pearls</h1>
     <p>Mentoring the Leaders of Tomorrow!</p>
   </section>
 
@@ -18,12 +18,12 @@
     <div class="item">
     <% carousel_image2 = fetch_image_by_title('frontiers2_carousel2') %>
     <%= image_tag(carousel_image2.image_data.url, alt: 'frontiers2_carousel2') if carousel_image2 %>
-      
+
     </div>
     <div class="item">
     <% carousel_image3 = fetch_image_by_title('pearls_carousel') %>
     <%= image_tag(carousel_image3.image_data.url, alt: 'pearls_carousel') if carousel_image3 %>
-     
+
     </div>
     <div class="item">
     <% carousel_image4 = fetch_image_by_title('house_carousel') %>

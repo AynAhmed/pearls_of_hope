@@ -1,0 +1,145 @@
+
+.checkout-section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 40px;
+  }
+
+  .checkout-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .order-details {
+    display:none;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .product-details {
+    margin-bottom: 10px;
+  }
+
+  .product-name {
+    font-weight: bold;
+  }
+
+  .customer-info {
+    margin-bottom: 20px;
+  }
+
+  .customer-info-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  .form-label {
+    display: block;
+    font-weight: bold;
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .payment-info-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  #card-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  #card-element {
+    margin-bottom: 10px;
+  }
+
+  #card-errors {
+    color: red;
+    margin-bottom: 10px;
+  }
+
+  .btn-pay-now {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .btn-pay-now:hover {
+    background-color: #0056b3;
+  }
+
+
+/* Cart Table styles */
+
+.cart-table {
+    max-width: 600px; /* Match the max-width of the checkout section */
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto; /* Center the table horizontally */
+  }
+  
+  .cart-table th,
+  .cart-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .cart-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .cart-table tbody .cart-item:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .cart-table tbody .cart-item td:last-child {
+    text-align: center;
+  }
+  
+  /* Submit button styles */
+  .cart-table input[type="submit"] {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .cart-table input[type="submit"]:hover {
+    background-color: #cc0000;
+  }
+  .totalText{
+
+background-color: rgb(255, 255, 255);
+border-radius: 5px;
+padding: 20px;
+margin-bottom: 20px;
+border-top: rgb(48, 48, 48) solid 3px;
+  }
+
+

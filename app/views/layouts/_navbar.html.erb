@@ -32,7 +32,7 @@
       </div>
     <% end %>
   </li>
-  
+
 </ul>
       <% elsif user_signed_in? %>
         <!-- Navigation options for logged-in users with role 'default' -->
@@ -42,9 +42,10 @@
           <li><%= link_to 'Programs', programs_path, class: 'custom-link' %></li>
           <li><%= link_to 'Volunteer', 'https://forms.gle/ytC8a6rpb8mPiR5bA', class: 'custom-link' %></li>
           <li id="cart">
-            <%= link_to carts_path do %>
+            <%= link_to cart_path do %>
               <i class="fa-solid fa-cart-shopping icon"></i>
             <% end %>
+
           </li>
            <li class="profile-dropdown">
         <%= link_to profiles_path, class: 'profileAvatar', style: 'width: 30px; height: 30px; border-radius: 15px;' do %>
