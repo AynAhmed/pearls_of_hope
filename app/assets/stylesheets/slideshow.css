@@ -37,12 +37,13 @@
 
 /* Updated CSS for the carousel */
 .carousel-container {
-  width: 80%;
+  width: 100%;
   margin: auto;
   position: relative;
   display: flex;
   flex-direction: column;
   gap: var(--lx-gap);
+  
 
   .carousel {
     aspect-ratio: 16/9;
@@ -132,6 +133,9 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    margin-top: 0.75vw;
+    
+
 
     .dot {
       cursor: pointer;
@@ -148,3 +152,4 @@
     }
   }
 }
+
