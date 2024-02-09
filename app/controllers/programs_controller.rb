@@ -1,14 +1,18 @@
 class ProgramsController < ApplicationController
 
     before_action :set_program, only: [:show, :edit, :update, :destroy, :signup,:create_checkout_session]
-  
+    
 
     def index
       @programs = Program.all
     end
 
     def show
-
+      @program = Program.find(params[:id])
+      # Assuming each program has an associated product
+      @product = @program.product
+      # Assuming you already have a method to initialize the cart
+      initialize_cart
     end
 
     def new
@@ -25,7 +29,7 @@ class ProgramsController < ApplicationController
       end
     end
 
-    
+
 
     def edit
     end
@@ -36,8 +40,8 @@ class ProgramsController < ApplicationController
       else
         render :edit
       end
-    end  
-  
+    end
+
     def signup
       flash[:notice] = 'Signed up for the program!'
       redirect_to @program
@@ -60,12 +64,11 @@ class ProgramsController < ApplicationController
       mode:'subscription',
       success_url: checkout_success_url(@program),
       cancel_url: program_url(@program)
-  
+
       })
       redirect_to session.url, allow_other_host: true, status: 303
     end
-      
-  
+
 
     private
 
@@ -75,14 +78,14 @@ class ProgramsController < ApplicationController
     rescue ActiveRecord::RecordNotFound
       # Handle the case where the program is not found
       redirect_to programs_path, alert: 'Program not found'
-
     end
 
-  
+
     def program_params
       params.require(:program).permit(:name, :description, :program_type, :age_group, :date)
     end
+
+    #creating  product
+
+   
   end
-
-
-

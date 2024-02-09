@@ -1,7 +1,8 @@
 class CheckoutController < ApplicationController
     before_action :authenticate_user!
+
     def show
-    
+
         @program = Program.find_by(id: params[:id])
 
         if @program.nil?
@@ -22,6 +23,7 @@ class CheckoutController < ApplicationController
               success_url: checkout_success_url
       )
   end
+
     def success
     end
 
@@ -29,7 +31,7 @@ class CheckoutController < ApplicationController
         @programs = Program.all
         @cart = current_user.carts || current_user.create_cart
       end
-    
+
       def update_cart
         program = Program.find(params[:program_id])
         quantity = params[:quantity].to_i

@@ -1,38 +1,55 @@
-<main class="about-page">
-    <section id="what-we-do">
-      <h2>What We Do</h2>
-      <p>Pearls of Hope Community Center is a safe space to engage in religious...</p> <img src="https://qarabic.com/wp-content/uploads/2022/01/Learn-how-to-raise-kids-in-Islam.jpg"><img src="https://images.squarespace-cdn.com/content/v1/58dff3f06b8f5b410f5e300b/1610824740711-E0P03IPNGPD5T63P2DPE/DSC_9602.jpg"><img src="https://images.squarespace-cdn.com/content/v1/58dff3f06b8f5b410f5e300b/1618115398958-AMV3NAHYLQ3WZJIPL40S/DSC_2105+%281%29.JPG?format=2500w">
-    </section>
+<div class="banner">
+  <img src="assets/climb.jpg" style="width: 100%; height: 400px; object-fit: cover;">
+</div>
+<br>
+<br>
 
-    <div class="parent">
-    <section id="our-mission">
-      <h2>Our Mission</h2>
-      <p>Pearls of Hope Community Center is a year round youth center dedicated to helping young girls and boys become responsible and contributing
-       members of society by providing religious education, improving academic skills, offering opportunities to learn practical life skills, and encouraging
-       our youth to look beyond themselves to make a difference in their communities.</p>
-    </section>
+<div class="box" style="display: flex; align-items: center;">
+  <div class="text">
+    <h3 style="text-align: center;">About Us</h3>
+    <p>Pearls of Hope was established in late 2009 by our Founder, sister Danyal Masoud. Danyal grew up in Chicago where , like many young Muslims, she faced many challenges and struggles. She started Pearls of Hope to provide a safe space for youth facing a lot of the same struggles she did growing up. She wanted to be the mentor she would have wanted and needed at their age. So Pearls of Hope was born in the basement of a masjid here in the Twin cities with one class of fifteen girls. The girls who joined the program were given the space to navigate feelings of insecurity and isolation that they often feel in our society. In sister Danyal, the girls found a loving mentor who would listen, counsel and support them unconditionally. They participated in circles of halaqa where they were given the tools to build a solid muslim identity in a an inspiring, engaging and fun environment. On March 30, 2015, Pearls of Hope Community Center was Incorporated. Through its impact, Pearls of Hope grew to offer guidance and support to over 200 youth across 7 programs. </p>
+  </div>
+  <div class="image-container">
+    <img src="assets/family.jpg">
+  </div>
+</div>
 
-    <section id="our-vision">
-      <h2>Our Vision</h2>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, 
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap 
-        into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum 
-        passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p> 
-    </section>
-    </div>
+<div class="box" style="display: flex; align-items: center;">
+  <div class="image-container2">
+    <img src="assets/mission.png" >
+  </div>
+  <div class="text">
+    <h3 style="text-align: center;">Our Mission</h3>
+    <p>Our mission is to mentor the leaders of tomorrow using religious education as our foundation and inspiring the use of knowledge into action</p>
+  </div>
+</div>
 
-    <section id="our-story">
-    <img src="https://hijabilifedotcom.files.wordpress.com/2013/02/muslim-kids.jpg"><img src="https://www.twincities.com/wp-content/uploads/2023/04/AP23105784365617.jpg?w=620"><img src="https://bridge.georgetown.edu/wp-content/uploads/2019/09/Banner-Image.jpg">
-      <h2>Our Story</h2>
-      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
-       a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature,
-       discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics,
-       very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-      <!-- More content here -->
-    </section>
-  </main>
+<br>
 
+<div class="box" style="display: flex; align-items: center;">
+  <div class="text">
+    <h3 style="text-align: center;">Our Vision</h3>
+    <p>That youth who come through our program leave a more knowledgeable Muslim and a more confident, compassionate, contributing citizen of our community.</p>
+  </div>
+  <div class="image-container">
+    <img src="assets/value.jpg">
+  </div>
+</div>
 
+<br>
+<br>
 
-
-
+<section id="newsletter-signup">
+  <div class="newsletter-box">
+    <h2>Sign Up for Our Newsletter</h2>
+    <%= form_with(url: '/subscribe', method: 'post') do |f| %>
+      <div class="form-group">
+        <div class="input-wrapper">
+          <input type="text" placeholder="First Name">
+          <input type="text" placeholder="Last Name">
+          <input type="text" placeholder="Email">
+        <%= f.submit 'Sign Up', class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+  </div>
+</section>

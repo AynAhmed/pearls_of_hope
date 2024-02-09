@@ -1,6 +1,9 @@
 class Product < ApplicationRecord
-  belongs_to :program 
-  validates :product_name, presence: true
+  belongs_to :program
+  has_many :cart_products, dependent: :destroy
+  has_many :carts, through: :cart_products
+
+  validates :name, presence: true
 
 
   # after_save do

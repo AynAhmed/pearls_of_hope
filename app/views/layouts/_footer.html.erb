@@ -9,30 +9,42 @@
 
 <br>
 <br>
-    
+
 
     <div class="footer-content">
     <h2>Pearls of Hope Community Center</h2>
 
+    <div class="links">
+    <ul>
+    <li><%= link_to 'Home', root_path, class: 'custom-link' %></li>
+    <li><%= link_to 'About', about_index_path, class: 'custom-link' %></li>
+    <li><%= link_to 'Programs', programs_path, class: 'custom-link' %></li>
+    <li><%= link_to 'Volunteer', 'https://forms.gle/ytC8a6rpb8mPiR5bA', class: 'custom-link' %></li>
+    </ul>
+    </div>
+
+   
     <address>
       <%= fetch_text_content_body_by_title("Address").gsub(', ', '<br>').html_safe if fetch_text_content_body_by_title("Address").present? %>
     </address>
+    
 
-    <p>
+    <div class="phone">
       Phone:
       <a href="tel:+1<%= fetch_text_content_body_by_title("Phone") %>">
         <%= fetch_text_content_body_by_title("Phone") %>
       </a>
-    </p>
+    </div>
 
-    <p>
+    <div class="email">
       Email:
       <a href="mailto:<%= fetch_text_content_body_by_title("Email") %>">
         <%= fetch_text_content_body_by_title("Email") %>
       </a>
-    </p>
+    </div>
 
   </div>
   <p class="copy-right">Copyright &copy; <%= Time.now.year %> Pearls of Hope</p>
   </footer>
 
+  

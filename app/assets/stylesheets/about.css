@@ -1,51 +1,96 @@
+/* General Styles */
+body {
+    font-family: 'Dancing Script'; /* Change to Dancing Script font */
+    margin: 0;
+    padding: 0;
+    color: #66356c; /* Change text color */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Image Styles */
 img {
-        width: 450px;
-        height: auto;
-        align-content: center;
-} 
-
-.parent {
-    height:300px;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Add border radius */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Add shadow */
 }
-#our-mission {
-    background-color: #0E5F86;
-    color: white;
-    width: 50%;
-    height: 255px;
-    float: left;
+
+/* Section Styles */
+.section {
+    margin-bottom: 50px;
+}
+
+/* Text Container Styles */
+.box {
+    display: flex;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+}
+
+.text {
+    flex: 1;
+    padding: 0 20px; /* Add padding */
+}
+
+.text h3 {
     text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-family: 'Dancing Script'; /* Change to Dancing Script font */
+    font-size: 45px;
 }
 
-#our-vision {
-    background-color: #88C1CC;
-    color: white;
-    width: 50%;
-    height: 255px;
-    float: right;
+.text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Newsletter Signup Section Styles */
+#newsletter-signup {
     text-align: center;
+    margin-top: 50px;
 }
 
-#what-we-do h2 {
-     color: #816685;
-     font-family: cursive;
-     font-size: 40px; 
+.newsletter-box {
+    background-color: #f8f8f8;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-#our-mission h2 {
-    color: #88C1CC;
-    font-family: cursive;
-    font-size: 40px; 
+.newsletter-box h2 {
+    font-family: 'Dancing Script'; /* Change to Dancing Script font */
+    font-size: 2em;
+    margin-bottom: 20px;
+    margin: 15px;
 }
 
-#our-vision h2 {
-    color: #613894;
-    font-family: cursive;
-    font-size: 40px; 
+.form-group {
+    margin-bottom: 20px;
 }
 
-#our-story h2 {
-    color: #88C1CC;
-    font-family: cursive; 
-    font-size: 40px;
+/* Image Container Styles */
+.image-container {
+    width: 50%; /* Adjust the width as needed */
+    flex-shrink: 0; /* Prevent image from shrinking */
+    margin: 0 20px; /* Add margin */
 }
+
+.image-container2 {
+    width: 40%; /* Adjust the width as needed */
+    flex-shrink: 0; /* Prevent image from shrinking */
+    margin: 0 20px; /* Add margin */
+}
+
+
 

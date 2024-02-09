@@ -1,0 +1,25 @@
+<table class="cart-table">
+  <thead>
+    <tr>
+      <th>Item Name</th>
+      <th>Price</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @cart.cart_products.each do |cart_product| %>
+      <% product = cart_product.product %>
+      <tr id="<%= "cart-#{product.id}" %>" class="cart-item">
+        <td><%= product.name %></td>
+        <td><%= number_to_currency(product.price) %></td>
+        <td>
+          <%= form_with(url: carts_remove_path) do |f| %>
+            <%= f.hidden_field :id, value: cart_product.id %>
+            <%= f.submit "Remove" %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

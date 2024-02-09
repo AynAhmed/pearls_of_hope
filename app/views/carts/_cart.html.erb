@@ -1,0 +1,11 @@
+<%= turbo_frame_tag "cart" do %>
+    <div>
+        <h1 style=" text-align: center; margin-bottom: 20px;  margin-top: 20px;">My Cart</h1>
+        <% if @cart.cart_products.count > 0 %>
+          <%= render "carts/cart_products" %>
+        <% else %>
+          <p style=" text-align: center;">Your cart is empty</p>
+        <% end %>
+    </div>
+<% end %>
+

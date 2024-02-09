@@ -1,5 +1,7 @@
 ActiveAdmin.register Program do
   permit_params :name, :description, :program_type, :age_group, :date,  :fee, :price
+  after_create :create_stripe_product
+
   index do
     selectable_column
     id_column
@@ -38,6 +40,8 @@ ActiveAdmin.register Program do
     end
     f.actions
   end
+
+
 
   controller do
     after_create do
