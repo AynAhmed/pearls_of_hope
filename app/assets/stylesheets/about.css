@@ -1,42 +1,96 @@
-/* Global styles for images */
-img {
-    height: auto;
-    display: block;
+/* General Styles */
+body {
+    font-family: 'Dancing Script'; /* Change to Dancing Script font */
+    margin: 0;
+    padding: 0;
+    color: #66356c; /* Change text color */
+}
+
+.container {
+    max-width: 1200px;
     margin: 0 auto;
-    max-width: 100%;
+    padding: 20px;
 }
 
-/* Container styles for images */
-.image-container {
-    margin: 20px auto; /* Center the container horizontally and add spacing */
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    padding: 10px;
-}
-
-/* Image styles */
-.image-container img {
+/* Image Styles */
+img {
     display: block;
     max-width: 100%;
     height: auto;
-    transition: transform 0.3s ease;
+    border-radius: 10px; /* Add border radius */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Add shadow */
 }
 
-/* Hover effect on image container */
-.image-container:hover,
-.image-container:focus {
-    transform: scale(1.05);
+/* Section Styles */
+.section {
+    margin-bottom: 50px;
 }
 
-/* Hover effect on image */
-.image-container:hover img,
-.image-container:focus img {
-    filter: brightness(80%);
+/* Text Container Styles */
+.box {
+    display: flex;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 15px;
 }
 
-/* Styles for text */
 .text {
-    margin: 10px; /* Add margin-top to create space */
+    flex: 1;
+    padding: 0 20px; /* Add padding */
 }
+
+.text h3 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-family: 'Dancing Script'; /* Change to Dancing Script font */
+    font-size: 45px;
+}
+
+.text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Newsletter Signup Section Styles */
+#newsletter-signup {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.newsletter-box {
+    background-color: #f8f8f8;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter-box h2 {
+    font-family: 'Dancing Script'; /* Change to Dancing Script font */
+    font-size: 2em;
+    margin-bottom: 20px;
+    margin: 15px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Image Container Styles */
+.image-container {
+    width: 50%; /* Adjust the width as needed */
+    flex-shrink: 0; /* Prevent image from shrinking */
+    margin: 0 20px; /* Add margin */
+}
+
+.image-container2 {
+    width: 40%; /* Adjust the width as needed */
+    flex-shrink: 0; /* Prevent image from shrinking */
+    margin: 0 20px; /* Add margin */
+}
+
+
+

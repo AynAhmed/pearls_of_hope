@@ -150,3 +150,41 @@ width:450px;
 height: 450px;
 }
 
+
+.newsletter-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 80%; /* Adjust width as needed */
+    margin: 0 auto;
+  }
+  
+  .input-wrapper {
+    margin-right: 10px;
+  }
+  
+  .input-label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .small-input {
+    width: 80px; /* Adjust width of small inputs */
+  }
+  
+  .btn-primary {
+    margin-left: 10px;
+  }
+  
+  .form-control {
+    display: inline-block;
+    width: auto; /* Allow the inputs to take up the necessary space */
+  }
+  
+
+
+
+
+  
