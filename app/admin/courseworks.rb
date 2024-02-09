@@ -4,8 +4,8 @@ ActiveAdmin.register Coursework do
   # Customize filters
   filter :name
   filter :description
-  filter :program_id, as: :select, collection: Program.all.map { |p| [p.name, p.id] }
-  filter :user_id, as: :select, collection: User.all.map { |u| [u.email, u.id] }
+  #filter :program_id, as: :select, collection: Program.all.map { |p| [p.name, p.id] }
+  #filter :user_id, as: :select, collection: User.all.map { |u| [u.email, u.id] }
 
   index do
     selectable_column
@@ -18,7 +18,7 @@ ActiveAdmin.register Coursework do
       coursework.attachments.map { |attachment| link_to attachment.filename, rails_blob_path(attachment, disposition: "attachment") }.join(", ").html_safe
     end
     actions
-  end
+  end\
 
   form do |f|
     f.inputs do
