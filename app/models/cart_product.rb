@@ -1,11 +1,11 @@
 class CartProduct < ApplicationRecord
   belongs_to :cart
   belongs_to :product
-  
 
-    
+  validates :cart_id, presence: true
+  validates :product_id, presence: true
 
   def total
-    cart_products.to_a.sum { |cart_product| cart_product.price }
+    product.price * quantity
   end
 end

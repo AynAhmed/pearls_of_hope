@@ -54,6 +54,10 @@ class StudentsController < ApplicationController
 
     def set_student
       @student = Student.find(params[:id])
+      session[:student_id] = @student.id
+    rescue ActiveRecord::RecordNotFound
+      # Handle the case where the program is not found
+      redirect_to programs_path, alert: 'Student not found'
     end
 
     def student_params

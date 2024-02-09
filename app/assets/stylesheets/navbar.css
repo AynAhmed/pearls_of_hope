@@ -33,9 +33,6 @@ header {
     display: inline-block;
 }
 
-a.custom-link {
-
-}
 
 .nav-links li .custom-link {
     transition: all 0.3s ease 0s;
