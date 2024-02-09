@@ -77,6 +77,8 @@ Rails.application.routes.draw do
     resources :courseworks, only: [:index, :new, :create, :show]
   end
 
+  
+
   resources :s, only: [:index]
 
   resources :about, only: [:index]
