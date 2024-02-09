@@ -3,16 +3,13 @@
   <!-- Sidebar Navigation -->
   <div class="sidebar">
 
-  <div class="welcomeInstructor" >Welcome, <%= user.first_name.capitalize %></div>
+    <div class="welcomeInstructor" >Welcome, <%= user.first_name.capitalize %></div>
 
-  <div>
-    <%= link_to 'Profile', profiles_path,class: 'sidebar-link' %>
+    <div class="sidebar-div">
+      <%= link_to 'Profile', profiles_path, class: 'sidebar-link' %>
+    </div>
   </div>
-  <div>
-    <%= link_to 'Students', class: 'sidebar-link' %>
-  </div>
-    <%= link_to 'Programs', class: 'sidebar-link' %>
-  </div> 
+  
   <!-- Main Content -->
   <div class="main-content">
     <h2>Instructor's Dashboard</h2>

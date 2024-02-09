@@ -2,14 +2,10 @@
 <div class="instructor-dashboard">
   <!-- Sidebar Navigation -->
   <div class="sidebar">
-  <div class="welcomeInstructor" >Welcome, <%= user.first_name.capitalize %>!</div>
-  <div>
-    <%= link_to 'My Students', class: 'sidebar-link' %>
-  </div>
-  <div>
-    <%= link_to 'My Enrollements', class: 'sidebar-link' %>
-  </div>
-    <%= link_to 'Profile', class: 'sidebar-link' %>
+    <div class="welcomeInstructor" >Welcome, <%= user.first_name.capitalize %>!</div>
+    <div>
+      <%= link_to 'Profile', class: 'sidebar-link' %>
+    </div>
   </div>
   <!-- Main Content -->
   <div class="main-content">
@@ -19,10 +15,10 @@
     <ul>
       <% @students.each do |student| %>
         <li>
-        <%= link_to student.full_name, student_path(student) %>
-
-          <%= link_to student.full_name, students_path(student) %>
-
+          <%= link_to student.full_name, student_path(student) %>
+          <p id="display-enrollment">
+            Enrolled in: <%= display_enrolled_programs(student) %>
+          </p>
         </li>
       <% end %>
     </ul>

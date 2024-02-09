@@ -4,7 +4,7 @@ class CourseworksController < ApplicationController
 
 
   def index
-    @courseworks = @program.courseworks
+    @courseworks = @student.program.courseworks
   end
 
 

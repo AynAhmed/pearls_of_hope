@@ -17,7 +17,8 @@
   color: rgb(143, 140, 140);
   border-bottom: 1px solid #4a4747;
   padding-bottom: 10px;
-  font-size: 45px;
+  font-size: 32px;
+  font-family: kalnia;
 }
 
 
@@ -59,6 +60,10 @@
 
 .sidebar-link:hover {
   color: #ddd;
+}
+
+.sidebar-div{
+  margin: 15px;
 }
 
 .main-content {
@@ -112,8 +117,8 @@ div .main-content{
 
 div .welcomeInstructor{
   color:white; 
-  font-size: 35px;
-  text-align: center;
+  font-size: 25px;
+  text-align: left;
   font-family: kalnia;
   font-weight: bold;
 }
@@ -186,8 +191,8 @@ text-align: center; /* Center the items within the container */
 .programs ul li {
 display: inline-block;
 width: 250px;
-height: 250px;
-margin: 10px; /* Set a fixed margin for all sides of each item */
+height: 100px;
+margin: 15px; /* Set a fixed margin for all sides of each item */
 vertical-align: top;
 }
 
@@ -201,4 +206,9 @@ margin-right: 0;
 
 .programs ul li:nth-child(3n+1) {
 clear: left;
+}
+
+#display-enrollment{
+  padding: 5px;
+  margin: 5px;
 }

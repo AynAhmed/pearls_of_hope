@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap">
+
     <title>PearlsOfHope</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
@@ -15,7 +18,7 @@
     <script src="https://kit.fontawesome.com/5d37fde041.js" crossorigin="anonymous"></script>
 <%= javascript_importmap_tags %>
   
-  
+
   <link rel="stylesheet" href="https://fonts.google.com/specimen/Kalnia?sort=date&preview.text=Instructor%27s%20Dashboard&stroke=Serif')" />
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -28,9 +31,11 @@
   </head>
   <body>
     <%= render "layouts/navbar" %>
+    <%= render partial: "carts/cart" if @render_cart %>
     <%= yield %>
     <% unless controller_name == 'dashboards' %>
       <%= render 'layouts/footer' %>
     <% end %>
   </body>
 </html>
+
