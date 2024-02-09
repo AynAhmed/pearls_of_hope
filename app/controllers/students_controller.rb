@@ -1,30 +1,31 @@
 class StudentsController < ApplicationController
     before_action :set_student, only: [:show, :edit, :update, :destroy]
     before_action :authenticate_user!
-    
+
     def index
       @students = Student.all
       @user = current_user
     end
-  
+
     def show
 
     end
-  
+
     def new
       @student = Student.build
 
     end
 
     def create
-      @student = current_user.students.build(student_params)
       @student.user = current_user 
+      @student = current_user.students.build(student_params)
+  
 
       # Assuming you have a way to determine the program based on program_id
 
       if @student.save
-        redirect_to new_enrollment_path, notice: "You just create a new student!"
-          
+       
+        redirect_to new_enrollment_path, status: :see_other, notice: "You just created a student! Congrats!"
       else
         puts @student.errors.full_messages # Add this line for debugging
         render :new
@@ -38,7 +39,7 @@ class StudentsController < ApplicationController
 
     def update
       if @student.update(student_params)
-        redirect_to @student, notice: 'Student was successfully updated.'
+        redirect_to enrollments_path, notice: 'Student was successfully updated.'
       else
         render :edit
       end

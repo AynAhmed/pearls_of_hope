@@ -1,51 +1,42 @@
+/* Global styles for images */
 img {
-        width: 450px;
-        height: auto;
-        align-content: center;
-} 
-
-.parent {
-    height:300px;
-}
-#our-mission {
-    background-color: #0E5F86;
-    color: white;
-    width: 50%;
-    height: 255px;
-    float: left;
-    text-align: center;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
-#our-vision {
-    background-color: #88C1CC;
-    color: white;
-    width: 50%;
-    height: 255px;
-    float: right;
-    text-align: center;
+/* Container styles for images */
+.image-container {
+    margin: 20px auto; /* Center the container horizontally and add spacing */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    padding: 10px;
 }
 
-#what-we-do h2 {
-     color: #816685;
-     font-family: cursive;
-     font-size: 40px; 
+/* Image styles */
+.image-container img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
-#our-mission h2 {
-    color: #88C1CC;
-    font-family: cursive;
-    font-size: 40px; 
+/* Hover effect on image container */
+.image-container:hover,
+.image-container:focus {
+    transform: scale(1.05);
 }
 
-#our-vision h2 {
-    color: #613894;
-    font-family: cursive;
-    font-size: 40px; 
+/* Hover effect on image */
+.image-container:hover img,
+.image-container:focus img {
+    filter: brightness(80%);
 }
 
-#our-story h2 {
-    color: #88C1CC;
-    font-family: cursive; 
-    font-size: 40px;
+/* Styles for text */
+.text {
+    margin: 10px; /* Add margin-top to create space */
 }
-

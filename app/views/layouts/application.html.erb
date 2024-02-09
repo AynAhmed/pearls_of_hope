@@ -27,11 +27,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
     <script src="https://js.stripe.com/v3/"></script>
+    <%= javascript_importmap_tags %>
   </head>
   <body>
     <%= render "layouts/navbar" %>
     <%= yield %>
-    <%= render 'layouts/footer' %>
+    <% unless controller_name == 'dashboards' %>
+      <%= render 'layouts/footer' %>
+    <% end %>
   </body>
 </html>
 

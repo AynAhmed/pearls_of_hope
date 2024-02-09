@@ -3,7 +3,7 @@ class DashboardsController < ApplicationController
 
   def index
     @programs = Program.all
-    @students = Student.all
+    @students = current_user.students
     @user = current_user
     @coursework = Coursework.new if instructor?
   end
