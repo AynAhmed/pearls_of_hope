@@ -62,17 +62,19 @@
 <section id="newsletter-signup">
   <div class="newsletter-box">
     <h2>Sign Up for Our Newsletter</h2>
-    <%= form_with(url: '/subscribe', method: 'post') do |f| %>
+    <%= form_with(url: subscribe_path, method: 'post') do |f| %>
       <div class="form-group">
         <div class="input-wrapper">
-          <input type="text" placeholder="First Name">
-          <input type="text" placeholder="Last Name">
-          <input type="text" placeholder="Email">
-        <%= f.submit 'Sign Up', class: 'btn btn-primary' %>
+          <%= f.text_field :first_name, placeholder: "First Name" %>
+          <%= f.text_field :last_name, placeholder: "Last Name" %>
+          <%= f.email_field :email, placeholder: "Email" %>
+          <%= f.submit 'Sign Up', class: 'btn btn-primary' %>
+        </div>
       </div>
     <% end %>
   </div>
 </section>
+
 
 
 
