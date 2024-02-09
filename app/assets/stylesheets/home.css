@@ -1,154 +1,152 @@
-/* app/assets/stylesheets/home.css */
-/* Font Imports */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
-/* General Styles */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Open Sans', sans-serif;
-    color: #333; /* Dark text color */
-}
-
-#welcome {
-  margin-top: 10px;
-    text-align: center;
-    background-color: #e0f2f1;
-  }
-  
-  #welcome h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-  }
-  
-  #welcome p {
-    font-size: 20px;
-    color: #0b0606; /* Dark gray */
-  }
- 
-
-h1, h2 {
-    text-align: center;
-    font-family: 'Montserrat', sans-serif; /* Montserrat for headings */
-}
-
-#about {
-text-align: center;
-font-size: 32px;
-}
-
-button {
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif; /* Montserrat for buttons */
-}
-
-/* Header Styles */
-header {
-    background-color: #007bff;
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-header nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    color: #cce6ff; /* Lighter blue on hover */
-}
-
-
-
-
-section {
-    margin-bottom: 40px; /* Increased margin between sections */
-}
-
-/* Footer Styles */
-footer {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 20px 0; /* Increased padding */
-}
-
-#instagram,
-#facebook {
-  background-color: #F8F8F8;
-  padding: 50px 0;
+.container-about-us{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+}
+.item-about-us{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+
+}
+.item-about-us img {
+  max-width: 50%;
+  margin-right: 20px;
+  padding-left: 40px;
+}
+.item-about-us p{
+padding: 10px;
+font-size: 25px;
+}
+@media (max-width: 768px) {
+  .item-about-us img {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
+  }
 }
 
-.instagram-embed-container,
-.facebook-embed-container {
-  max-width: 540px;
-  width: 100%;
-  display: inline-block; /* Ensure the embeds appear next to each other */
-  margin-right: 20px; /* Adjust spacing between embeds */
-}
 
-@media only screen and (max-width: 768px) {
-  #instagram,
-  #facebook {
-    flex-direction: column; /* Display the embeds in a column on smaller screens */
-  }
 
-  .instagram-embed-container,
-  .facebook-embed-container {
-    margin-right: 0;
-    margin-bottom: 20px; /* Adjust spacing between embeds */
-  }
+#newsletter-signup {
+text-align: center;
+padding: 50px 0;
 }
 
 .newsletter-box {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    width: 80%; /* Adjust width as needed */
-    margin: 0 auto;
-  }
-  
-  .input-wrapper {
-    margin-right: 10px;
-  }
-  
-  .input-label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .small-input {
-    width: 80px; /* Adjust width of small inputs */
-  }
-  
-  .btn-primary {
-    margin-left: 10px;
-  }
-  
-  .form-control {
-    display: inline-block;
-    width: auto; /* Allow the inputs to take up the necessary space */
-  }
-  
+background-color: #fff;
+color: #613894;
+padding: 50px;
+border-radius: 20px;
+box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter-box h2 {
+font-size: 2.5em;
+margin-bottom: 20px;
+}
+
+.overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7); /* Adjust the alpha value for transparency */
+}
+
+.caption {
+font-family: 'Dancing Script';
+margin-left: 5vw;
+
+padding: var(--lx-space-01);
+position: absolute;
+bottom: 50%;
+width: 40%;
+text-align: left;
+font-size: 6.5vw;
+transition: transform 0.3s ease-in-out;  
+color: #ffffff;
+filter: drop-shadow(0 0 0.75rem black);
+
+max-height: 300px;
+
+
+span.highlighted-caption{
+  color:#88c0cb;
+}
+h3 {
+  color: #ffffff; /* Set the color for the h3 text */
+  font-size: 3vw; /* Adjust the font size as needed */
+  margin-top: 10px; /* Add space between h2 and h3 */
+}
+}
+
+.overlay {
+position: relative;
+}
+
+.overlay:before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+z-index: 1;
+pointer-events: none; /* Ensures clicks go through to the underlying elements */
+}
+
+
+#about h2{
+display: flex;
+  justify-content: right;
+  font-size: 70px;
+  font-family: 'Dancing Script';
+  margin-right: 25%;
+
+
+}
+
+#program h2{
+display: flex;
+justify-content: left;
+font-size: 70px;
+font-family: 'Dancing Script';
+margin-left: 10%;
+
+}
+
+#about-content{
+font-size: 60px;
+
+}
+
+
+.instagram-container {
+  padding-top: 3vw;
+display: flex;
+justify-content: center; /* Center horizontally */
+width:100%;
+}
+
+.instagram-media {
+display: block; /* Ensure it's displayed as a block element */
+}
+
+
+body {
+  background: linear-gradient(to bottom,  #ffffff,  #ecfdff);
+}
+
+#newsletter-box h2{
+  text-align:center;
+}
+
+#group-jpg{
+padding-bottom: 3vw;
+width:450px;
+height: 450px;
+}
+
