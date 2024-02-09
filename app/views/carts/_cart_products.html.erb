@@ -1,22 +1,25 @@
-<% @cart.cart_products.each do |cart_product| %>
-  <% product = cart_product.product %>
-  <div id="<%= "cart-#{product.id}" %>">
-    <div style="display:flex;justify-content:space-between;margin: 0em 5em;" class="jumbotron">
-      <strong>Name:</strong>
-      <%= product.name %>
-      <strong>Price:</strong>
-      <%= number_to_currency(product.price) %>
-      <%= form_with(url: carts_add_path) do |f| %>
-        <%= f.hidden_field :id, value: product.id %>
-        <%= f.number_field :quantity, value: 1, min: 0 %>
-        <%= f.submit "Add To Cart" %>
-      <% end %>
-      <strong>Total:</strong>
-      <%= number_to_currency(product.price) %>
-      <%= form_with(url: carts_remove_path) do |f| %>
-        <%= f.hidden_field :id, value: cart_product.id %>
-        <%= f.submit "🗑️ Remove", style: "border: none;" %>
-      <% end %>
-    </div>
-  </div>
-<% end %>
+<table class="cart-table">
+  <thead>
+    <tr>
+      <th>Item Name</th>
+      <th>Price</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @cart.cart_products.each do |cart_product| %>
+      <% product = cart_product.product %>
+      <tr id="<%= "cart-#{product.id}" %>" class="cart-item">
+        <td><%= product.name %></td>
+        <td><%= number_to_currency(product.price) %></td>
+        <td>
+          <%= form_with(url: carts_remove_path) do |f| %>
+            <%= f.hidden_field :id, value: cart_product.id %>
+            <%= f.submit "Remove" %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

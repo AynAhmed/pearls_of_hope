@@ -1,7 +1,7 @@
 ActiveAdmin.register Image do
     menu parent: 'Website Content'
     permit_params :title, :image_data
-  
+
     index do
       selectable_column
       id_column
@@ -10,10 +10,10 @@ ActiveAdmin.register Image do
       column :created_at
       actions
     end
-  
+
     filter :title
     filter :created_at
-  
+
     form do |f|
       f.inputs 'Image Details' do
         f.input :title
@@ -21,7 +21,7 @@ ActiveAdmin.register Image do
       end
       f.actions
     end
-  
+
     show do
       attributes_table do
         row :title
@@ -34,4 +34,3 @@ ActiveAdmin.register Image do
       active_admin_comments
     end
   end
-  

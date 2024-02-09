@@ -3,7 +3,7 @@ class Product < ApplicationRecord
   has_many :cart_products, dependent: :destroy
   has_many :carts, through: :cart_products
 
-  validates :product_name, presence: true
+  validates :name, presence: true
 
 
   # after_save do
