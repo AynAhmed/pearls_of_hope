@@ -8,7 +8,7 @@ class CartsController < ApplicationController
 
   
   def show
-    @render_cart = true
+    @render_cart = false
   end
 
   def add
