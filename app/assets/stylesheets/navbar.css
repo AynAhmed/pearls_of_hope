@@ -114,6 +114,25 @@ li.donate-button:hover{
   .hamburger-icon:hover .hamburger-icon-bar {
     background-color: #555;
   }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 0px 16px;
+    z-index: 1;
+    right: 0;
+    /* Change display to flex and set flex-direction to column */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dropdown-content a {
+    padding: 4px 0;
+    margin: 4px 0;
+  }
   
   /* Styles for smaller screens */
 @media (max-width: 768px) {
@@ -190,7 +209,7 @@ li.donate-button:hover{
   }
 
   .dropdown-content a {
-    color: white; /* Change link color */
+    color: black; /* Change link color */
     text-decoration: none;
     display: block;
     padding: 5px 0;
