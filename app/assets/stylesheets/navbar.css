@@ -127,7 +127,7 @@ li.donate-button:hover{
   .nav-links {
     display: none; /* Hide the navigation links by default */
     flex-direction: column;
-    background-color: #2f4858;
+    background-color: white;
     padding: 10px;
     border-radius: 5px;
     position: absolute;
@@ -145,6 +145,7 @@ li.donate-button:hover{
 
   .nav-links.active {
     display: flex; /* Show when active */
+    background: white;
   }
 
   /* Additional styling for dropdown links */
@@ -158,9 +159,10 @@ li.donate-button:hover{
     transition: color 0.3s ease; /* Add transition */
   }
 
-  .nav-links li .custom-link:hover {
+  .nav-links li a:hover {
     color: rgb(67, 122, 180); /* Change link color on hover */
   }
+
 
   .donate-button {
     color: white; /* Change button text color */
@@ -176,9 +178,14 @@ li.donate-button:hover{
     background-color: #0056b3; /* Darken button color on hover */
   }
 
+  #donate-link:hover{
+    color: black;
+  }
+
+
   /* Style the dropdown content */
   .dropdown-content {
-    background-color: #2f4858; /* Change background color */
+    background-color: white; /* Change background color */
     padding: 10px; /* Add padding */
   }
 
