@@ -1,154 +1,151 @@
-.container-about-us{
+/* General styling */
+.container-about-us {
   display: flex;
   flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text */
 }
-.item-about-us{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 20px;
 
+.item-about-us {
+  display: flex;
+  flex-direction: row; /* Change back to row layout */
+  align-items: center; /* Align items vertically */
+  margin-bottom: 20px;
 }
+
 .item-about-us img {
   max-width: 50%;
   margin-right: 20px;
-  padding-left: 40px;
+  margin-left:20px;
 }
 
-.item-about-us p{
-padding: 10px;
-font-size: 25px;
+
+
+.item-about-us p {
+  padding: 10px;
+  font-size: 20px;
+  padding-right: 30px;
 }
+
+/* Media query for responsiveness */
 
 @media (max-width: 768px) {
+  .item-about-us {
+    flex-direction: column; /* Change to column layout */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+  }
   .item-about-us img {
-      max-width: 100%;
-      margin-right: 0;
-      margin-bottom: 10px;
+    max-width: 100%; /* Adjust image width */
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 20px; /* Add bottom margin */
   }
 }
 
+/* Styling for headers */
+#about h2, #program h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 70px;
+  font-family: 'Dancing Script';
+}
 
+#about h2 {
+  margin-left: 50%;
+}
 
-#newsletter-signup {
-text-align: center;
-padding: 50px 0;
+#program h2 {
+  margin-right: 50%;
+}
+
+/* Additional styling */
+body {
+  background: linear-gradient(to bottom, #FFFFFF, #ECFDFF);
 }
 
 .newsletter-box {
-background-color: #fff;
-color: #613894;
-padding: 50px;
-border-radius: 20px;
-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  color: #613894;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
 .newsletter-box h2 {
-font-size: 2.5em;
-margin-bottom: 20px;
+  font-size: 2.5em;
+  margin-bottom: 20px;
 }
 
 .overlay {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: rgba(0, 0, 0, 0.7); /* Adjust the alpha value for transparency */
-}
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Adjust the alpha value for transparency */
+ }
+
+  .overlay {
+    position: relative;
+    }
+    .overlay:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+      z-index: 1;
+      pointer-events: none; /* Ensures clicks go through to the underlying elements */
+      }
 
 .caption {
-font-family: 'Dancing Script';
-margin-left: 5vw;
-
-padding: var(--lx-space-01);
-position: absolute;
-bottom: 50%;
-width: 40%;
-text-align: left;
-font-size: 6.5vw;
-transition: transform 0.3s ease-in-out;  
-color: #ffffff;
-filter: drop-shadow(0 0 0.75rem black);
-
-max-height: 300px;
-
-
-span.highlighted-caption{
-  color:#88c0cb;
-}
-h3 {
-  color: #ffffff; /* Set the color for the h3 text */
-  font-size: 3vw; /* Adjust the font size as needed */
-  margin-top: 10px; /* Add space between h2 and h3 */
-}
-}
-
-.overlay {
-position: relative;
-}
-
-.overlay:before {
-content: "";
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
-z-index: 1;
-pointer-events: none; /* Ensures clicks go through to the underlying elements */
-}
-
-
-#about h2{
-display: flex;
-  justify-content: right;
-  font-size: 70px;
   font-family: 'Dancing Script';
-  margin-right: 25%;
+  margin-left: 5vw;
+  padding: var(--lx-space-01);
+  position: absolute;
+  bottom: 50%;
+  width: 40%;
+  text-align: left;
+  font-size: 6.5vw;
+  transition: transform 0.3s ease-in-out;
+  color: #FFFFFF;
+  filter: drop-shadow(0 0 0.75rem black);
+  max-height: 300px;
+  span.highlighted-caption{
+   color:#88c0cb;
+  }
+  
+  h3 {
+   color: #FFFFFF; /* Set the color for the h3 text */
+   font-size: 3vw; /* Adjust the font size as needed */
+   margin-top: 10px; /* Add space between h2 and h3 */
+  }
+  
+  }
 
+  .instagram-container {
+    padding-top: 3vw;
+   display: flex;
+   justify-content: center; /* Center horizontally */
+   width:100%;
+   }
 
-}
+   #newsletter-signup {
+    text-align: center;
+    padding: 50px 0;
+   }
 
-#program h2{
-display: flex;
-justify-content: left;
-font-size: 70px;
-font-family: 'Dancing Script';
-margin-left: 10%;
+    .newsletter-box {
+    background-color: #fff;
+    color: #613894;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
 
-}
-
-#about-content{
-font-size: 60px;
-
-}
-
-
-.instagram-container {
-  padding-top: 3vw;
-display: flex;
-justify-content: center; /* Center horizontally */
-width:100%;
-}
-
-.instagram-media {
-display: block; /* Ensure it's displayed as a block element */
-}
-
-
-body {
-  background: linear-gradient(to bottom,  #ffffff,  #ecfdff);
-}
-
-#newsletter-box h2{
-  text-align:center;
-}
-
-#group-jpg{
-padding-bottom: 3vw;
-width:450px;
-height: 450px;
-}
-
+    .newsletter-box h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    }
