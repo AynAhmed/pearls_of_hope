@@ -352,6 +352,7 @@ DEPENDENCIES
   gon
   importmap-rails
   jbuilder
+  jquery-rails
   pay (~> 7.1)
   pg (~> 1.4)
   puma (>= 5.0)
@@ -366,7 +367,7 @@ DEPENDENCIES
   web-console
 
 RUBY VERSION
-   ruby 3.2.0p0
+   ruby 3.2.3p157
 
 BUNDLED WITH
    2.4.1

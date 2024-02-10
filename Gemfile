@@ -5,6 +5,9 @@ gem "rails", "~> 7.1.2"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 # Use pg as the database for Active Record
+
+gem 'jquery-rails'
+
 gem 'pg', '~> 1.4'
 #Devise gem
 gem "devise", "~> 4.9"
