@@ -13,6 +13,10 @@ class PaymentsController < ApplicationController
       currency: 'usd',
       source: params[:stripe_token],
       description: 'pearls of hope Program'
+      metadata: {
+                             PROGRAMS: product_ids.to_json,
+                              CUSTOMER: "#{@payment.first_name.capitalize} #{@payment.last_name.capitalize} | #{@payment.email}"
+                            }
     })
 
     respond_to do |format|
