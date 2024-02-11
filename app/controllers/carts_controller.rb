@@ -66,7 +66,7 @@ class CartsController < ApplicationController
   def set_gon_variables
     gon.env_variables = {
       STRIPE_PUBLIC_KEY: ENV['STRIPE_PUBLIC_KEY'],
-      STRIPE_SECRET_KEY: ENV['STRIPE_SECRET_KEY']
+      STRIPE_SECRET_KEY: ENV['STRIPE_PRIVATE_KEY']
     }
   end
 end

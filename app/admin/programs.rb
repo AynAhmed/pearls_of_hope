@@ -48,6 +48,7 @@ ActiveAdmin.register Program do
       super do |format|
         if resource.valid?
           create_stripe_product(resource)
+          resource.stripe_price_id = resource.stripe_price_id # Set stripe_price_id before calling create_local_product
         end
       end
     end
@@ -55,7 +56,7 @@ ActiveAdmin.register Program do
     private
   
     def create_stripe_product(program)
-      stripe_secret_key = ENV['STRIPE_SECRET_KEY']
+      stripe_secret_key = ENV['STRIPE_PRIVATE_KEY']
       return unless program.stripe_product_id.nil?
   
       Stripe.api_key = stripe_secret_key
@@ -73,6 +74,7 @@ ActiveAdmin.register Program do
       )
   
       program.update(stripe_product_id: stripe_product.id, stripe_price_id: stripe_price.id)
+
     end
   end
   

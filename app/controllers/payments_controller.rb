@@ -2,7 +2,7 @@ class PaymentsController < ApplicationController
 
   def create
 
-    Stripe.api_key = ENV['STRIPE_SECRET_KEY']
+    Stripe.api_key = ENV['STRIPE_PRIVATE_KEY']
 
     @payment = Payment.new(payment_params)
 
@@ -13,10 +13,6 @@ class PaymentsController < ApplicationController
       currency: 'usd',
       source: params[:stripe_token],
       description: 'pearls of hope Program'
-      metadata: {
-                             PROGRAMS: product_ids.to_json,
-                              CUSTOMER: "#{@payment.first_name.capitalize} #{@payment.last_name.capitalize} | #{@payment.email}"
-                            }
     })
 
     respond_to do |format|
