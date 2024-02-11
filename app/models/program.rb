@@ -25,12 +25,15 @@ class Program < ApplicationRecord
 
  
     def create_local_product
-    Product.create(
-      name: self.name,
-      price: self.price, # Assuming 'price' attribute exists in the Program model
-      program_id: self.id
-    )
-  end
+      product = Product.create(
+        name: self.name,
+        price: self.price, # Assuming 'price' attribute exists in the Program model
+        program_id: self.id,
+        price_id: self.stripe_price_id # Set the price_id column with stripe_price_id
+      )
+    end
+    
+
 
     
 end
