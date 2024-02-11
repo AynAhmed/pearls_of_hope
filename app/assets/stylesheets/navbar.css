@@ -127,6 +127,7 @@ li.donate-button:hover{
     /* Change display to flex and set flex-direction to column */
     display: flex;
     flex-direction: column;
+    border-radius: 5px;
   }
 
   .dropdown-content a {
