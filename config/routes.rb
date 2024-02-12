@@ -15,6 +15,9 @@ Rails.application.routes.draw do
 
   get 'dashboard',to: 'dashboards#index'
 
+  get 'dashboard/students', to: 'dashboards#students', as: 'dashboard_students'
+
+
 
   post 'payments/create'
   
