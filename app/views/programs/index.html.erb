@@ -2,21 +2,15 @@
 <h1 class="programsTitle">Programs</h1>
 <!-- Programs Section -->
 <section class="program-grid">
-  <% @programs.each do |program| %>
-    
+<% @programs.each do |program| %>
+
     <article id="<%= program.name.parameterize %>" class="program-card">
 
       <h3><%= program.name %></h3>
       <p>Age Group: <%= program.age_group %></p>
 
+      
 
-      <% @programs.each do |program| %>
-        <div class="program">
-          <h2><%= program.name %></h2>
-          <p><%= program.description %></p>
-          <%= image_tag program.image_url %>
-        </div>
-      <% end %>
 
 
 
