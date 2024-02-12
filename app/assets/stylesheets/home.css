@@ -1,4 +1,7 @@
 /* General styling */
+main{
+  margin-top: 15px;
+}
 .container-about-us {
   display: flex;
   flex-direction: column;

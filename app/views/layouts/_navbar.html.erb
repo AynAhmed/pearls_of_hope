@@ -44,6 +44,9 @@
             <%= link_to cart_path do %>
               <i class="fa-solid fa-cart-shopping icon"></i>
             <% end %>
+            <li class="donate-button">
+            <%= link_to "Donate", "https://crm.bloomerang.co/HostedDonation?ApiKey=pub_5a3e2eb6-a0a8-11ec-af60-02eab0531019&WidgetId=16384", id: 'donate-link' %>
+            </li>
 
           </li>
            <li class="profile-dropdown">
@@ -75,8 +78,7 @@
           <%= link_to "Donate", "https://crm.bloomerang.co/HostedDonation?ApiKey=pub_5a3e2eb6-a0a8-11ec-af60-02eab0531019&WidgetId=16384", target: :blank, id: 'donate-link' %></li>
 
           </li>
-
-          </li>
+          
           <li class="sign-in">
           <%= user_signed_in? ?
             link_to('Sign Out', destroy_user_session_path, method: :delete, data: { turbo_method: :delete }, class: 'some-css-class') :
