@@ -4,16 +4,18 @@
 function appendProfileDropdown() {
     var profileDropdown = $('.profile-dropdown');
     $('.navbar-flex-container').append(profileDropdown);
+    console.log('it works')
   }
   
   // Function to move profile avatar dropdown back to its original position
   function moveProfileDropdown() {
     var profileDropdown = $('.profile-dropdown');
     $('.navbar').append(profileDropdown);
+    console.log('it was moved down')
   }
   
   // Toggle navbar dropdown
-  $('.nav-toggle').click(function() {
+  $('.hamburger-menu').click(function() {
     if ($(this).is(':checked')) {
       appendProfileDropdown();
     } else {

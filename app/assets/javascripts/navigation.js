@@ -18,7 +18,6 @@ $(document).ready(function() {
     $(window).resize(function() {
         var screenWidth = $(window).width();
         if (screenWidth > 768) {
-            console.log('it is working')
             $('.nav-links').removeClass('active'); // Remove active class if screen width exceeds 768px
         }
     });
