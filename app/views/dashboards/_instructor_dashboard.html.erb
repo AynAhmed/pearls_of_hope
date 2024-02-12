@@ -20,7 +20,8 @@
     <ul>
       <% programs.each do |program| %>
         <li>
-        <%= link_to program.name, item_path(program) %> | <%= program.courseworks.count %>
+        <%= link_to program.name, item_path(program) %> 
+        <p class='assignments'>Number of works assigned: <%= program.courseworks.count %></p>
         <div class ="add-coursework-cont">
             <br>
           <%= link_to "Add Coursework", new_item_coursework_path(program), class: "add-coursework-button" %>
