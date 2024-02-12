@@ -3,7 +3,7 @@ body {
     font-family: 'Dancing Script'; /* Change to Dancing Script font */
     margin: 0;
     padding: 0;
-    color: #66356c; /* Change text color */
+    color:  #333; /* Change text color */
 }
 
 .container {
@@ -17,7 +17,7 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
-    border-radius: 10px; /* Add border radius */
+    border-radius: 5px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Add shadow */
 }
 

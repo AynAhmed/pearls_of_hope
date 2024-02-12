@@ -1,3 +1,4 @@
+<div class= "instructor-dash-container">
 <%# app/views/dashboards/_instructor_dashboard.html.erb %>
 <div class="instructor-dashboard">
   <!-- Sidebar Navigation -->
@@ -9,7 +10,7 @@
       <%= link_to 'Profile', profiles_path, class: 'sidebar-link' %>
     </div>
   </div>
-  
+
   <!-- Main Content -->
   <div class="main-content">
     <h2>Instructor's Dashboard</h2>
@@ -20,7 +21,7 @@
       <% programs.each do |program| %>
         <li>
         <%= link_to program.name, item_path(program) %> | <%= program.courseworks.count %>
-          <div class ="add-coursework-cont">
+        <div class ="add-coursework-cont">
             <br>
           <%= link_to "Add Coursework", new_item_coursework_path(program), class: "add-coursework-button" %>
           </div>
@@ -29,5 +30,5 @@
     </ul>
   </div>
   
-
+  </div>
   

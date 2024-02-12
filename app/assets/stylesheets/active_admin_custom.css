@@ -1,0 +1,9 @@
+
+#header {
+    background-color: black;
+    background-image: linear-gradient(to bottom, #7cadc7, #0E5F86); 
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
