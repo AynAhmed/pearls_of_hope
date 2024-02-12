@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>PearlsOfHope</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
   <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
@@ -11,7 +11,12 @@
   <%= javascript_importmap_tags %>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "program", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "program_show", "data-turbo-track": "reload" %>
   <%= stylesheet_link_tag "sign_up", "data-turbo-track": "reload" %>
+
 
 </head>
 <body>

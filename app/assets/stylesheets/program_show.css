@@ -1,0 +1,73 @@
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .program-details {
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 40px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .program-image {
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn {
+    display: block;
+    margin: 30px auto; /* Adjust vertical margin and center horizontally */
+    max-width: 200px; /* Set maximum width */
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #2980b9;
+  }
+  .program-details {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .program-detail {
+    padding: 5px; /* Adjust padding to your preference */
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 2px; /* Add margin bottom for spacing */
+  }
+.lead{
+    padding:16px;
+}
+.btn.btn-primary.btn-add-to-cart {
+    padding-top: 10px;
+}
+
+  .title {
+    padding-top: 20px; /* Increase top padding for better spacing */
+    text-align: center;
+    font-size: 45px;
+    color: #333; /* Set a dark text color */
+    font-weight: bold; /* Make the font bold for emphasis */
+    text-transform: uppercase; /* Convert text to uppercase for a stylish look */
+    letter-spacing: 2px; /* Add letter spacing for better readability */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    padding-bottom: 20px;
+  }
+  
+  
