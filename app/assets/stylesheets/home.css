@@ -19,6 +19,8 @@
   margin-left:20px;
 }
 
+
+
 .item-about-us p {
   padding: 10px;
   font-size: 20px;
@@ -26,6 +28,7 @@
 }
 
 /* Media query for responsiveness */
+
 @media (max-width: 768px) {
   .item-about-us {
     flex-direction: column; /* Change to column layout */

@@ -12,7 +12,7 @@ class ProgramsController < ApplicationController
       # Assuming each program has an associated product
       @product = @program.product
       # Assuming you already have a method to initialize the cart
-      initialize_cart
+
     end
 
     def new

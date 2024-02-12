@@ -2,6 +2,6 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-
 import "./slideshow.js"
 import "./checkout.js"
+import "./test.js"

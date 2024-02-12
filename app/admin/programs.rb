@@ -1,6 +1,6 @@
 ActiveAdmin.register Program do
   permit_params :name, :description, :program_type, :age_group, :date,  :fee, :price
-  after_create :create_stripe_product
+
 
   index do
     selectable_column
@@ -44,23 +44,39 @@ ActiveAdmin.register Program do
 
 
   controller do
-    after_create do
-      return unless resource.stripe_product_id.nil?
-
+    def create
+      super do |format|
+        if resource.valid?
+          create_stripe_product(resource)
+          resource.stripe_price_id = resource.stripe_price_id # Set stripe_price_id before calling create_local_product
+        end
+      end
+    end
+  
+    private
+  
+    def create_stripe_product(program)
+      stripe_secret_key = ENV['STRIPE_PRIVATE_KEY']
+      return unless program.stripe_product_id.nil?
+  
+      Stripe.api_key = stripe_secret_key
+  
       stripe_product = Stripe::Product.create(
-        name: resource.name,
+        name: program.name,
         type: 'service',
-        description: resource.description
+        description: program.description
       )
-
+  
       stripe_price = Stripe::Price.create(
         product: stripe_product.id,
-        unit_amount: (resource.price/100).to_i,
+        unit_amount: (program.price * 100).to_i, # Convert price to cents
         currency: 'usd'
-        )
+      )
+  
+      program.update(stripe_product_id: stripe_product.id, stripe_price_id: stripe_price.id)
 
-      resource.update(stripe_product_id: stripe_product.id, stripe_price_id: stripe_price.id)
     end
   end
-
+  
+  
 end

@@ -92,5 +92,10 @@ img {
     margin: 0 20px; /* Add margin */
 }
 
-
+.staff {
+    margin-left: 525px;
+    font-family: 'Dancing Script'; /* Change to Dancing Script font */
+    font-size: 45px;
+    padding: 15px;
+}
 

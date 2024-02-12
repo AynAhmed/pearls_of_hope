@@ -2,7 +2,7 @@ class PaymentsController < ApplicationController
 
   def create
 
-    Stripe.api_key = ENV['STRIPE_SECRET_KEY']
+    Stripe.api_key = ENV['STRIPE_PRIVATE_KEY']
 
     @payment = Payment.new(payment_params)
 

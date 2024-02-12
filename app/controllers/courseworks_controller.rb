@@ -18,6 +18,7 @@ class CourseworksController < ApplicationController
   end
 
   def create
+    @user = User.ids
     @coursework = @program.courseworks.build(coursework_params) 
   # Handle file uploads
   if params[:coursework][:attachments].present?
@@ -69,6 +70,6 @@ class CourseworksController < ApplicationController
   end
 
   def coursework_params
-    params.require(:coursework).permit(:name, :description, :program_id)
+    params.require(:coursework).permit(:name, :description, :program_id, :user_id)
   end
 end
