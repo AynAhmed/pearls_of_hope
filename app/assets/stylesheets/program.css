@@ -5,18 +5,18 @@ body {
   padding: 0;
   font-family: 'Roboto', sans-serif;
 }
-
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 90%; /* Adjust this value to control the maximum width of the container */
+  margin: 0 auto; /* This will center the container horizontally */
+  padding: 20px; /* This sets the padding inside the container */
+  text-align: center;
 }
-
 .programsTitle {
   text-align: center;
   font-size: 36px;
   color: #333;
-  margin-bottom: 30px;
+  margin-top: 20px; /* Adjust this value to increase or decrease the space above the title */
+  margin-bottom: 20px; /* Adjust this value to increase or decrease the space below the title */
 }
 
 .program-grid {
@@ -37,7 +37,7 @@ body {
   .back-link a {
     background-color: #3498db;
     color: #fff;
-    padding: 10px 15px;
+    padding: 10px;
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
@@ -59,7 +59,7 @@ body {
 }
 
 .program-image {
-  max-width: 100%; /* Ensure image fits within container */
+  max-width: 50%; /* Ensure image fits within container */
   height: auto; /* Maintain aspect ratio */
 }
 .program-card:hover {
@@ -155,4 +155,10 @@ form input[type="submit"] {
   padding: 10px 15px; /* Adds padding to the submit button */
   font-size: 16px; /* Increases font size for better readability */
   border-radius: 0.25rem; /* Rounds the corners of the submit button */
+}
+.programsTitle {
+  text-align: center;
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px; /* Adjust this value to increase or decrease the space below the title */
 }
