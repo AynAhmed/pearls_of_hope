@@ -10,13 +10,13 @@
       <p>Age Group: <%= program.age_group %></p>
 
 
-
+  
 
       <p><%= truncate(program.description, length: 100) %></p>
       <div class="button-container">
         <%= link_to "Learn More", program_path(program), class: "btn btn-primary" %>
         <div
-<!-- checks if the user is logged in before the they can register for a program -->   
+      <!-- checks if the user is logged in before the they can register for a program -->   
         <% if user_signed_in? %>
           <%= link_to "Register", enrollments_path(program_id: program.id), class: "btn btn-primary" %>
         <% else %>
