@@ -1,0 +1,128 @@
+/* General form styles */
+/* Container for the form to center everything */
+.profile-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px; /* Add some padding around the container */
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  /* Title styling */
+  .edit-profiles-title {
+    width: 600px; /* Match the profile card width */
+    text-align: center;
+  padding: 20px;
+  border-radius: 10px 10px 0 0; /* Round top corners to seamlessly integrate with the card */
+    font-size: 24px; /* Adjust based on your preference */
+    background-color:#89bfcb;
+    color: #333; /* Dark grey for better readability */
+  }
+  
+  /* Profile form styling */
+  .profile-form {
+    padding: 25px;
+    width: 100%; /* Responsive width */
+    max-width: 600px; /* Maximum width to maintain form readability */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #fff; /* White background */
+  }
+  
+  /* Form group styling for label and input grouping */
+  .form-group {
+    width: 100%; /* Ensure it spans the width of the form */
+    margin-bottom: 20px; /* Space between each form group */
+  }
+  
+  /* Styling for labels */
+  .form-group div {
+    margin-bottom: 5px;
+    color: #666; /* Darker text for labels for contrast */
+    font-weight: bold; /* Make labels slightly bolder */
+  }
+  
+  /* Input field styling */
+  .form-control {
+    width: 100%; /* Full width to match form group */
+    padding: 10px; /* Padding for inside the input */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Rounded corners for input fields */
+    color: #6c757d; /* Grey text color for input */
+    background-color: #f8f9fa; /* Slightly off-white background */
+  }
+  
+  /* Primary button styling */
+  .btn-primary {
+    width: auto; /* Auto width based on content */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Secondary button styling */
+  .btn-secondary {
+    width: auto; /* Auto width based on content */
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Space from the previous element */
+  }
+  
+  .btn-secondary:hover {
+    background-color: #545b62;
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .edit-profiles-title {
+      font-size: 20px; /* Slightly smaller font size on smaller screens */
+    }
+  
+    .profile-form {
+      padding: 15px; /* Less padding to save space */
+
+    }
+  
+    .form-control, .btn-primary, .btn-secondary {
+      padding: 8px 15px; /* Adjust padding for smaller screens */
+    }
+  }
+  
+
+
+  .profile-button {
+margin-top: 30px;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #333;
+    transition: background-color 0.3s ease;
+    border:  #333 solid 2.5px;
+  }
+  
+  
+  .profile-button:hover {
+    background-color: #9ec9d3;
+  
+    color: #333;
+  }

@@ -1,7 +1,13 @@
+console.log("checkout.js loaded!");
+
 document.addEventListener('DOMContentLoaded', function () {
+
   // Initializing Stripe with your public API key
+  console.log("checkout.js loaded!");
   const public_key = gon.env_variables.STRIPE_PUBLIC_KEY;
   const stripe = Stripe(public_key);
+
+  console.log("Stripe object:", stripe);
 
 
   // Creating an instance of the Stripe Elements library

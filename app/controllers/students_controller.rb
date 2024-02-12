@@ -17,7 +17,7 @@ class StudentsController < ApplicationController
     end
 
     def create
-      @student.user = current_user 
+      @student.user = current_user
       @student = current_user.students.build(student_params)
 
 

@@ -1,6 +1,7 @@
 class Coursework < ApplicationRecord
   belongs_to :program
   has_many_attached :attachments
+ 
 
   def self.ransackable_associations(auth_object = nil)
     ["program"]

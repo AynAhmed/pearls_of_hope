@@ -1,6 +1,6 @@
 class EnrollmentsController < ApplicationController
   before_action :set_program, only: [:index, :show, :edit, :update, :destroy ]
-
+  before_action :authenticate_user!
   def index
     # Fetch the program information based on the program_id passed in the URL params
     @program = Program.find(params[:program_id])
