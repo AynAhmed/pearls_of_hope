@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0; /* Reset default body margin */
+}
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure full height of the viewport */
+}
+.signup-title {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    background-color: #fff; /* Add background color */
+    border-radius: 8px; /* Add border radius */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    padding: 10px; /* Add padding */
+    width: 100%; /* Set width to 100% */
+}
+.user_info {
+    text-align: center;
+}
+.signup-card{
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px; /* Add padding to the card */
+    width: 100%; /
+}
+.submit-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px ;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.signup-actions {
+    margin-top: 20px; /* Add margin to create space between the last text field and the sign-up button */
+  }
+  
+  
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+.input-field {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
