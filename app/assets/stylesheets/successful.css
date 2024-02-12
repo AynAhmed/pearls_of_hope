@@ -1,0 +1,36 @@
+
+  /* Add this CSS to your stylesheets (e.g., application.css) */
+
+.pay-success-cont {
+    text-align: center;
+    margin: 150px;;
+  }
+  
+  .pay-success-cont h1{
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  .payment-success {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  
+  .checked-img {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+  }
+  
+  .checked-img img {
+    width: 100px; /* Adjust size as needed */
+  }
+  
+  .pay-success-txt {
+    font-size: 18px;
+    color: #666;
+    margin-top: 20px;
+  }
+  
+  .pay-success-txt p {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  }

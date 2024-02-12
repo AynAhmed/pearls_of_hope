@@ -17,7 +17,7 @@ class PaymentsController < ApplicationController
 
     respond_to do |format|
       if @payment.save
-        format.html { redirect_to carts_path, notice: 'Payment was successful. Thanks for your payment' }
+        format.html { redirect_to successful_index_path, notice: 'Payment was successful. Thanks for your payment' }
       end
     end
   rescue Stripe::CardError => e
