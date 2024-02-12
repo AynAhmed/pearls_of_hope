@@ -15,26 +15,31 @@ class EnrollmentsController < ApplicationController
 
   def new
     @students = current_user.students
-    @program_id = params[:program_id]# Retrieve program ID from session
+    puts "@students: #{@students.inspect}" # A
+    @program_id = params[:program_id] # Retrieve program ID from session or wherever it's stored
     @enrollment = Enrollment.new
-   end
+  end
+  
 
 
-  def create
-    @enrollment = Enrollment.new(enrollment_params)
-    # Set the initial status to "pending"
-    @enrollment.status = "pending"
 
+    def create
+      @enrollment = Enrollment.new(enrollment_params)
+      # Set the initial status to "pending"
+      @enrollment.status = "pending"
+    
       # Fetch the program and student
       @program = Program.find(params[:enrollment][:program_id])
       @student = Student.find(params[:enrollment][:student_id])
-
-    # Ensure that the user has a cart; create one if it doesn't exist
-    if @enrollment.save && current_user.cart.nil?
-      current_user.add_to_cart
-      redirect_to carts_path, status: :see_other, notice: "You just enrolled a student! Congrats!"
+    
+      # Ensure that the user has a cart; create one if it doesn't exist
+      if @enrollment.save
+        redirect_to cart_path, status: :see_other, notice: "You just enrolled a student! Congrats!"
+      else
+        render :new
+      end
     end
-
+    
     # if @enrollment.save
 
     # # Create a CartProduct record using the product_id from the program
@@ -53,7 +58,7 @@ class EnrollmentsController < ApplicationController
     # else
     #   # Handle enrollment creation errors and display error messages
     # end
-  end
+\
 
   def edit
   end
