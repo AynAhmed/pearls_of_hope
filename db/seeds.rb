@@ -7,7 +7,7 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-#AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+# AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
 
 
 
@@ -46,6 +46,32 @@ carousel_images.each do |title, path|
   image_path = Rails.root.join(path)
   create_image_record(title, image_path)
 end
+
+
+# since 'programs.jpg' is located in the 'app/assets/images/' directory we grab image like:
+home_img_one_path = Rails.root.join('app', 'assets', 'images', 'programs.jpg')
+# Create: home page image #1 seed
+create_image_record('home-page-image-one', home_img_one_path)
+
+#home image 2 seed
+
+home_img_two_path = Rails.root.join('app', 'assets', 'images', 'group.jpg')
+create_image_record('home-page-image-two', home_img_two_path)
+
+#about image 1 seed 
+
+about_img_one_path = Rails.root.join('app', 'assets', 'images', 'family.jpg')
+create_image_record('about-page-image-one', about_img_one_path)
+
+#about image 2 seed 
+
+about_img_two_path = Rails.root.join('app', 'assets', 'images', 'mission.png')
+create_image_record('about-page-image-two', about_img_two_path)
+
+#about image 3 seed 
+
+about_img_three_path = Rails.root.join('app', 'assets', 'images', 'value.jpg')
+create_image_record('about-page-image-three', about_img_three_path)
 
 
 # # Image seeds for program
@@ -160,7 +186,49 @@ TextContent.find_or_create_by(title: "Email") do |content|
   content.body = "pearlsofhopecenter@gmail.com"
 end
 
+#seeding testimonial data-1 
 
+TextContent.find_or_create_by(title: "testimonial#1") do |content|
+  content.body = "I love that Pearls of Hope provides safe space for young girls and boys to grow and learn about their Islamic identity and develop sisterhood/brotherhood through their interactions with their peers!  Peers have huge influence on their relationships, having a positive influence over their peers in the program or out in the community can be life changing! - Pearls of Hope Summer Camp Parent"
+end
+
+#seeding testimonial data-2
+
+TextContent.find_or_create_by(title: "testimonial#2") do |content|
+  content.body = "It's heartening to reflect on my time with Pearls of Hope, joining as a teen around 16-17 and now, at 30, witnessing its enduring role as a safe haven for me and my peers. It's truly a blessing to see it remain a safe space for youth to gather, worship, learn, and share over the years. - Pearls of Hope Diamond 2009 "
+end
+
+#seeding testimonial data-3
+
+
+TextContent.find_or_create_by(title: "testimonial#3") do |content|
+  content.body = "Pearls has taught my son so many essential things about Islam especially how to pray. When doing weekly homework he enjoys trying to learn new letters and Quran. Saleh said, “I wish we can have Dugsi (Saturday school) everyday, we do so many fun things while learning! - Al-Mustaqbal Academy parent"
+end
+
+
+#seeding testimonial data-4
+
+TextContent.find_or_create_by(title: "testimonial#4") do |content|
+  content.body = "I highly recommend Pearls of Hope to parents looking for a positive environment for their children to learn their Deen and build a confident Islamic identity. Here they will get mentorship, guidance and knowledge of their faith. - Former Diamond Instructor"
+end
+
+#about us paragraph
+
+TextContent.find_or_create_by(title: "about-us") do |content|
+  content.body = "Pearls of Hope was established in late 2009 by our Founder, sister Danyal Masoud. Danyal grew up in Chicago where , like many young Muslims, she faced many challenges and struggles. She started Pearls of Hope to provide a safe space for youth facing a lot of the same struggles she did growing up. She wanted to be the mentor she would have wanted and needed at their age. So Pearls of Hope was born in the basement of a masjid here in the Twin cities with one class of fifteen girls. The girls who joined the program were given the space to navigate feelings of insecurity and isolation that they often feel in our society. In sister Danyal, the girls found a loving mentor who would listen, counsel and support them unconditionally. They participated in circles of halaqa where they were given the tools to build a solid muslim identity in a an inspiring, engaging and fun environment. On March 30, 2015, Pearls of Hope Community Center was Incorporated. Through its impact, Pearls of Hope grew to offer guidance and support to over 200 youth across 7 programs."
+end
+
+#our mission paragraph
+
+TextContent.find_or_create_by(title: "our-mission") do |content|
+  content.body = "Our mission is to mentor the leaders of tomorrow using religious education as our foundation and inspiring the use of knowledge into action"
+end
+
+#our vision paragraph
+
+TextContent.find_or_create_by(title: "our-vision") do |content|
+  content.body = "That youth who come through our program leave a more knowledgeable Muslim and a more confident, compassionate, contributing citizen of our community."
+end
 
 # SocialMediaEmbed data - Create: social media embeded posts - post data
 
