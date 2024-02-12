@@ -1,44 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
+  <title>PearlsOfHope</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <%= stylesheet_link_tag "sign_up", "data-turbo-track": "reload" %>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap">
-
-    <title>PearlsOfHope</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-
-  
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <script src="https://kit.fontawesome.com/5d37fde041.js" crossorigin="anonymous"></script>
-    <%= javascript_importmap_tags %>
-  
-
-  <link rel="stylesheet" href="https://fonts.google.com/specimen/Kalnia?sort=date&preview.text=Instructor%27s%20Dashboard&stroke=Serif')" />
-
+</head>
+<body>
+  <%= render "layouts/navbar" %>
+  <%= render partial: "carts/cart" if @render_cart %>
+  <%= yield %>
+  <% unless controller_name == 'dashboards' %>
+    <%= render 'layouts/footer' %>
+  <% end %>
+  <script src="https://kit.fontawesome.com/5d37fde041.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+  <script src="https://js.stripe.com/v3/"></script>
   
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-
-    <script src="https://js.stripe.com/v3/"></script>
-    <%= javascript_importmap_tags %>
-  </head>
-  <body>
-    <%= render "layouts/navbar" %>
-    <%= render partial: "carts/cart" if @render_cart %>
-    <%= yield %>
-
-    <% unless controller_name == 'dashboards' %>
-      <%= render 'layouts/footer' %>
-    <% end %>
-
-   
-  </body>
+</body>
 </html>
-

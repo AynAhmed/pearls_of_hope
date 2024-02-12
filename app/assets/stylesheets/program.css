@@ -104,3 +104,57 @@ body {
 a {
   color:black;
 }
+
+/* Enhances the overall look of the page, assuming these styles are added to your stylesheet */
+.program-image {
+  max-width: 100%; /* Ensures the image is responsive */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 0.25rem; /* Slightly rounded corners for a modern look */
+}
+
+.program-details {
+  background-color: #f8f9fa; /* Light background color for the details section */
+  padding: 20px; /* Adds padding inside the details section */
+  border-radius: 0.25rem; /* Slightly rounded corners */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  margin-top: 20px; /* Adds space between the image and details section */
+}
+
+h1.display-4 {
+  font-size: 2.5rem; /* Adjusts size for better readability */
+  margin-bottom: 1.5rem; /* Adds more space below the title */
+  color: #333; /* Dark color for the title for contrast */
+}
+
+p.lead {
+  font-weight: bold; /* Makes lead paragraphs bold */
+  margin-bottom: 0.75rem; /* Reduces bottom margin for a tighter look */
+  color: #0056b3; /* Adds color to lead paragraphs for emphasis */
+}
+
+.btn-light, .btn-primary {
+  margin-right: 10px; /* Adds spacing between buttons */
+  border: none; /* Removes border for a cleaner look */
+}
+
+.btn-primary {
+  background-color: #007bff; /* Ensures consistent primary button color */
+  color: #ffffff; /* White text for readability */
+}
+
+.btn-light {
+  background-color: #f8f9fa; /* Light background for the secondary button */
+  color: #333; /* Dark text for contrast */
+}
+
+/* Adds padding and centers content for the 'Add to cart' form button */
+form {
+  text-align: center; /* Centers the form content */
+  margin-top: 20px; /* Adds space above the form */
+}
+
+form input[type="submit"] {
+  padding: 10px 15px; /* Adds padding to the submit button */
+  font-size: 16px; /* Increases font size for better readability */
+  border-radius: 0.25rem; /* Rounds the corners of the submit button */
+}

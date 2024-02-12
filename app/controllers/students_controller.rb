@@ -17,8 +17,8 @@ class StudentsController < ApplicationController
     end
 
     def create
-      @student.user = current_user 
       @student = current_user.students.build(student_params)
+      @student.user = current_user
 
 
       # Assuming you have a way to determine the program based on program_id

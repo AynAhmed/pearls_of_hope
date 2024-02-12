@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'successful/index'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
@@ -13,6 +14,9 @@ Rails.application.routes.draw do
   resources :profiles
 
   get 'dashboard',to: 'dashboards#index'
+
+  get 'dashboard/students', to: 'dashboards#students', as: 'dashboard_students'
+
 
 
   post 'payments/create'
@@ -31,6 +35,7 @@ Rails.application.routes.draw do
 
   resources :products, only: [:index]
 
+  resources :successful, only: [:index]
   
 
   resources :students

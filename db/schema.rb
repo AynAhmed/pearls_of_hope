@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_08_054452) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_11_120027) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -84,6 +84,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_08_054452) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "course", id: :serial, force: :cascade do |t|
+    t.string "name", limit: 255, null: false
+    t.integer "professor_id"
+  end
+
   create_table "courseworks", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -107,6 +112,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_08_054452) do
     t.index ["student_id", "program_id"], name: "index_enrollments_on_student_id_and_program_id", unique: true
     t.index ["student_id"], name: "index_enrollments_on_student_id"
     t.index ["user_id"], name: "index_enrollments_on_user_id"
+  end
+
+  create_table "house", id: :serial, force: :cascade do |t|
+    t.string "name", limit: 255, null: false
   end
 
   create_table "images", force: :cascade do |t|
@@ -216,14 +225,20 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_08_054452) do
     t.index ["user_id"], name: "index_payments_on_user_id"
   end
 
+  create_table "person", id: :serial, force: :cascade do |t|
+    t.string "first_name", limit: 255, null: false
+    t.string "last_name", limit: 255, null: false
+    t.integer "house_id"
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.integer "price"
     t.bigint "program_id", null: false
     t.string "payment_type"
+    t.string "price_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "price_id"
     t.index ["program_id"], name: "index_products_on_program_id"
   end
 
@@ -239,6 +254,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_08_054452) do
     t.string "stripe_product_id"
     t.string "stripe_price_id"
     t.integer "price"
+    t.string "image"
   end
 
   create_table "social_media_embeds", force: :cascade do |t|
@@ -296,6 +312,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_08_054452) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "cart_products", "carts"
   add_foreign_key "cart_products", "products"
+  add_foreign_key "course", "person", column: "professor_id", name: "course_professor_id_fkey"
   add_foreign_key "courseworks", "programs"
   add_foreign_key "courseworks", "users"
   add_foreign_key "enrollments", "programs"
@@ -306,6 +323,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_08_054452) do
   add_foreign_key "pay_payment_methods", "pay_customers", column: "customer_id"
   add_foreign_key "pay_subscriptions", "pay_customers", column: "customer_id"
   add_foreign_key "payments", "users"
+  add_foreign_key "person", "house", name: "person_house_id_fkey"
   add_foreign_key "products", "programs"
   add_foreign_key "students", "users", on_delete: :cascade
 end

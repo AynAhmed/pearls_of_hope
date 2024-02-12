@@ -1,5 +1,6 @@
 <!-- Profile Page Structure -->
-<div class="profile-card">
+<div class="profile-form-container">
+<h1 class="edit-profiles-title">Personal Info</h1>
   <div class="profile-form">
     <%= form_with(model: current_user, url: profile_path(current_user), method: :put, class: 'user-form') do |form| %>
       <div class="form-group">
@@ -27,10 +28,12 @@
       <div class="form-group">
         <%= form.submit 'Update Profile', class: 'btn btn-primary' %>
       </div>
+
     <% end %>
+    <div class="profile-actions">
+    <%= link_to 'back', profiles_path, class: 'profile-button' %>
+  </div>
   </div>
 
-  <div class="profile-actions">
-    <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'btn btn-secondary' %>
-  </div>
+ 
 </div>
