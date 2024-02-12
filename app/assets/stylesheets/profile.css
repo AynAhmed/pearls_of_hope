@@ -1,138 +1,65 @@
-.profile-card {
-  max-width: 400px;
-  margin: auto;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(239, 4, 4, 0.1);
-  border-radius: 8px;
-  background-color: #660650;
-  text-align: center;
-  color: black;
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-
-.user-form {
-  margin-bottom: 20px;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-control {
-  width: 100%; /* Set the width to 100% */
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box; /* Ensure padding and border are included in the width */
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  text-decoration: none;
-  color: #fff;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.btn-primary {
-  background-color: #3498db;
-}
-
-.btn-secondary {
-  background-color: #e74c3c;
-}
-
-.profile-details {
-  margin-top: 20px;
-}
-
-.profile-details p {
-  margin-bottom: 10px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  text-decoration: none;
-  color: #fff;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.btn-primary {
-  background-color: #040404;
-}
-
-.btn-secondary {
-  background-color: #fcfbfb;
-}
-
-.card {
-  font-family: helvetica;
-  max-width: 400px;
-  margin: auto;
-  padding: 20px;
-  box-shadow: 10px 20px rgb(0, 0, 0);
-  border-radius: 8px;
-  background-color: #fbfafb;
-  text-align: center;
-  color: rgb(253, 250, 250);
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-
-.card h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(2, 2, 2);
-}
-
-.card h2 {
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(2, 2, 2);
-}
-
-.profile-button {
-  color:black;
-}
-
-
-.title {
-  color: grey;
-  font-size: 18px;
-}
-
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
+/* Profile Page Styles */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  font-size: 18px;
+  margin: 50px;
+  margin-bottom: 20%;
+  
 }
 
-a {
+.profile-title {
+  width: 600px; /* Match the profile card width */
+  margin-bottom: 0; /* Remove bottom margin to touch the card */
+  text-align: center;
+  color: #333;
+  font-size: 24px; /* Adjust based on your preference */
+  background-color:#89bfcb; /* Optional: to match the card's background */
+  padding: 20px; /* Match the card's padding */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: to match the card's shadow */
+  border-radius: 10px 10px 0 0; /* Round top corners to seamlessly integrate with the card */
+}
+
+.profile-card {
+  width: 600px; /* Set a specific width */
+  background: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 0 0 10px 10px; /* Round bottom corners only */
+  overflow: hidden;
+  display: flex;
+  padding-bottom: 15px;
+  flex-direction: column;
+  align-items: center; /* Center content */
+}
+
+.user-info h4, .profile-actions {
+  width: 100%; /* Ensure full width inside the card */
+  text-align: center; /* Center align the text */
+  color: #5e5e5e;
+font-size: 16px;
+  margin: 14px;
+
+}
+
+.phoneCont{
+  color:  #5e5e5e;
+  padding-bottom: 5px;
+}
+.profile-button {
+
+  font-weight: bold;
+  padding: 10px 20px;
   text-decoration: none;
-  font-size: 14px;
+  border-radius: 5px;
+  color: #333;
+  transition: background-color 0.3s ease;
+  border:  #333 solid 2.5px;
 }
 
-button:hover, a:hover {
-  opacity: 0.7;
-}
 
-.text-field {
-  margin: 30px;
-}
+.profile-button:hover {
+  background-color: #9ec9d3;
 
-.email {
-  margin-left: 17px;
-}
-
-.role {
-  margin-left: 17px;
+  color: #333;
 }

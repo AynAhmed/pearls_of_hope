@@ -1,11 +1,13 @@
-<div class="card"> 
-<h1> My Profile </h1>
-<h2> Name: <%= current_user.first_name %> <%= current_user.last_name %> </h2>
-<h2> Phone Number: <%= current_user.phone_number %> </h2>
- 
-  
-  <ul>
-    <li><%= link_to "Edit Profile", edit_profile_path(current_user), class: 'profile-button' %></li>
-  </ul>
+<div class="profile-container">
+  <h1 class="profile-title">My Profile</h1>
+  <div class="profile-card">
+    <div class="user-info">
+      <h4 class="name">Name: <%= current_user.first_name %> <%= current_user.last_name %></h4>
+      <h4 class="phoneCont">Phone Number: <%= current_user.phone_number %></h4>
+    </div>
+    <div class="profile-actions">
+      <%= link_to "Edit Profile", edit_profile_path(current_user), class: 'profile-button' %>
+    </div>
+  </div>
 
 </div>

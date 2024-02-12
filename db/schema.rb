@@ -236,9 +236,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_11_120027) do
     t.integer "price"
     t.bigint "program_id", null: false
     t.string "payment_type"
+    t.string "price_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "price_id"
     t.index ["program_id"], name: "index_products_on_program_id"
   end
 

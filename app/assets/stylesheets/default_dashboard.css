@@ -1,6 +1,209 @@
+ .default-dash-container{
+font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+ }
+
  div .main-content{
-    background-color: #715a7f;
+  background-color: rgb(243, 243, 243);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+div .default-dashboard{
+  background-color: rgb(243, 243, 243);
+}
+
+.default-dashboard h2 {
+  color:  #333;
+  border-bottom: 1px solid #4a4747;
+  padding-bottom: 10px;
+  font-size: 45px;
+}
+
+
+
+  .sidebar {
+    width: 200px; /* Adjust width as needed */
+    background-color: #89bfcb;
+    padding: 20px;
+  }
+
+  .sidebar {
+    width: 200px; /* Adjust width as needed */
+    background-color: #659fb8; /* Sidebar background color */
+    padding: 20px;
+  }
+
+  .sidebar-link {
+    display: block;
+    padding: 10px 0;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .sidebar-link:hover {
+    color: #ddd;
+  }
+
+  .sidebar-div{
+    margin: 15px;
+  }
+
+  .welcomeUser{
+      color:white;
+      font-size: 20px;
+      text-align: left;
+      font-weight: bold;
+  }
+
+  .default-dashboard {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+  }
+
+
+  .default-dashboard h3 {
+    color: rgb(143, 140, 140);
+    padding-bottom: 10px;
+    font-size: 32px;
+    text-align: center;
+  }
+
+
+  .instructor-dashboard {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+  }
+  
+  .instructor-dashboard h2{
+    color:  #333;;
+    border-bottom: 1px solid #4a4747;
+    padding-bottom: 10px;
+    font-size: 45px;
+   
+  }
+  
+  .instructor-dashboard h3 {
+    color: rgb(143, 140, 140);
+    border-bottom: 1px solid #4a4747;
+    padding-bottom: 10px;
+    font-size: 32px;
+    font-family: kalnia;
+  }
+  
+  
+  .programs-list, .students-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .programs-list li, .students-list li {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .dashboard-section {
+    margin-bottom: 30px;
+  }
+
+  .personal-info {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+
+
+  .main-content {
+    flex-grow: 1; /* Takes the remaining width */
+    padding: 20px;
+  }
+
+  .programs, .students, .personal-info {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  div .main-content{
+    background-color: rgb(236, 236, 236);
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
- 
+  
   }
+  
+  .sidebar li {
+    background-color: #fff; /* White background for sidebar list items */
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+
+
+
+/* Container for the main content */
+.default-main-content {
+  margin: 0 auto;
+  padding: 20px;
+  width: 80%; /* Adjust based on your preference */
+  max-width: 1200px; /* Ensures the content doesn't stretch too wide on larger screens */
+}
+
+/* Centering the dashboard title */
+.dashboard-title {
+
+  font-size: 24px; /* Adjust the size as needed */
+  color: #333; /* Dark color for contrast and readability */
+  margin-bottom: 30px; /* Adds some space between the title and the content below */
+}
+
+/* Styling for the programs section */
+.default-dash-programs {
+/* Light background to distinguish this section */
+  border-radius: 8px; /* Adds rounded corners for a modern look */
+  padding: 15px; /* Padding inside the section */
+  margin-top: 20px; /* Space from the title or previous content */
+}
+
+.default-dash-programs h3 {
+  margin-bottom: 15px; /* Space between the section title and the list */
+}
+
+/* Styling for the list of students */
+.default-dash-programs ul {
+  list-style: none; /* Removes default list styling */
+  padding: 0;
+}
+
+.default-dash-programs li {
+  padding: 10px 0; /* Adds padding between list items */
+  border-bottom: 1px solid #eaeaea; /* Adds a subtle line between items */
+}
+
+/* Styling links for a more professional look */
+.default-dash-programs a {
+  color: #007bff; /* A classic link color */
+  text-decoration: none; /* Removes underline from links */
+}
+
+.default-dash-programs a:hover {
+  text-decoration: underline; /* Adds underline on hover for better interaction feedback */
+}
+
+/* Additional styling for enrollment details */
+#display-enrollment {
+  font-size: 14px; /* Smaller font size for less emphasis */
+  color: #666; /* Lighter text color for the enrollment details */
+}
