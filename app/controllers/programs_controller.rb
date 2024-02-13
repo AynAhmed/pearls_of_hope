@@ -86,6 +86,10 @@ class ProgramsController < ApplicationController
     end
 
     #creating  product
-
-   
+  end
+  def unenroll
+    program = Program.find(params[:program_id]) 
+    enrollment = current_user.enrollments.find_by(program_id: program.id)
+    
+    redirect_to 'https://docs.google.com/forms/d/1JP0rOHR7vd9LmRwhN2UOS4tv9fpJIEjmiNxjWzjHJa4/viewform?edit_requested=true'
   end

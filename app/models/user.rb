@@ -42,4 +42,9 @@ class User < ApplicationRecord
         def create_cart
           Cart.create(user: self)
         end
-end
+
+        def enrolled_in?(program)
+          # Check if the user is enrolled in the specified program
+          enrollments.exists?(program_id: program.id)
+        end
+      end

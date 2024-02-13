@@ -196,6 +196,30 @@ Program.find_or_create_by(name: "Diamonds") do |program|
   program.price = 20
 end
 
+Program.find_or_create_by(name: "Climb") do |program|
+  program.description = "CLiMB is Pearls of Hope’s fitness, health and wellness class for women and girls 14 and
+  up. Dr. Laila Akhter provides nutrition, exercise and wellness support in order to achieve
+  and maintain a healthy weight. Exercise classes are entirely online via Google Meets
+  and offered 5 times per week. Each semester has a theme and guest speakers to keep
+  the program is informative and fun. Sisters in the class bond over the WhatsApp group by
+  doing challenges for prizes and supporting each other’s efforts."
+  program.age_group = "girls ages 14 and up"
+  program.program_type = "Mentoring"
+  program.date = "2022-01-01"
+  program.fee = true
+  program.price = 20
+end
+Program.find_or_create_by(name: "Summer Camp") do |program|
+  program.description = "Our Summer camp is a summer favorite for kids ages 5-12 and combines education and fun under the sun! Camp is held Mon – Fri 10 am-2 pm and runs for five weeks. We cover Quran/Noorania, Islamic Studies and Hadith. We also offer arts and crafts that are in line with the theme. Each Friday, the kids embark on a fun educational field trip. Boys 12 and up are trained to not only call the adhan and lead salah, but to also prepare and deliver the Jummah sermon."
+  program.age_group = "ages 5 to 12"
+  program.program_type = "Mentoring"
+  program.date = "2022-01-01"
+  program.fee = true
+  program.price = 20
+end
+
+
+
 
 # TextContent data - Create: HOME PAGE -ABOUT US - PARAGRAPH
 about_us_para_data = [
