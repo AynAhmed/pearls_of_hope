@@ -19,15 +19,8 @@ div .default-dashboard{
 }
 
 
-
   .sidebar {
-    width: 200px; /* Adjust width as needed */
-    background-color: #89bfcb;
-    padding: 20px;
-  }
-
-  .sidebar {
-    width: 200px; /* Adjust width as needed */
+    width: 150px; /* Adjust width as needed */
     background-color: #659fb8; /* Sidebar background color */
     padding: 20px;
   }
@@ -209,6 +202,7 @@ div .default-dashboard{
   color: #666; /* Lighter text color for the enrollment details */
 }
 
+
 .purchased-programs {
   margin-top: 20px;
 }
@@ -295,3 +289,8 @@ a.create-student-btn{
   opacity: 0;
   transition: opacity 0.3s ease;
 }
+
+.profile-link{
+  padding-top: 10px;
+}
+
