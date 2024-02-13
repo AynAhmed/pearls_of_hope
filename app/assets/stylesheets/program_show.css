@@ -3,6 +3,7 @@ body {
 }
 
 
+
 .text-center {
   text-align: center;
 }
@@ -71,6 +72,22 @@ body {
     flex-direction: column; /* Display items vertically */
     align-items: center;
     justify-content: center;
+
+  .text-center {
+    text-align: center;
+  }
+  
+  .program-details {
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 40px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .program-image {
+    display: block;
     margin: 0 auto;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

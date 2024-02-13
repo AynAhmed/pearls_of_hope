@@ -209,3 +209,16 @@ form input[type="submit"] {
     border-radius: 0; /* Remove border radius to avoid image distortion */
   }
   
+=======
+
+
+.top-image {
+padding: 10px;
+
+}
+
+.top-image {
+  border-radius: 8px;
+
+}
+
