@@ -208,9 +208,6 @@ form input[type="submit"] {
     height: auto; /* Maintain aspect ratio */
     border-radius: 0; /* Remove border radius to avoid image distortion */
   }
-  
-=======
-
 
 .top-image {
 padding: 10px;
