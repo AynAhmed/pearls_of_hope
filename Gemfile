@@ -59,3 +59,5 @@ gem "stripe", "~> 10.6"
 gem "pay", "~> 7.1"
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'gibbon'
+
+gem 'pry'

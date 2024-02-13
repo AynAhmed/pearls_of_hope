@@ -18,16 +18,18 @@ main{
 
 .item-about-us img {
   max-width: 50%;
-  margin-right: 20px;
-  margin-left:20px;
+  width: 600px;
+  height: auto;
+  margin-left:10px;
+  margin-right: -20px;
 }
-
 
 
 .item-about-us p {
   padding: 10px;
   font-size: 20px;
   padding-right: 30px;
+  margin: 10px;
 }
 
 /* Media query for responsiveness */
@@ -53,12 +55,12 @@ main{
   font-family: 'Dancing Script';
 }
 
-#about h2 {
-  margin-left: 50%;
+.about h2 {
+  text-align: center;
 }
 
 #program h2 {
-  margin-right: 50%;
+  text-align: center;
 }
 
 
@@ -174,7 +176,11 @@ main{
   background-color: #66356c;
   border-radius: 10px;
   padding: 20px;
+  height: 200px;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-bottom: 20px; /* Increased margin for better separation */
+  min-width: 100px;
 }
 
 /* Testimonial Text */
@@ -214,3 +220,20 @@ main{
   text-align: center;
   font-size: 70px;
 }
+
+button {
+  background-color:#88c0cb;
+  color: white;
+  border-radius: 30px;
+}
+
+button a {
+  color: black;
+  padding: 10px;
+}
+
+.social-media-text {
+  text-align: center;
+}
+
+

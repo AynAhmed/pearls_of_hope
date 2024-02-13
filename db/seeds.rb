@@ -10,7 +10,7 @@
 
 # AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
 
-#AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+# AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
 
 
 
@@ -80,6 +80,24 @@ create_image_record('about-page-image-two', about_img_two_path)
 
 about_img_three_path = Rails.root.join('app', 'assets', 'images', 'value.jpg')
 create_image_record('about-page-image-three', about_img_three_path)
+
+#about image 4 seed 
+
+about_img_four_path = Rails.root.join('app', 'assets', 'images', 'boys.jpeg')
+create_image_record('about-page-image-four', about_img_four_path)
+
+
+
+#testimonial img 1
+
+staff_img_one_path = Rails.root.join('app', 'assets', 'images', 'zakya.png')
+create_image_record('staff-image-one', staff_img_one_path)
+
+#testimonial img 2
+
+staff_img_two_path = Rails.root.join('app', 'assets', 'images', 'asiya.png')
+create_image_record('staff-image-two', staff_img_two_path)
+
 
 
 # # Image seeds for program
@@ -245,6 +263,19 @@ end
 TextContent.find_or_create_by(title: "our-vision") do |content|
   content.body = "That youth who come through our program leave a more knowledgeable Muslim and a more confident, compassionate, contributing citizen of our community."
 end
+
+#exectuve director
+
+TextContent.find_or_create_by(title: "executive-director-about") do |content|
+  content.body = "Zakya A. Gazey is the Executive Director at Pearls of Hope Community Center in Minnesota, bringing over 10 years of expertise in early childhood education and nutrition. With a background in Early Childhood and experience in education, she leads educational initiatives and programs. Zakya's journey with Pearls of Hope started in 2009, and in 2022, she assumed the role of Executive Director, emphasizing her dedication to the organization's mission. Beyond her role, she actively engages in community projects, aiming to empower youth through knowledge and education."
+end
+
+#program coordinator
+
+TextContent.find_or_create_by(title: "program-coordinator-about") do |content|
+  content.body = "In her role, Asiya is responsible for overseeing community programming, managing students, and fostering effective communication with parents and community members. Her dedication extends to teaching the Diamonds program, where she imparts valuable knowledge and skills to our youth. Beyond her professional achievements, Asiya has a keen interest in design, environmentalism, and health and wellness. This combination of skills and passions allows her to contribute meaningfully to the organization's mission and create a positive impact in the community."
+end
+
 
 # SocialMediaEmbed data - Create: social media embeded posts - post data
 

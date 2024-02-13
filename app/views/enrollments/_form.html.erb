@@ -3,14 +3,20 @@
 <%= form_with(model: @enrollment, url: enrollments_path, method: :post) do |form| %>
   <!-- Select dropdown to choose a student -->
   <div class="field">
+    <!-- Hidden field to store user_id-->
+    <%= form.hidden_field :user_id, value: current_user.id %>
+
     <%= form.label :student_id, "Select a student:" %>
+
     <%= form.select :student_id, options_from_collection_for_select(@students, :id, :full_name) %>
   </div>
 
-  <!-- Hidden field to store program_id -->
+  <!-- Hidden field to store program_id  and user_id-->
   <%= form.hidden_field :program_id, value: @program_id %>
+  
+
 
   <!-- Add other enrollment form fields here -->
 
-  <%= form.submit "Confirm Enrollment/add to cart" , id: "enrollment-submit-button" %>
+  <%= form.submit "Confirm Enrollment" , id: "enrollment-submit-button" %>
 <% end %>
