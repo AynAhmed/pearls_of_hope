@@ -16,8 +16,8 @@
 
 <div class="box" style="display: flex; align-items: center;">
   <div class="image-container2">
-    <% about_image_two = fetch_image_by_title('about-page-image-two')%>
-    <%= image_tag(about_image_two.image_data.url, alt: 'about image two') if about_image_two %>  </div>
+    <% about_image_four = fetch_image_by_title('about-page-image-four')%>
+    <%= image_tag(about_image_four.image_data.url, alt: 'about-image-four') if about_image_four %>  </div>
   <div class="text">
     <h3 style="text-align: center;">Our Mission</h3>
    <p> <%=fetch_text_content_body_by_title("our-mission")%> </p>

@@ -92,6 +92,14 @@ img {
     justify-content: center; /* Center align images horizontally */
 }
 
+.image-container2 {
+    width: 50%;
+    flex-shrink: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center align images horizontally */
+}
+
 
 .image-container img {
     max-width: 100%;
