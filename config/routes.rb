@@ -40,6 +40,12 @@ Rails.application.routes.draw do
 
   resources :students
 
+  # resources :carts, only: [:index, :show, :add, :remove, :clear_cart] do
+  #   post 'add', on: :collection # Define 'add' as a collection action
+  #   post 'remove', on: :collection # Define 'remove' as a collection action
+  #   get 'clear_cart', on: :collection # Define 'clear_cart' as a collection action
+  # end
+
   get "cart", to: 'carts#show'
   post "carts/add"
   post "carts/remove"

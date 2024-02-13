@@ -29,8 +29,8 @@
           </div>
         </div>
 
-        <%= form_with(url: carts_add_path) do |f| %>
-          <%= f.hidden_field :id, value: @program.product %>
+        <%= form_with(url: carts_add_path, method: :post) do |f| %>
+          <%= f.hidden_field :id, value: @program.product.id %>
           <%= f.hidden_field :cart_id, value: @cart.id %>
           <%= f.submit "Add to cart", class: "btn btn-primary btn-add-to-cart" %>
 
