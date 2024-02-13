@@ -4,9 +4,10 @@
       <div class="text-center">
         <h1 class="title"><%= @program.name %></h1>
 
-        <%= image_tag program_image_path(@program), class: "program-image img-fluid rounded mb-4 mx-auto d-block" %>
+        
 
         <div class="program-details text-left mx-auto d-block" style="max-width: 600px;">
+        <%= image_tag program_image_path(@program), class: "program-image img-fluid rounded mb-4 mx-auto d-block" %>
           <div class="program-detail mb-4">
             <p class="lead"><strong>Description:</strong></p>
             <p><%= @program.description %></p>
@@ -29,7 +30,7 @@
         </div>
 
         <%= form_with(url: carts_add_path) do |f| %>
-          <%= f.hidden_field :id, value: @program.product.id %>
+          <%= f.hidden_field :id, value: @program.product %>
           <%= f.hidden_field :cart_id, value: @cart.id %>
           <%= f.submit "Add to cart", class: "btn btn-primary btn-add-to-cart" %>
 
