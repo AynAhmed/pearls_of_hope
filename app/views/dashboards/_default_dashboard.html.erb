@@ -1,27 +1,55 @@
-<%# app/views/dashboards/_default_dashboard.html.erb %>
-<div class= "default-dash-container">
-<div class="default-dashboard">
-  <!-- Sidebar Navigation -->
-  <div class="sidebar">
-    <div class="welcomeUser" >Welcome, <%= user.first_name.capitalize %>!</div>
-    <div class='profile-link'>
-      <%= link_to 'Profile', class: 'sidebar-link' %>
+<div class="default-dash-container">
+  <div class="default-dashboard">
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+      <div class="welcomeUser">Welcome, <%= user.first_name.capitalize %>!</div>
+      <div>
+        <%= link_to 'Profile', class: 'sidebar-link' %>
+      </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="default-main-content">
+      <h2 class="dashboard-title">Dashboard</h2>
+
+      <!-- Separation between sections -->
+
+      <div class="default-dash-programs">
+  <!-- Purchased Programs section -->
+  <div class="purchased-programs">
+    <%= link_to "Create A Student", new_student_path, class: "create-student-btn" %>
+    <p class="section-title">Your Purchased Programs:</p>
+
+    <div class="program-grid">
+      <% @purchased_programs.each do |program_name, program_id| %>
+        <div class="program-item">
+          <%= program_name %>
+          <%= link_to "Add Student", new_enrollment_path(program_id: program_id, existing_student: true), class: "add-student-link" %>
+        </div>
+      <% end %>
     </div>
   </div>
-  <!-- Main Content -->
-  <div class="default-main-content">
-    <h2 class= "dashboard-title">Dashboard</h2>
-    <div class="default-dash-programs">
-    <h3>My Students</h3>
-    <ul>
-      <% @students.each do |student| %>
-        <li>
-          <%= link_to student.full_name, student_path(student) %>
-          <p id="display-enrollment">
-            Enrolled in: <%= display_enrolled_programs(student) %>
-          </p>
-        </li>
-      <% end %>
-    </ul>
+</div>
+
+
+        <!-- Add space between sections -->
+        <div class="section-space"></div>
+
+        <!-- My Students section -->
+        <div>
+          <p class="students-title">My Students</p>
+          <ul>
+            <% @students.each do |student| %>
+              <li>
+                <%= link_to student.full_name, student_path(student) %>
+                <p id="display-enrollment">
+                  Enrolled in: <%= display_enrolled_programs(student) %>
+                </p>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
-  </div>
+</div>

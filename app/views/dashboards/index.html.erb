@@ -3,6 +3,5 @@
 <% if @user.role == 'instructor' %>
   <%= render 'instructor_dashboard', programs: @programs, students: @students, user: @user %>
 <% else %>
-  <%= render 'default_dashboard', user: @user %>
+  <%= render 'default_dashboard', programs: @programs, students: @students, user: @user %>
 <% end %>
-
