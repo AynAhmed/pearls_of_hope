@@ -2,3 +2,14 @@
     text-align: center;
     background-color: ;
 }
+
+button {
+    background-color:#88c0cb;
+    color: white;
+    border-radius: 30px;
+  }
+
+  button p {
+   color: white;
+   padding: 10px;
+  }
