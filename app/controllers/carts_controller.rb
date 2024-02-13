@@ -11,29 +11,20 @@ class CartsController < ApplicationController
 
   def add
     @product = Product.find_by(id: params[:id])
-  
-    if @product
-      if @cart.save # Ensure that the cart is saved before proceeding
-        current_cart_product = @cart.cart_products.find_by(product_id: @product.id)
-  
-        if current_cart_product
-          flash[:notice] = 'Product is already in the cart.'
-        else
-          @cart.cart_products.create(product: @product)
-          flash[:notice] = 'Product added to cart successfully.'
-        end
-      else
-        flash[:alert] = 'Error: Cart could not be saved.'
-      end
+    return product_not_found unless @product
+    
+    if @cart.save
+      return product_already_in_cart if @cart.cart_products.exists?(product_id: @product.id)
+      
+      @cart.cart_products.create(product: @product)
+      flash[:notice] = 'Product added to cart successfully.'
     else
-      flash[:alert] = 'Product not found.'
+      flash[:alert] = 'Error: Cart could not be saved.'
     end
   
     respond_to do |format|
-      format.turbo_stream do
-        render turbo_stream: [turbo_stream.replace('cart', partial: 'carts/cart', locals: { cart: @cart })]
-      end
-      format.html # Add a default HTML response
+      format.turbo_stream { render turbo_stream: [turbo_stream.replace('cart', partial: 'carts/cart', locals: { cart: @cart })] }
+      format.html { redirect_to cart_path }
     end
   end
 
@@ -68,5 +59,15 @@ class CartsController < ApplicationController
       STRIPE_PUBLIC_KEY: ENV['STRIPE_PUBLIC_KEY'],
       STRIPE_SECRET_KEY: ENV['STRIPE_PRIVATE_KEY']
     }
+  end
+
+  def product_not_found
+    flash[:alert] = 'Product not found.'
+    redirect_back(fallback_location: root_path)
+  end
+  
+  def product_already_in_cart
+    flash[:notice] = 'Product is already in the cart.'
+    redirect_back(fallback_location: root_path)
   end
 end
