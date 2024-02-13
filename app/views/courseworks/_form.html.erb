@@ -1,37 +1,26 @@
 <%# app/views/courseworks/new.html.erb %>
 
-<div class="card-body">
-<%= form_with(model: [@program, @coursework], url: item_courseworks_path(@program)) do |f| %>
- 
-    <!-- Form Row -->
-    <div class="row gx-3 mb-3">
-      <!-- Form Group (first name) -->
-      <div class="col-md-6">
+<div class="coursework">
+  <div class="coursework-card">
+    <h2>Create Coursework</h2>
+    <%= form_with(model: [@program, @coursework], url: item_courseworks_path(@program)) do |f| %>
+      <div class="form-group">
         <%= f.label :name, class: "small mb-1" %>
-      <div class= "titleInputfeild">
         <%= f.text_field :name, class: "form-control" %>
       </div>
-      </div>
-
-      <!-- Form Group (last name) -->
-      <div class="col-md-6">
+      <div class="form-group">
         <%= f.label :description, class: "small mb-1" %>
-      <div class= "descriptionInputField">
         <%= f.text_area :description, class: "form-control", placeholder: "Write something here" %>
-       </div>
-        </div>
-
-          <%= f.hidden_field :program_id, value: @program.id %>
-        <div class="col-md-6">
-            <%= f.file_field :attachments, multiple: true %>
-        </div>
-    </div>
-
- 
-<div class="actions">
-    <%= f.submit 'Create Coursework', class: 'btn btn-primary' %>
+      </div>
+      <%= f.hidden_field :program_id, value: @program.id %>
+      <div class="form-group">
+        <%= f.label :attachments, class: "small mb-1" %>
+        <%= f.file_field :attachments, multiple: true %>
+      </div>
+      <div class="form-group">
+        <%= f.submit 'Create Coursework', class: 'btn' %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
 
-</div>
-</div>
