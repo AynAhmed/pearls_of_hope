@@ -281,7 +281,7 @@ a.create-student-btn{
 }
 
 .add-student-link {
-  position: absolute;
+
   bottom: 5px; /* Adjust the position of the link */
   left: 50%;
   transform: translateX(-50%);
