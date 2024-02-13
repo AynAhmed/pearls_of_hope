@@ -85,19 +85,40 @@ img {
 
 /* Image Container Styles */
 .image-container {
-    width: 50%; /* Adjust the width as needed */
-    flex-shrink: 0; /* Prevent image from shrinking */
-    margin: 0 20px; /* Add margin */
+    width: 50%;
+    flex-shrink: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center align images horizontally */
 }
 
 .image-container2 {
-    width: 40%; /* Adjust the width as needed */
-    flex-shrink: 0; /* Prevent image from shrinking */
-    margin: 0 20px; /* Add margin */
+    width: 50%;
+    flex-shrink: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center align images horizontally */
 }
 
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Text Container Styles */
+.text-container {
+    width: 50%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center; /* Align text vertically */
+    justify-content: center; /* Center align text horizontally */
+}
+
+
 .staff {
-    margin-left: 525px;
+    text-align: center;
     font-family: 'Dancing Script'; /* Change to Dancing Script font */
     font-size: 45px;
     padding: 15px;
