@@ -25,7 +25,7 @@ class StudentsController < ApplicationController
 
       if @student.save
 
-        redirect_to new_enrollment_path, status: :see_other, notice: "You just created a student! Congrats!"
+        redirect_to dashboard_path, status: :see_other, notice: "You just created a student! Congrats!"
       else
         puts @student.errors.full_messages # Add this line for debugging
         render :new
@@ -39,7 +39,7 @@ class StudentsController < ApplicationController
 
     def update
       if @student.update(student_params)
-        redirect_to enrollments_path, notice: 'Student was successfully updated.'
+        redirect_to dashboard_path, notice: 'Student was successfully updated.'
       else
         render :edit
       end

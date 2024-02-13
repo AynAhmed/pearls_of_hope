@@ -1,0 +1,19 @@
+<div class="coursework-container">
+  <% @program.courseworks.each do |coursework| %>
+    <div class="coursework-item">
+      <h3><%= coursework.name %></h3>
+      <p><%= coursework.description %></p>
+
+      <% if coursework.attachments.present? %>
+        <p><strong>Attachments:</strong></p>
+        <ul>
+          <% coursework.attachments.each do |attachment| %>
+            <li>
+              <%= link_to attachment.filename, rails_blob_path(attachment, disposition: "attachment") %>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
+  <% end %>
+</div>
