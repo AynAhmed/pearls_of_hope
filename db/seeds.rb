@@ -81,6 +81,11 @@ create_image_record('about-page-image-two', about_img_two_path)
 about_img_three_path = Rails.root.join('app', 'assets', 'images', 'value.jpg')
 create_image_record('about-page-image-three', about_img_three_path)
 
+#about image 4 seed 
+
+about_img_four_path = Rails.root.join('app', 'assets', 'images', 'boys.jpeg')
+create_image_record('about-page-image-four', about_img_four_path)
+
 
 
 #testimonial img 1

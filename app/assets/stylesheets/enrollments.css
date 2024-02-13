@@ -1,0 +1,15 @@
+.student {
+    text-align: center;
+}
+
+button {
+    background-color:#88c0cb;
+    color: white;
+    border-radius: 30px;
+    margin-bottom: 20px;
+  }
+
+  button p {
+   color: white;
+   padding: 10px;
+  }

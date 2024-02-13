@@ -1,0 +1,29 @@
+<div class= "instructor-dash-container">
+  <%# app/views/dashboards/_instructor_dashboard.html.erb %>
+  <div class="instructor-dashboard">
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+      <div class="welcomeInstructor" >Welcome, <%= @user.first_name.capitalize %></div>
+      <div class="sidebar-div">
+        <%= link_to 'Profile', profiles_path, class: 'sidebar-link' %>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <h2>Students Dashboard</h2>
+
+      <div class="programs">
+        <h3>Enrolled Students</h3>
+        <ul>
+          <% @students.each do |student| %>
+            <li>
+              <%= student.full_name %>
+               <p class="dob-card">Date of Birth:</p> <%= student.dob.strftime("%B %d %Y") %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

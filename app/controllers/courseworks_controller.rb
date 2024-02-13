@@ -17,28 +17,39 @@ class CourseworksController < ApplicationController
     @coursework = Coursework.find(params[:id])
   end
 
+  # def create
+  #   @user = User.ids
+  #   @coursework = @program.courseworks.build(coursework_params) 
+  # # Handle file uploads
+  # if params[:coursework][:attachments].present?
+  #   params[:coursework][:attachments].each do |attachment|
+  #     @coursework.attachments.attach(attachment)
+  #   end
+  # end
+
   def create
-    @user = User.ids
-    @coursework = @program.courseworks.build(coursework_params) 
-  # Handle file uploads
-  if params[:coursework][:attachments].present?
-    params[:coursework][:attachments].each do |attachment|
-      @coursework.attachments.attach(attachment)
+    @coursework = @program.courseworks.build(coursework_params)
+    @coursework.user_id = current_user.id
+    
+    # Handle file uploads
+    if params[:coursework][:attachments].present?
+      params[:coursework][:attachments].each do |attachment|
+        @coursework.attachments.attach(attachment)
+      end
     end
-  end
-
-
-    puts "Received params: #{params.inspect}"
-
+    
     respond_to do |format|
       if @coursework.save
-        format.html { redirect_to dashboards_index_path }
+        format.html { redirect_to dashboard_path }
       else
-        puts "Errors: #{@coursework.errors.full_messages.inspect}"
-        format.html { render :new, status: :unprocessable_entity }
+        format.html do
+          flash.now[:error] = @coursework.errors.full_messages.join(", ")
+          render :new, status: :unprocessable_entity
+        end
       end
     end
   end
+  
 
   # GET /coursework/1/edit
   def edit

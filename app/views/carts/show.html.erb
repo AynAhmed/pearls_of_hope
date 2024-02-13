@@ -10,8 +10,10 @@
         <p class="product-price">Price: <%= number_to_currency(product.price) %></p>
       </div>
       <% (program = Program.find_by(name: product.name)) ? program_ids << program.id : nil %>
+
     <% end %>
-    <% string = program_ids.join(',') %>
+
+    <%= string = program_ids.join(',') %>
   </div>
   <b><p class = "totalText">Your total is <%= number_to_currency(@cart.total) %></p><b>
   <% if program_ids.any? %>
@@ -32,7 +34,7 @@
         </div>
       </div>
       <%= form.hidden_field :user_id, value: current_user.id %>
-      <%= form.hidden_field :programs_ids, value: string %>
+      <%= form.hidden_field :program_ids, value: string %>
       <%= form.hidden_field :amount, value: @cart.total %>
       <div id="card-container">
         <h3 class="payment-info-title">Payment Information</h3>
