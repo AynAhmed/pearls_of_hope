@@ -1,20 +1,33 @@
-<div class="container-mt-4">
-  <h1><%= @program.name %></h1>
-  <p><%= @program.description %></p>
-</div>
-
-<div class="container-mt-5">
-  <% if @program.courseworks.present? %>
-    <h3>Coursework</h3>
-    <ul>
-      <% @program.courseworks.each do |coursework| %>
-        <li>
-          <%= link_to coursework.name, item_coursework_path(@program, coursework) %>
-        </li>
-      <% end %>
-    </ul>
-  <% else %>
-  <% end %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Program Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="programs-container">
+    <h1><%= @program.name %></h1>
+    <p class="course-program-description"><%= @program.description %></p>
   </div>
+
+  <div class="courseworks-container">
+    <% if @program.courseworks.present? %>
+      <h3 class="header">Coursework</h3>
+      <ul class="course-container">
+        <% @program.courseworks.each do |coursework| %>
+          <li>
+            <%= link_to coursework.name, item_coursework_path(@program, coursework), class: "display-coursework" %>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p class="course-orogram-description">No coursework available.</p>
+    <% end %>
+  </div>
+</body>
+</html>
+
 
 
