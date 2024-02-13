@@ -93,27 +93,34 @@ create_image_record('staff-image-one', staff_img_one_path)
 staff_img_two_path = Rails.root.join('app', 'assets', 'images', 'asiya.png')
 create_image_record('staff-image-two', staff_img_two_path)
 
+# image seed for programs
 
+program_image_al_mustaqbal_academy_path = Rails.root.join('app', 'assets', 'images', 'al_mustaqbal_academy.jpg')
+create_image_record('program_image_al_mustaqbal_academy', program_image_al_mustaqbal_academy_path)
 
-# # Image seeds for program
-# program_images = {
-#   'al_mustaqbal_academy' => 'al_mustaqbal_academy.jpg',
-#   'charms' => 'charms.jpg',
-#   'climb' => 'climb.jpg',
-#   'diamonds' => 'diamonds.jpg',
-#   'explorers' => 'explorers.jpg',
-#   'frontiers' => 'frontiers.jpg',
-#   'pearls' => 'pearls.jpg',
-#   'jewels' => 'jewels.jpg',
-#   'placeholder' => 'poh.jpg'
-# }
+program_image_charms_path = Rails.root.join('app', 'assets', 'images', 'charms.jpg')
+create_image_record('program_image_charms', program_image_charms_path)
 
-# program_images.each do |title, path|
-#   image_path = Rails.root.join(path)
-#   image = create_image_record(title, image_path) # Create or find the image record
-#   program = Program.find_by(name: title.capitalize) # Assuming title matches program name
-#   program.update(image: image) if program # Assign the image to the program if found
-# end
+program_image_climb_path = Rails.root.join('app', 'assets', 'images', 'climb.jpg')
+create_image_record('program_image_climb', program_image_climb_path)
+
+program_image_diamonds_path = Rails.root.join('app', 'assets', 'images', 'diamonds.jpg')
+create_image_record('program_image_diamonds', program_image_diamonds_path)
+
+program_image_explorers_path = Rails.root.join('app', 'assets', 'images', 'explorers.jpg')
+create_image_record('program_image_explorers', program_image_explorers_path)
+
+program_image_frontiers_path = Rails.root.join('app', 'assets', 'images', 'frontiers.jpg')
+create_image_record('program_image_frontiers', program_image_frontiers_path)
+
+program_image_jewels_path = Rails.root.join('app', 'assets', 'images', 'jewels.jpg')
+create_image_record('program_image_jewels', program_image_jewels_path)
+
+program_image_pearls_path = Rails.root.join('app', 'assets', 'images', 'pearls.jpg')
+create_image_record('program_image_pearls', program_image_pearls_path)
+
+program_image_summer_camp_path = Rails.root.join('app', 'assets', 'images', 'poh.jpg')
+create_image_record('program_image_summer_camp', program_image_summer_camp_path)
 
 
 

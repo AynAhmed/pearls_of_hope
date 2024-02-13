@@ -1,73 +1,95 @@
 body {
-    font-family: 'Roboto', sans-serif;
-  }
+  font-family: 'Roboto', sans-serif;
+}
 
-  
-  .text-center {
-    text-align: center;
-  }
-  
-  .program-details {
-    max-width: 500px;
-    margin: 0 auto;
-    padding-top: 40px;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .program-image {
-    display: block;
+
+.text-center {
+  text-align: center;
+}
+
+.program-details {
+  max-width: 500px;
+  margin: 0 auto;
+  padding-top: 40px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  display: block;
+  margin: 30px auto; /* Adjust vertical margin and center horizontally */
+  max-width: 200px; /* Set maximum width */
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+.program-details {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.program-detail {
+  padding: 5px; /* Adjust padding to your preference */
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 2px; /* Add margin bottom for spacing */
+}
+.lead{
+  padding:16px;
+}
+.btn.btn-primary.btn-add-to-cart {
+  padding-top: 10px;
+}
+
+.title {
+  padding-top: 20px; /* Increase top padding for better spacing */
+  text-align: center;
+  font-size: 45px;
+  color: #333; /* Set a dark text color */
+  font-weight: bold; /* Make the font bold for emphasis */
+  text-transform: uppercase; /* Convert text to uppercase for a stylish look */
+  letter-spacing: 2px; /* Add letter spacing for better readability */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  padding-bottom: 20px;
+}
+.program-details,
+.program-image {
+    min-width: 600px; /* Set the minimum width to 600 pixels */
+    max-width: 600px; /* Set the maximum width to 600 pixels */
+    height: auto; /* Let the height adjust based on content */
+    display: flex;
+    flex-direction: column; /* Display items vertically */
+    align-items: center;
+    justify-content: center;
     margin: 0 auto;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .btn {
-    display: block;
-    margin: 30px auto; /* Adjust vertical margin and center horizontally */
-    max-width: 200px; /* Set maximum width */
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    text-decoration: none;
-    transition: background-color 0.3s;
-  }
-  
-  .btn:hover {
-    background-color: #2980b9;
-  }
-  .program-details {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .program-detail {
-    padding: 5px; /* Adjust padding to your preference */
-    background-color: #ffffff;
-    border-radius: 8px;
-    margin-bottom: 2px; /* Add margin bottom for spacing */
-  }
-.lead{
-    padding:16px;
+    overflow: hidden; /* Hide any content that exceeds the container */
 }
-.btn.btn-primary.btn-add-to-cart {
-    padding-top: 10px;
+.program-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribute space between items */
+  margin-top: 20px; /* Adjust margin as needed */
 }
 
-  .title {
-    padding-top: 20px; /* Increase top padding for better spacing */
-    text-align: center;
-    font-size: 45px;
-    color: #333; /* Set a dark text color */
-    font-weight: bold; /* Make the font bold for emphasis */
-    text-transform: uppercase; /* Convert text to uppercase for a stylish look */
-    letter-spacing: 2px; /* Add letter spacing for better readability */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
-    padding-bottom: 20px;
-  }
-  
-  
+.program-card {
+  width: calc(33.33% - 20px); /* Adjust width to fit 3 cards per row with some margin */
+  margin-bottom: 20px; /* Adjust margin as needed */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  border: 1px solid #ddd; /* Add border for each card */
+  border-radius: 8px; /* Add border radius for rounded corners */
+  overflow: hidden; /* Hide any content that overflows the card */
+  padding: 20px; /* Add padding to the card */
+}
+
