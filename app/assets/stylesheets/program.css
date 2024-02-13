@@ -164,3 +164,14 @@ form input[type="submit"] {
   color: #333;
   margin-bottom: 20px; /* Adjust this value to increase or decrease the space below the title */
 }
+
+
+.top-image {
+padding: 10px;
+
+}
+
+.top-image {
+  border-radius: 8px;
+
+}

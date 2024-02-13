@@ -6,14 +6,17 @@ class PaymentsController < ApplicationController
 
     @payment = Payment.new(payment_params)
 
+    
+
     # Charge user card
     Stripe::Charge.create({
       # Converted to cents
-      amount: @payment.amount * 100, 
+      amount: @payment.amount * 100,
       currency: 'usd',
       source: params[:stripe_token],
       description: 'pearls of hope Program'
     })
+
 
     respond_to do |format|
       if @payment.save
