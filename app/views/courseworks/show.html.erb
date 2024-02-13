@@ -1,15 +1,15 @@
 <% if @coursework.program %>
-  <h1>Program: <%= @coursework.program.name %></h1>
+  <h1 id="program-title">Program: <%= @coursework.program.name %></h1>
   <!-- Display other program-related attributes here -->
 <% end %>
 
-<div>
-<h2><%= @coursework.name %></h2>
-<p>Posted ○ <%= @coursework.created_at.strftime('%B %d, %Y') %></p>
-<p>Description: <%= @coursework.description %></p>
+<div class="coursework-title-description">
+<h2 id="coursework-title"><%= @coursework.name %></h2>
+<p class="posted-coursework">Posted ○ <%= @coursework.created_at.strftime('%B %d, %Y') %></p>
+<p class="posted-coursework">Description: <%= @coursework.description %></p>
 </div>
 
 <% @coursework.attachments.each do |attachment| %>
-  <p>Attachment: <%= link_to attachment.filename, rails_blob_path(attachment, disposition: 'attachment') %></p>
+  <p class="posted-coursework">Attachment: <%= link_to attachment.filename, rails_blob_path(attachment, disposition: 'attachment') %></p>
 <% end %>
 

@@ -23,6 +23,8 @@
   <%= render "layouts/navbar" %>
   <%= render partial: "carts/cart" if @render_cart %>
   <%= yield %>
+  <div class="footer-wrap"> 
+  </div>
   <% unless controller_name == 'dashboards' %>
     <%= render 'layouts/footer' %>
   <% end %>

@@ -1,0 +1,74 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .programs-container, .courseworks-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .course-program-description {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .courseworks-container {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .courseworks-container li {
+    margin-bottom: 10px;
+  }
+  
+  .display-coursework {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .display-coursework:hover {
+    text-decoration: underline;
+  }
+  
+  /* Coursework specific styles */
+  .header {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .empty-placeholder {
+    font-style: italic;
+    color: #888;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .programs-container, .courseworks-container {
+      max-width: 90%;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    h1 {
+      font-size: 24px;
+    }
+  
+    .course-program-description {
+      font-size: 14px;
+    }
+  
+    .header {
+      font-size: 18px;
+    }
+  }
+  
+  
