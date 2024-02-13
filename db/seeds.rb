@@ -73,7 +73,7 @@ create_image_record('about-page-image-one', about_img_one_path)
 
 #about image 2 seed 
 
-about_img_two_path = Rails.root.join('app', 'assets', 'images', 'mission.png')
+about_img_two_path = Rails.root.join('app', 'assets', 'images', 'boys.jpeg')
 create_image_record('about-page-image-two', about_img_two_path)
 
 #about image 3 seed 
