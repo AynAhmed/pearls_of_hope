@@ -1,0 +1,40 @@
+.container {
+    width: 90%; /* Example percentage-based width */
+    margin: 0 auto; /* Center the container */
+}
+@media screen and (max-width: 768px) {
+    /* Styles for screens smaller than 768px */
+}
+img {
+    max-width: 100%; /* Ensure images don't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+}
+body{
+    margin: 0;
+}
+@media only screen and (max-width: 950px) {
+    .cf7_custom_style_1 {
+       padding-left: 10%;
+       padding-right: 10%;
+    }
+ }
+ 
+ @media only screen and (max-width: 600px) {
+    .cf7_custom_style_1 {
+       padding-left: 0;
+       padding-right: 0;
+    }
+ }
+ /* Apply Flexbox to the container */
+.cf7_custom_style_1 {
+    display: flex;
+    flex-direction: column; /* Align children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+  }
+  
+  /* Additional styling for child elements if needed */
+  .cf7_custom_style_1 .child-element {
+    /* Styles for child elements */
+  }
+  
