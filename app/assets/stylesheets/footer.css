@@ -3,7 +3,10 @@
   color: #ffffff;
   padding: 30px;
   text-align: center;
-  position: relative;
+  position: sticky;
+  top: 600px;
+  width: 100%;
+  
 }
 
 .footer-content {

@@ -18,16 +18,18 @@ main{
 
 .item-about-us img {
   max-width: 50%;
-  margin-right: 20px;
-  margin-left:20px;
+  width: 600px;
+  height: auto;
+  margin-left:10px;
+  margin-right: -20px;
 }
-
 
 
 .item-about-us p {
   padding: 10px;
   font-size: 20px;
   padding-right: 30px;
+  margin: 10px;
 }
 
 /* Media query for responsiveness */
@@ -53,13 +55,12 @@ main{
   font-family: 'Dancing Script';
 }
 
-#about h2 {
-  margin-left: 50%;
+.about h2 {
+  text-align: center;
 }
 
 #program h2 {
-  margin-right: 50%;
-  margin-top: 50px;
+  text-align: center;
 }
 
 
@@ -129,6 +130,7 @@ main{
     padding-top: 3vw;
    display: flex;
    justify-content: center; /* Center horizontally */
+   width:100%;
    }
 
    #newsletter-signup {
@@ -150,6 +152,7 @@ main{
     }
 
 
+  /* Testimonials Section */
 .testimonials {
   display: flex;
   flex-wrap: wrap;
@@ -158,12 +161,14 @@ main{
   max-width: 1000px;
 }
 
+/* Testimonial Containers */
 .testimonial-container-1,
 .testimonial-container-2 {
   flex: 1;
   margin-bottom: 20px;
 }
 
+/* Individual Testimonials */
 .testimonial-1,
 .testimonial-2,
 .testimonial-3,
@@ -171,11 +176,14 @@ main{
   background-color: #66356c;
   border-radius: 10px;
   padding: 20px;
+  height: 200px;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-bottom: 20px; /* Increased margin for better separation */
-  margin-left:10px;
-  margin-right:10px;
+  min-width: 100px;
 }
 
+/* Testimonial Text */
 .testimonial-1 p,
 .testimonial-2 p,
 .testimonial-3 p,
@@ -184,7 +192,6 @@ main{
   line-height: 1.6;
   color: white;
   font-family: Arial, sans-serif; /* Changed font family to a more common sans-serif font */
-
 }
 
 /* Testimonial Source */
@@ -214,17 +221,19 @@ main{
   font-size: 70px;
 }
 
+button {
+  background-color:#88c0cb;
+  color: white;
+  border-radius: 30px;
+}
 
-
-#social-media-text{
+button a {
+  color: black;
   padding: 10px;
-  font-size: 20px;
 }
 
-#follow-us{
-display: flex;
-flex-direction: row;
-align-items: center;
-margin-bottom: 20px;
+.social-media-text {
+  text-align: center;
 }
+
 
