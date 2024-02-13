@@ -1,5 +1,5 @@
 ActiveAdmin.register Program do
-  permit_params :name, :description, :program_type, :age_group, :date,  :fee, :price
+  permit_params :name, :description, :program_type, :age_group, :date,  :fee, :price, :image
 
 
   index do
@@ -37,9 +37,11 @@ ActiveAdmin.register Program do
       f.input :fee, as: :select, collection: [["Yes", true], ["No", false]], include_blank: false, prompt: "Select True or False"
       f.input :price, as: :number
       f.input :description, as: :text  # Textarea for longer descriptions
+      f.input :image, as: :file
     end
     f.actions
   end
+  
 
 
 
@@ -77,6 +79,10 @@ ActiveAdmin.register Program do
 
     end
   end
-  
+  def attach_image_to_program(program)
+    return unless params[:program][:image].present?
+
+    program.image.attach(params[:program][:image])
+  end
   
 end

@@ -1,9 +1,14 @@
-
 <h1 class="programsTitle">Programs</h1>
 <section class="program-grid">
   <% @programs.each do |program| %>
     <article id="<%= program.name.parameterize %>" class="program-card">
-      <%= image_tag("placeholder.jpg", class: "top-image") %> <!-- Add image here -->
+      <% program_image = fetch_image_by_title("program_image_#{program.name.parameterize}") %>
+      <%= image_tag(program_image.image_data.url, alt: program.name) if program_image %>
+      <% if program.name == "Al-Mustaqbal Academy" %>
+        <%= image_tag "al_mustaqbal_academy.jpg", alt: "Al-Mustaqbal Academy" %>
+      <% elsif program.name == "Summer Camp" %>
+        <%= image_tag "poh.jpg", alt: "Summer Camp" %>
+      <% end %>
       <h3><%= program.name %></h3>
       <p>Age Group: <%= program.age_group %></p>
       <p><%= truncate(program.description, length: 100) %></p>
@@ -18,13 +23,3 @@
     </article>
   <% end %>
 </section>
-
-
-
-
-
-
-
-
-
-

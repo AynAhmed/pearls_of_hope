@@ -82,7 +82,7 @@ class ProgramsController < ApplicationController
 
 
     def program_params
-      params.require(:program).permit(:name, :description, :program_type, :age_group, :date)
+      params.require(:program).permit(:name, :description, :program_type, :age_group, :date, :image)
     end
 
     #creating  product

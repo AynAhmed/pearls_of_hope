@@ -1,6 +1,7 @@
 class Program < ApplicationRecord
     has_many :courseworks
     has_many :enrollments
+    has_one_attached :image
 
     validates :name, presence: true
     validates :description, presence: true
