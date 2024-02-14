@@ -21,6 +21,6 @@ class DashboardsController < ApplicationController
 
   def students
     @user = current_user
-    @students = current_user.students
+    @enrollments = current_user.enrollments
   end
 end
