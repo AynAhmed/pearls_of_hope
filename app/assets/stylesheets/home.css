@@ -13,7 +13,7 @@ main{
   display: flex;
   flex-direction: row; /* Change back to row layout */
   align-items: center; /* Align items vertically */
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .item-about-us img {
@@ -262,6 +262,7 @@ button a {
 
 .social-media-text {
   text-align: center;
+  margin-top: 25px;
 }
 
 
