@@ -14,9 +14,10 @@ body {
 .programsTitle {
   text-align: center;
   font-size: 36px;
-  color: #333;
-  margin-top: 20px; /* Adjust this value to increase or decrease the space above the title */
-  margin-bottom: 20px; /* Adjust this value to increase or decrease the space below the title */
+  font-size: 70px;
+  color: rgb(102, 53, 108);
+  margin-top: 28px; /* Adjust this value to increase or decrease the space above the title */
+  margin-bottom: 30px; /* Adjust this value to increase or decrease the space below the title */
 }
 
 .program-grid {
@@ -154,12 +155,7 @@ form input[type="submit"] {
   font-size: 16px; /* Increases font size for better readability */
   border-radius: 0.25rem; /* Rounds the corners of the submit button */
 }
-.programsTitle {
-  text-align: center;
-  font-size: 36px;
-  color: #333;
-  margin-bottom: 20px; /* Adjust this value to increase or decrease the space below the title */
-}
+
 .program-grid {
     display: flex;
     flex-wrap: wrap;
@@ -219,6 +215,12 @@ padding: 10px;
 
 .top-image {
   border-radius: 8px;
+}
 
+
+/* programs title index page  */
+h3.program-index-title{
+margin-top:20px;
+text-align: center;
 }
 

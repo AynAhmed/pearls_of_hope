@@ -34,7 +34,7 @@ class EnrollmentsController < ApplicationController
     
       # Ensure that the user has a cart; create one if it doesn't exist
       if @enrollment.save
-        redirect_to cart_path, status: :see_other, notice: "You just enrolled a student! Congrats!"
+        redirect_to dashboard_path, status: :see_other, notice: "You just enrolled a student! Congrats!"
       else
         render :new
       end

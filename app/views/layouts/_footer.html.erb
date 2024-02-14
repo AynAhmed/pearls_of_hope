@@ -2,6 +2,7 @@
 <footer class="footer">
 
 <div>
+<div>
     <a href="https://www.instagram.com/pearlsofhopemn/?hl=en"><i class="fab fa-instagram social-icon"></i></a>
     <a href="https://www.facebook.com/PearlsofHopeMN/"><i class="fab fa-facebook social-icon"></i></a>
     <a href="https://www.youtube.com/@pearlsofhopecenter"><i class="fab fa-youtube social-icon"></i></a>
@@ -45,6 +46,16 @@
 
   </div>
   <p class="copy-right">Copyright &copy; <%= Time.now.year %> Pearls of Hope</p>
+  </div>
+
+  <div class="admin-icon-footer">
+    <%= link_to new_admin_user_session_path do %>
+      <i class="fas fa-user-shield"></i> 
+    <% end %>
+  </div>
+
+  
+
   </footer>
 
   

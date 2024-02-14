@@ -45,11 +45,13 @@ body {
   padding: 16px;
 }
 
-.title {
+h1.title {
+  font-family: "Dancing Script", cursive;
+font-weight: bolder;
   padding: 20px 0; /* Adjust padding */
   text-align: center;
   font-size: 2.5rem; /* Adjust font size */
-  color: #333;
+  color: rgb(102, 53, 108);
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -87,3 +89,4 @@ body {
   overflow: hidden; /* Hide any content that overflows the card */
   padding: 20px; /* Add padding to the card */
 }
+

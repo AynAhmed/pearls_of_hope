@@ -132,24 +132,50 @@ main{
    justify-content: center; /* Center horizontally */
    width:100%;
    }
+/* Newsletter Signup Section Styles */
+#newsletter-signup {
+  text-align: center;
+  padding: 50px 0;
+}
 
-   #newsletter-signup {
-    text-align: center;
-    padding: 50px 0;
-   }
+.newsletter-box {
+  background-color: #fff;
+  color: #333;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
 
-    .newsletter-box {
-    background-color: #fff;
-    color: #613894;
-    padding: 50px;
-    border-radius: 20px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    }
+.newsletter-box h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
 
-    .newsletter-box h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    }
+
+
+.input-wrapper input {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-wrapper input[type="submit"] {
+  width: auto;
+  padding: 10px 20px;
+  background-color:#8abeca;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.input-wrapper input[type="submit"]:hover {
+  background-color: #4b2d6b;
+}
+
 
 
   /* Testimonials Section */
@@ -213,12 +239,14 @@ main{
 }
 
 #testimonial-title, h1{
+  margin-top: 20px;
   margin: 20px auto; 
   padding: 20px;
   font-family: 'Dancing Script', cursive;
   color: #66356c;
   text-align: center;
   font-size: 70px;
+
 }
 
 button {
@@ -236,4 +264,29 @@ button a {
   text-align: center;
 }
 
+
+.about-content{
+  max-width: 600px;
+
+}
+
+.about{
+margin-left: 50px;
+margin-top: 20px;
+}
+
+div.item-about-us{
+  margin-top: 50px;
+}
+
+.learnMorebtn{
+  padding: 15px;
+}
+
+input.btn-primary{
+  background-color:#88c0cb;
+  border: solid black 2px;
+  color:black;
+
+}
 
