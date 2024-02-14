@@ -106,41 +106,52 @@
 
 
 
-
-
-
-<section class = "testimonial-container-main">
-
-  
+<section class="testimonial-container-main">
   <h1 class="testimonial-title">Testimonials</h1>
-  
 
-<div class="testimonials">
-<div class= "testimonial-container-1">
-  <div class= "testimonial-1">
-   <p> <%=fetch_text_content_body_by_title("testimonial#1")%> </p>
+  <div class="testimonial-slideshow-container">
+    <div class="mySlides-quote">
+      <div class="quote-content">
+        <p><%= fetch_text_content_body_by_title("testimonial#1") %></p>
+      </div>
+    </div>
+
+    <div class="mySlides-quote">
+      <div class="quote-content">
+        <p><%= fetch_text_content_body_by_title("testimonial#2") %></p>
+      </div>
+    </div>
+
+    <div class="mySlides-quote">
+      <div class="quote-content">
+        <p><%= fetch_text_content_body_by_title("testimonial#3") %></p>
+      </div>
+    </div>
+
+    <div class="mySlides-quote">
+      <div class="quote-content">
+        <p><%= fetch_text_content_body_by_title("testimonial#4") %></p>
+      </div>
+    </div>
+
+    <a class="quote-prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="quote-next" onclick="plusSlides(1)">&#10095;</a>
   </div>
-  <div class = "testimonial-2">
-   <p> <%=fetch_text_content_body_by_title("testimonial#2")%> </p>
+
+  <div class="dot-container">
+    <span class="quote-dot" onclick="currentSlide(1)"></span> 
+    <span class="quote-dot" onclick="currentSlide(2)"></span> 
+    <span class="quote-dot" onclick="currentSlide(3)"></span> 
+    <span class="quote-dot" onclick="currentSlide(4)"></span> 
   </div>
-</div>
-
-
-<div class= "testimonial-container-2">
-  <div class = "testimonial-3">
-   <p> <%=fetch_text_content_body_by_title("testimonial#3")%> </p>
-  </div>
-
-  <div class = "testimonial-4">
-   <p> <%=fetch_text_content_body_by_title("testimonial#4")%> </p>
-  </div>
-</div>
-</div>
-
-<section class= "follow-us">
-
-
 </section>
+
+
+
+
+
+
+
 
 <div class= "social-media-text">
 <h2>Follow us on Instagram</h2>
