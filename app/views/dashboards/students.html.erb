@@ -16,10 +16,11 @@
       <div class="programs">
         <h3>Enrolled Students</h3>
         <ul>
-          <% @students.each do |student| %>
+          <% @enrollments.each do |enrollment| %>
             <li>
-              <%= student.full_name %>
-               <p class="dob-card">Date of Birth:</p> <%= student.dob.strftime("%B %d %Y") %>
+              <%= enrollment.student.full_name %>
+               <p class="dob-card">Date of Birth: <%= enrollment.student.dob.strftime("%B %d %Y") %></p>
+               <p class="dob-card">Program enrolled: <%= enrollment.program.name %></p>
             </li>
           <% end %>
         </ul>
