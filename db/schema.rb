@@ -241,13 +241,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_08_054452) do
     t.integer "price"
   end
 
-  create_table "social_media_embeds", force: :cascade do |t|
-    t.string "title"
-    t.text "embed_code"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "students", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -282,14 +275,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_08_054452) do
     t.string "country"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  end
-
-  create_table "videos", force: :cascade do |t|
-    t.string "title"
-    t.string "description"
-    t.string "url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

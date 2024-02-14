@@ -34,3 +34,27 @@
   .pay-success-txt p {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   }
+
+  .success-redirect-btn{
+    margin-top: 29px;
+    background-color: black;
+    max-width: 100px;
+    padding: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: white;
+    border-radius: 25px;
+  }
+  .success-redirect-btn a {
+    color: white;
+
+  }
+  .success-redirect-btn {
+  margin-left: 32rem;
+  color: white;
+
+}
+.success-redirect-btn a:hover {
+  color: rgb(151, 186, 205);
+
+}
