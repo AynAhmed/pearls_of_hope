@@ -5,6 +5,7 @@
 
 <div class="coursework-title-description">
 <h2 id="coursework-title"><%= @coursework.name %></h2>
+<hr class= "coursework-title-line">
 <p class="posted-coursework">Posted ○ <%= @coursework.created_at.strftime('%B %d, %Y') %></p>
 <p class="posted-coursework">Description: <%= @coursework.description %></p>
 </div>

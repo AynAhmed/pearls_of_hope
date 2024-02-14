@@ -71,3 +71,24 @@
   text-decoration: none;
   transition: color 0.3s ease;
 }
+
+.admin-icon-footer {
+  width: 40px;
+  margin-inline-start: 84rem;
+  border-radius: 15px;
+  padding: 3px;
+
+  border: solid rgb(214, 214, 214) 2px;
+
+}
+
+.admin-icon-footer a {
+  color: #ffffff; /* Your link color */
+  text-decoration: none;
+}
+
+.admin-icon-footer a:hover {
+  text-decoration: underline; /* Underline on hover */
+
+}
+

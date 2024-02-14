@@ -35,9 +35,7 @@
           <%= f.submit "Add to cart", class: "btn btn-primary btn-add-to-cart" %>
 
         <% end %>
-        <% if current_user && current_user.enrolled_in?(@program) %>
-        <%= link_to "Unenroll from Program", unenroll_path(program_id: @program.id), class: "btn btn-primary" %>
-      <% end %>
+      
         <div class="mt-4">
           <%= link_to 'Back', programs_path, class: "btn btn-light" %>
       
