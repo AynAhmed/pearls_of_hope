@@ -308,16 +308,3 @@ TextContent.find_or_create_by(title: "program-coordinator-about") do |content|
 end
 
 
-# SocialMediaEmbed data - Create: social media embeded posts - post data
-
-SocialMediaEmbed.find_or_create_by(title: "SocMedia#1") do |embed|
-  embed.embed_code = '<iframe width="560" height="315" src="https://www.youtube.com/embed/jZbkM2L3rHA?si=USJvzb2i7uCY9_fj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
-end
-
-SocialMediaEmbed.find_or_create_by(title: "SocMedia#2") do |embed|
-  embed.embed_code = '<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Czt8xNbR6J1/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">...</blockquote><script async src="//www.instagram.com/embed.js"></script>'
-end
-
-SocialMediaEmbed.find_or_create_by(title: "SocMedia#3") do |embed|
-  embed.embed_code = '<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FPearlsofHopeMN%2Fposts%2Fpfbid02VFYsyWweWyt4wUN9dif1YVinbvT3V6a83fx2Bfm8UZE3ANFrX7XtX9h4HyXahRZsl&show_text=false&width=500" width="500" height="498" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>'
-end
